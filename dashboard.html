@@ -114,7 +114,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
 
   <div class="card">
     <div class="block-title"><span class="block-num">2</span>SITUATION ACTUELLE</div>
-    <div class="ref-date">État au 14/06/2026 — parcours MFA optionnel. 318 sollicitations depuis déc. 2025 (162 requêtes OSP + 156 emails selfcare).</div>
     <div class="stats-row-2">
       <div class="stat-box-lg"><span class="stat-val-lg">1 604</span><div class="stat-lbl-lg">boutiques MFA activé sur 6 460 actives éligibles</div></div>
       <div class="stat-box-lg"><span class="stat-val-lg">7 736</span><div class="stat-lbl-lg">boutiques restantes à activer d'ici oct. 2026 (base 9 340)</div></div>
@@ -138,67 +137,215 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
   </div>
 </div>
 
-<!-- BLOCS 3 + 4 -->
-<div class="grid-mid">
+<!-- BLOC 3 -->
+<div style="margin-bottom:12px">
   <div class="card">
     <div class="block-title"><span class="block-num">3</span>OBJECTIF CIBLE</div>
-    <div class="accroche" style="margin-bottom:10px">Rendre le MFA obligatoire pour 100 % des vendeurs d'ici octobre 2026, sans désorganisation opérationnelle.</div>
+    <div class="accroche" style="margin-bottom:10px">Rendre le MFA obligatoire pour 100 % des 9 340 vendeurs d'ici octobre 2026, sans désorganisation opérationnelle.</div>
     <div class="obj-row">
       <div class="obj-main"><span class="val">&lt; 5%</span><div class="lbl">objectif prioritaire : ratio sollicitations / nouvelles activations (actuellement 13,7%)</div></div>
-      <div class="obj-sec"><span class="val">30%</span><div class="lbl">objectif secondaire : adoption volontaire avant obligation · ~1 047 boutiques restantes</div></div>
+      <div class="obj-sec"><span class="val">30%</span><div class="lbl">objectif secondaire : adoption volontaire avant obligation · ~1 198 boutiques de plus à activer (base 9 340)</div></div>
     </div>
-    <div class="body-text" style="margin-top:8px">À 50 % d'adoption avant obligation, les ~5 000 vendeurs restants généreraient <strong>~250 sollicitations maximum</strong> à &lt;5 %, absorbables via une ouverture progressive par cohortes.</div>
-    <div class="body-text">Rythme actuel : <strong>+0,5 pt/semaine</strong>. Passage obligatoire par cohortes une fois le ratio sol./activations stabilisé sous <strong>5 %</strong>.</div>
+    <div class="body-text" style="margin-top:8px">À 50 % d'adoption avant obligation, les ~4 670 boutiques restantes généreraient <strong>~153 sollicitations maximum</strong> à &lt;5 % — absorbables via un déploiement progressif par cohortes.</div>
     <div class="pills">
       <span class="pill pill-blue">Déploiement progressif par cohortes</span>
       <span class="pill pill-green">Stabilisation ratio &lt; 5%</span>
       <span class="pill pill-orange">Passage obligatoire après validation</span>
     </div>
   </div>
+</div>
 
-  <div class="card">
-    <div class="block-title"><span class="block-num">4</span>HYPOTHÈSE ROOT CAUSE</div>
-    <div class="rc-pb">Pb → 13,7 % des vendeurs activant le MFA génèrent une sollicitation support · 318 cas depuis déc. 2025 · dispositif non industrialisable à grande échelle. Détail arbre complet page 2.</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
-      <div style="background:#ede9fe;border:1px solid #c4bffa;border-radius:6px;padding:10px">
-        <div style="font-size:10px;font-weight:800;color:#312e81;margin-bottom:4px">C1 · Multi-utilisateurs <span style="background:#5b4fcf;color:#fff;border-radius:10px;padding:1px 7px;font-size:9px;margin-left:4px">42% · 134 sol.</span></div>
-        <div style="font-size:10px;color:#534ab7;line-height:1.5">
-          ↳ Ignorance feature compte secondaire (~46 cas)<br>
-          ↳ Mobilité interne — départ/remplacement (37 cas)<br>
-          ↳ QR code non partageable / accès simultané (37 cas)<br>
-          ↳ MFA activé par un tiers (14 cas)
-        </div>
-      </div>
-      <div style="background:#fff1f2;border:1px solid #ffbfc5;border-radius:6px;padding:10px">
-        <div style="font-size:10px;font-weight:800;color:#7f1d1d;margin-bottom:4px">C2 · Reset OTP / Perte d'accès <span style="background:#d94f4f;color:#fff;border-radius:10px;padding:1px 7px;font-size:9px;margin-left:4px">31% · 99 sol.</span></div>
-        <div style="font-size:10px;color:#c0392b;line-height:1.5">
-          ↳ Changement/perte de téléphone (28 cas)<br>
-          ↳ App supprimée / codes épuisés (24 cas)<br>
-          ↳ Désactivation demandée (24 cas)<br>
-          ↳ Codes récupération épuisés (23 cas)
-        </div>
-      </div>
-      <div style="background:#ebf4fd;border:1px solid #a8c8f0;border-radius:6px;padding:10px">
-        <div style="font-size:10px;font-weight:800;color:#0c447c;margin-bottom:4px">C3 · Incompréhension <span style="background:#1a5cbf;color:#fff;border-radius:10px;padding:1px 7px;font-size:9px;margin-left:4px">18% · 56 sol.</span></div>
-        <div style="font-size:10px;color:#185fa5;line-height:1.5">
-          ↳ Codes de secours perdus (27 cas)<br>
-          ↳ Scan photo iOS non fonctionnel (~15 cas)<br>
-          ↳ MFA configuré à l'insu (~8 cas)
-        </div>
-      </div>
-      <div style="display:grid;grid-template-rows:1fr 1fr;gap:6px">
-        <div style="background:#e1f5ee;border:1px solid #7ed8b5;border-radius:6px;padding:8px">
-          <div style="font-size:10px;font-weight:800;color:#064e3b;margin-bottom:3px">C4 · Opposition <span style="background:#059669;color:#fff;border-radius:10px;padding:1px 6px;font-size:9px;margin-left:4px">11% · 35 sol.</span></div>
-          <div style="font-size:10px;color:#065f46;line-height:1.4">Friction quotidienne (17) · Pas de tél. pro (18)</div>
-        </div>
-        <div style="background:#f8f7f4;border:1px solid #d3d1c7;border-radius:6px;padding:8px">
-          <div style="font-size:10px;font-weight:800;color:#444;margin-bottom:3px">C5 · Bug technique <span style="background:#94a3b8;color:#fff;border-radius:10px;padding:1px 6px;font-size:9px;margin-left:4px">8% · 25 sol.</span></div>
-          <div style="font-size:10px;color:#666;line-height:1.4">Correctifs ciblés · tickets dev −79% depuis mars</div>
-        </div>
-      </div>
-    </div>
-    <div class="rc-hyp">Hypothèse principale → Le MFA repose sur un modèle individuel alors que les vendeurs fonctionnent en usages collaboratifs ; sans autonomie de reset (ajout/suppression appareil), chaque activation peut générer une sollicitation. <strong>69 % des cas adressables via 2 fonctionnalités Keycloak natives.</strong></div>
-  </div>
+<!-- BLOC 4 — pleine largeur pour lisibilité SVG -->
+<div class="full-card">
+  <div class="block-title"><span class="block-num">4</span>HYPOTHÈSE ROOT CAUSE</div>
+  <svg viewBox="0 0 1100 580" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:4px 0">
+  <defs><style>
+    .f{font-family:'Segoe UI',system-ui,sans-serif}
+    .badge{font-size:11px;font-weight:800}
+    .tit{font-size:13px;font-weight:700}
+    .sub{font-size:11px;font-weight:400}
+    .cas{font-size:11px;font-weight:700}
+    .det{font-size:10px;font-weight:400}
+  </style></defs>
+
+  <!-- BG -->
+  <rect x="0" y="0" width="1100" height="580" rx="12" fill="#f8f8f8" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════
+       C1 — MULTI-UTILISATEURS  42% · 134 sol.
+       x:4  w:446  h:572
+  ══════════════════════════════════ -->
+  <rect x="4" y="4" width="446" height="572" rx="8" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="1.2"/>
+  <!-- pastille C1 -->
+  <rect x="14" y="12" width="36" height="20" rx="10" fill="#5B4FCF"/>
+  <text x="32" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C1</text>
+  <text x="60" y="22" dominant-baseline="central" fill="#312E81" class="f tit">Multi-utilisateurs</text>
+  <text x="60" y="38" dominant-baseline="central" fill="#534AB7" class="f sub">134 sol. · 42%</text>
+
+  <!-- C1.1 -->
+  <rect x="10" y="54" width="434" height="118" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.85"/>
+  <rect x="18" y="62" width="40" height="18" rx="9" fill="#5B4FCF"/>
+  <text x="38" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.1</text>
+  <text x="66" y="71" dominant-baseline="central" fill="#312E81" class="f cas">Ignorance feature compte secondaire</text>
+  <text x="18" y="90" dominant-baseline="central" fill="#534AB7" class="f det">Les vendeurs ne savent pas qu'il existe une fonctionnalité</text>
+  <text x="18" y="105" dominant-baseline="central" fill="#534AB7" class="f det">de création de comptes individuels dans OSP.</text>
+  <text x="18" y="122" dominant-baseline="central" fill="#312E81" class="f cas">~46 cas</text>
+  <text x="18" y="138" dominant-baseline="central" fill="#534AB7" class="f det">Cause principale de non-activation chez les mono-comptes</text>
+  <text x="18" y="153" dominant-baseline="central" fill="#534AB7" class="f det">en statut "Later".</text>
+
+  <!-- C1.2 -->
+  <rect x="10" y="178" width="434" height="100" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.70"/>
+  <rect x="18" y="186" width="40" height="18" rx="9" fill="#5B4FCF"/>
+  <text x="38" y="195" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.2</text>
+  <text x="66" y="195" dominant-baseline="central" fill="#312E81" class="f cas">Mobilité interne</text>
+  <text x="18" y="214" dominant-baseline="central" fill="#534AB7" class="f det">Départ · remplacement · congé</text>
+  <text x="18" y="230" dominant-baseline="central" fill="#534AB7" class="f det">Le MFA est lié à un seul compte partagé — tout changement</text>
+  <text x="18" y="245" dominant-baseline="central" fill="#534AB7" class="f det">de personnel bloque l'accès.</text>
+  <text x="18" y="262" dominant-baseline="central" fill="#312E81" class="f cas">37 cas</text>
+
+  <!-- C1.3 -->
+  <rect x="10" y="284" width="434" height="100" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.55"/>
+  <rect x="18" y="292" width="40" height="18" rx="9" fill="#5B4FCF"/>
+  <text x="38" y="301" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.3</text>
+  <text x="66" y="301" dominant-baseline="central" fill="#312E81" class="f cas">Praticité · QR non partageable</text>
+  <text x="18" y="320" dominant-baseline="central" fill="#534AB7" class="f det">Accès simultané requis par plusieurs collaborateurs.</text>
+  <text x="18" y="336" dominant-baseline="central" fill="#534AB7" class="f det">Le QR code n'est visible qu'une seule fois au setup —</text>
+  <text x="18" y="351" dominant-baseline="central" fill="#534AB7" class="f det">impossible d'enrôler un 2ème téléphone après.</text>
+  <text x="18" y="368" dominant-baseline="central" fill="#312E81" class="f cas">37 cas</text>
+
+  <!-- C1.4 -->
+  <rect x="10" y="390" width="434" height="80" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.38"/>
+  <rect x="18" y="398" width="40" height="18" rx="9" fill="#5B4FCF"/>
+  <text x="38" y="407" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.4</text>
+  <text x="66" y="407" dominant-baseline="central" fill="#312E81" class="f cas">MFA activé par un tiers à l'insu du titulaire</text>
+  <text x="18" y="426" dominant-baseline="central" fill="#534AB7" class="f det">Collègue ou prestataire a configuré le MFA — le titulaire</text>
+  <text x="18" y="441" dominant-baseline="central" fill="#534AB7" class="f det">du compte n'a pas l'app et ne peut pas se connecter.</text>
+  <text x="18" y="458" dominant-baseline="central" fill="#312E81" class="f cas">14 cas</text>
+
+  <!-- ══════════════════════════════════
+       C2 — RESET OTP  31% · 99 sol.
+       x:456  w:330  h:572
+  ══════════════════════════════════ -->
+  <rect x="456" y="4" width="330" height="572" rx="8" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="1.2"/>
+  <rect x="466" y="12" width="36" height="20" rx="10" fill="#D94F4F"/>
+  <text x="484" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C2</text>
+  <text x="510" y="22" dominant-baseline="central" fill="#7F1D1D" class="f tit">Reset OTP / Perte d'accès</text>
+  <text x="510" y="38" dominant-baseline="central" fill="#E63946" class="f sub">99 sol. · 31%</text>
+
+  <!-- C2.1 -->
+  <rect x="462" y="54" width="318" height="118" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.85"/>
+  <rect x="470" y="62" width="40" height="18" rx="9" fill="#D94F4F"/>
+  <text x="490" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.1</text>
+  <text x="518" y="71" dominant-baseline="central" fill="#7F1D1D" class="f cas">Chgt / perte de téléphone</text>
+  <text x="470" y="90" dominant-baseline="central" fill="#E63946" class="f det">Départ d'un collègue · appareil perdu ou cassé.</text>
+  <text x="470" y="106" dominant-baseline="central" fill="#E63946" class="f det">Aucune autonomie de reset depuis l'OSP à ce jour —</text>
+  <text x="470" y="122" dominant-baseline="central" fill="#E63946" class="f det">passage obligatoire par le support.</text>
+  <text x="470" y="138" dominant-baseline="central" fill="#7F1D1D" class="f cas">28 cas</text>
+  <text x="470" y="154" dominant-baseline="central" fill="#E63946" class="f det">Cause n°1 de contact support évitable.</text>
+
+  <!-- C2.2 -->
+  <rect x="462" y="178" width="318" height="100" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.70"/>
+  <rect x="470" y="186" width="40" height="18" rx="9" fill="#D94F4F"/>
+  <text x="490" y="195" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.2</text>
+  <text x="518" y="195" dominant-baseline="central" fill="#7F1D1D" class="f cas">App supprimée / codes épuisés</text>
+  <text x="470" y="214" dominant-baseline="central" fill="#E63946" class="f det">App Authenticator supprimée par erreur ou</text>
+  <text x="470" y="230" dominant-baseline="central" fill="#E63946" class="f det">lors d'un changement de téléphone.</text>
+  <text x="470" y="246" dominant-baseline="central" fill="#7F1D1D" class="f cas">24 cas</text>
+  <text x="470" y="262" dominant-baseline="central" fill="#E63946" class="f det">Pas de self-service disponible.</text>
+
+  <!-- C2.3 -->
+  <rect x="462" y="284" width="318" height="100" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.55"/>
+  <rect x="470" y="292" width="40" height="18" rx="9" fill="#D94F4F"/>
+  <text x="490" y="301" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.3</text>
+  <text x="518" y="301" dominant-baseline="central" fill="#7F1D1D" class="f cas">Désactivation demandée</text>
+  <text x="470" y="320" dominant-baseline="central" fill="#E63946" class="f det">MFA jugé contraignant — vendeur souhaite</text>
+  <text x="470" y="336" dominant-baseline="central" fill="#E63946" class="f det">le désactiver mais n'a pas d'autonomie self-service.</text>
+  <text x="470" y="352" dominant-baseline="central" fill="#7F1D1D" class="f cas">24 cas</text>
+
+  <!-- C2.4 -->
+  <rect x="462" y="390" width="318" height="80" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.38"/>
+  <rect x="470" y="398" width="40" height="18" rx="9" fill="#D94F4F"/>
+  <text x="490" y="407" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.4</text>
+  <text x="518" y="407" dominant-baseline="central" fill="#7F1D1D" class="f cas">Codes récupération épuisés</text>
+  <text x="470" y="426" dominant-baseline="central" fill="#E63946" class="f det">Recovery codes mal compris ou non conservés.</text>
+  <text x="470" y="442" dominant-baseline="central" fill="#E63946" class="f det">Manipulation en erreur · séquence épuisée.</text>
+  <text x="470" y="458" dominant-baseline="central" fill="#7F1D1D" class="f cas">23 cas</text>
+
+  <!-- ══════════════════════════════════
+       C3 — INCOMPRÉHENSION  18% · 56 sol.
+       x:792  w:304  h:280
+  ══════════════════════════════════ -->
+  <rect x="792" y="4" width="304" height="282" rx="8" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="1.2"/>
+  <rect x="802" y="12" width="36" height="20" rx="10" fill="#1A5CBF"/>
+  <text x="820" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C3</text>
+  <text x="846" y="22" dominant-baseline="central" fill="#0C447C" class="f tit">Incompréhension</text>
+  <text x="846" y="38" dominant-baseline="central" fill="#185FA5" class="f sub">56 sol. · 18%</text>
+
+  <!-- C3.1 -->
+  <rect x="798" y="54" width="292" height="90" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.85"/>
+  <rect x="806" y="62" width="40" height="18" rx="9" fill="#1A5CBF"/>
+  <text x="826" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.1</text>
+  <text x="854" y="71" dominant-baseline="central" fill="#0C447C" class="f cas">Codes de secours perdus</text>
+  <text x="806" y="90" dominant-baseline="central" fill="#185FA5" class="f det">QR code non sauvegardé au setup.</text>
+  <text x="806" y="106" dominant-baseline="central" fill="#185FA5" class="f det">Vendeur ne sait pas comment récupérer l'accès.</text>
+  <text x="806" y="124" dominant-baseline="central" fill="#0C447C" class="f cas">27 cas</text>
+
+  <!-- C3.2 -->
+  <rect x="798" y="150" width="292" height="76" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.65"/>
+  <rect x="806" y="158" width="40" height="18" rx="9" fill="#1A5CBF"/>
+  <text x="826" y="167" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.2</text>
+  <text x="854" y="167" dominant-baseline="central" fill="#0C447C" class="f cas">Scan photo iOS</text>
+  <text x="806" y="186" dominant-baseline="central" fill="#185FA5" class="f det">Confusion entre photo et scan QR code.</text>
+  <text x="806" y="202" dominant-baseline="central" fill="#0C447C" class="f cas">~15 cas</text>
+
+  <!-- C3.3 -->
+  <rect x="798" y="232" width="292" height="46" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.45"/>
+  <rect x="806" y="238" width="40" height="18" rx="9" fill="#1A5CBF"/>
+  <text x="826" y="247" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.3</text>
+  <text x="854" y="247" dominant-baseline="central" fill="#0C447C" class="f cas">MFA configuré à l'insu · ~8 cas</text>
+  <text x="806" y="264" dominant-baseline="central" fill="#185FA5" class="f det">Par un collègue ou prestataire.</text>
+
+  <!-- ══════════════════════════════════
+       C4 — OPPOSITION  11% · 35 sol.
+       x:792  w:304  h:174  y:294
+  ══════════════════════════════════ -->
+  <rect x="792" y="294" width="304" height="174" rx="8" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="1.2"/>
+  <rect x="802" y="302" width="36" height="20" rx="10" fill="#059669"/>
+  <text x="820" y="312" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C4</text>
+  <text x="846" y="312" dominant-baseline="central" fill="#064E3B" class="f tit">Opposition</text>
+  <text x="846" y="328" dominant-baseline="central" fill="#059669" class="f sub">35 sol. · 11%</text>
+
+  <!-- C4.1 -->
+  <rect x="798" y="344" width="140" height="76" rx="6" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="0.8" opacity="0.80"/>
+  <rect x="806" y="350" width="40" height="18" rx="9" fill="#059669"/>
+  <text x="826" y="359" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C4.1</text>
+  <text x="806" y="378" dominant-baseline="central" fill="#064E3B" class="f cas">Friction quoti.</text>
+  <text x="806" y="394" dominant-baseline="central" fill="#065F46" class="f det">MFA perçu comme</text>
+  <text x="806" y="408" dominant-baseline="central" fill="#065F46" class="f det">trop contraignant.</text>
+  <text x="806" y="424" dominant-baseline="central" fill="#064E3B" class="f cas">17 cas</text>
+
+  <!-- C4.2 -->
+  <rect x="950" y="344" width="140" height="76" rx="6" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="0.8" opacity="0.60"/>
+  <rect x="958" y="350" width="40" height="18" rx="9" fill="#059669"/>
+  <text x="978" y="359" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C4.2</text>
+  <text x="958" y="378" dominant-baseline="central" fill="#064E3B" class="f cas">Pas tél. pro</text>
+  <text x="958" y="394" dominant-baseline="central" fill="#065F46" class="f det">Pas de téléphone</text>
+  <text x="958" y="410" dominant-baseline="central" fill="#065F46" class="f det">professionnel fourni.</text>
+  <text x="958" y="426" dominant-baseline="central" fill="#064E3B" class="f cas">18 cas</text>
+
+  <!-- ══════════════════════════════════
+       C5 — BUG TECHNIQUE  8% · 25 cas
+       x:792  w:304  h:100  y:476
+  ══════════════════════════════════ -->
+  <rect x="792" y="476" width="304" height="100" rx="8" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.2"/>
+  <rect x="802" y="484" width="36" height="20" rx="10" fill="#94A3B8"/>
+  <text x="820" y="494" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C5</text>
+  <text x="846" y="494" dominant-baseline="central" fill="#444441" class="f tit">Bug technique</text>
+  <text x="846" y="510" dominant-baseline="central" fill="#5F5E5A" class="f sub">25 cas · 8%</text>
+  <text x="802" y="534" dominant-baseline="central" fill="#5F5E5A" class="f det">Correctifs techniques ciblés · tickets dev run.</text>
+  <text x="802" y="550" dominant-baseline="central" fill="#5F5E5A" class="f det">Volume réduit de 14/sem → 3/sem (−79%) depuis mars 2026.</text>
+
+  </svg>
 </div>
 
 <!-- BLOC 5 — CONTRE-MESURES -->
@@ -207,58 +354,44 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
   <table class="cm-table">
     <thead>
       <tr>
-        <th style="width:22%">Contre-mesure</th><th style="width:6%">Cause</th><th style="width:9%">Statut</th><th style="width:40%">Mécanisme</th><th>Résultat attendu</th>
+        <th style="width:22%">Contre-mesure</th><th style="width:7%">Cause</th><th style="width:9%">Statut</th><th style="width:38%">Mécanisme</th><th>Résultat attendu</th>
       </tr>
     </thead>
     <tbody>
       <tr style="background:#f5f3ff">
-        <td><strong>Ajout OTP par utilisateur — prérequis n°1</strong></td>
-        <td><span class="badge b-c1">C1</span></td>
-        <td><span class="status-req">Prérequis</span></td>
-        <td>Keycloak natif — chaque collaborateur configure son propre OTP sur son compte secondaire. Zéro dev custom.</td>
-        <td>Adresse <strong>42 %</strong> des sollicitations (134 cas). Débloque le passage en MFA obligatoire.</td>
+        <td><strong>Acculturer sur la création de compte secondaire</strong></td>
+        <td><span class="badge b-c1">C1.1</span></td>
+        <td><span class="status-plan">Planifiée</span></td>
+        <td>Faire connaître la feature de création de comptes secondaires individuels dans OSP. Tests H1a/H1b/H2/H3 sur les boutiques "Later".</td>
+        <td>Adresse les <strong>46 cas d'ignorance</strong> de la feature — soit <strong>14,5 %</strong> des sollicitations totales.</td>
+      </tr>
+      <tr style="background:#f5f3ff">
+        <td><strong>Ajout OTP par utilisateur</strong></td>
+        <td><span class="badge b-c1">C1.3</span></td>
+        <td><span class="status-plan" style="color:#6b21a8">En analyse</span></td>
+        <td>Chaque collaborateur configure son propre OTP sur son compte secondaire via Keycloak natif.</td>
+        <td>Adresse les <strong>37 cas d'accès simultané</strong> / QR non partageable — soit <strong>11,6 %</strong> des sollicitations.</td>
       </tr>
       <tr style="background:#fff1f2">
-        <td><strong>Delete OTP self-service — prérequis n°2</strong></td>
+        <td><strong>Autonomie reset OTP</strong></td>
         <td><span class="badge b-c2">C2</span></td>
-        <td><span class="status-req">Prérequis</span></td>
-        <td>Keycloak natif — vendeur supprime et reconfigure son OTP en autonomie (reset, changement téléphone, app supprimée). Zéro dev custom.</td>
-        <td>Adresse <strong>31 %</strong> des sollicitations (99 cas). Les 2 prérequis couvrent <strong>73 %</strong> des cas.</td>
+        <td><span class="status-plan" style="color:#6b21a8">En analyse</span></td>
+        <td>Possibilité pour le vendeur de réinitialiser son OTP en autonomie depuis l'OSP (Reset Credentials flow Keycloak natif).</td>
+        <td>Adresse <strong>31 %</strong> des sollicitations (99 cas) — changement de téléphone, app supprimée, désactivation demandée.</td>
       </tr>
       <tr>
-        <td><strong>Acculturer aux usages collaboratifs</strong></td>
-        <td><span class="badge b-c1">C1</span></td>
-        <td><span class="status-plan">Planifiée</span></td>
-        <td>Promouvoir la création de comptes secondaires individuels (feature existante OSP). Tests H1a/H1b/H2/H3 sur les 6 389 boutiques "Later".</td>
-        <td>Réduire les 46 cas d'ignorance de la feature. Augmenter le taux d'adoption vers 30 %.</td>
+        <td><strong>Warning sur les codes de secours</strong></td>
+        <td><span style="display:flex;gap:4px"><span class="badge b-c2">C2.4</span><span class="badge b-c3">C3.1</span></span></td>
+        <td><span style="color:#94a3b8;font-weight:700">À prévoir</span></td>
+        <td>Afficher un avertissement explicite au setup et dans les réglages sur l'importance de conserver ses recovery codes. Rappel si codes proches de l'épuisement.</td>
+        <td>Adresse les <strong>50 cas</strong> liés aux codes épuisés/perdus (C2.4 : 23 cas + C3.1 : 27 cas) — soit <strong>15,7 %</strong> des sollicitations.</td>
       </tr>
       <tr>
-        <td><strong>Renforcer l'autonomie reset OTP</strong></td>
-        <td><span class="badge b-c2">C2</span></td>
-        <td><span class="status-plan">Planifiée</span></td>
-        <td>Reset OTP via "mot de passe oublié" (Reset Credentials flow Keycloak natif — "Reset - Conditional OTP") + Recovery codes obligatoires au setup (Keycloak 26.4).</td>
-        <td>Zéro contact support pour les 28 cas de changement de téléphone. Résout les codes épuisés.</td>
-      </tr>
-      <tr>
-        <td><strong>Réduire la contrainte d'usage MFA au quotidien</strong></td>
-        <td><span class="badge b-c3">C3</span></td>
-        <td><span class="status-dep">Déployée</span></td>
-        <td>Gestion des sessions adaptée pour réduire la fréquence de saisie du code MFA.</td>
-        <td>Réduire la friction perçue et les 17 cas d'opposition "friction quotidienne".</td>
-      </tr>
-      <tr>
-        <td><strong>Clarifier et simplifier le parcours d'activation</strong></td>
-        <td><span class="badge b-c3">C3</span></td>
-        <td><span class="status-dep">Déployée</span></td>
-        <td>Correction des pains UX, guidage renforcé, FAQ accessible, email de connexion affiché dans les réglages OSP.</td>
-        <td>Réduire les 56 cas d'incompréhension 1ère config (18 % des sollicitations).</td>
-      </tr>
-      <tr>
-        <td><strong>Step-up auth — MFA uniquement sur actions DSP2</strong></td>
-        <td><span class="badge b-c4">C4</span></td>
-        <td><span class="status-plan">Planifiée</span></td>
-        <td>MFA demandé uniquement au déclenchement de paiement/remboursement (Keycloak ACR/LoA), pas à chaque connexion.</td>
-        <td>Éliminer la friction quotidienne pour 95 %+ des usages. Adresse les 17 cas d'opposition.</td>
+        <td><strong>Interdire visuellement le scan depuis l'appareil photo</strong></td>
+        <td><span class="badge b-c3">C3.2</span></td>
+        <td><span style="color:#94a3b8;font-weight:700">À prévoir</span></td>
+        <td>Faire comprendre visuellement dans le parcours d'activation que le scan doit être effectué depuis l'app Authenticator et non depuis l'appareil photo natif iOS/Android.</td>
+        <td>Adresse les <strong>~15 cas</strong> de scan photo iOS non fonctionnel. Réduction des incompréhensions 1ère config.</td>
       </tr>
     </tbody>
   </table>
@@ -267,81 +400,48 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
 <!-- BLOC 6 — EXPÉRIMENTATIONS -->
 <div class="full-card">
   <div class="block-title"><span class="block-num">6</span>EXPÉRIMENTATIONS &amp; DÉPLOIEMENTS</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
 
-  <!-- EN COURS -->
-  <div class="section-sep">🔄 Tests en cours &amp; en analyse</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px">
-
-    <div class="exp-card" style="border-color:#fcd34d;background:#fffbeb">
-      <span class="exp-tag tag-cours">En cours · S22/2026</span>
-      <h4>Vérification email affiché dans OSP</h4>
-      <p><span class="hyp-lbl">Si</span> l'email de connexion est affiché directement dans les réglages OSP,</p>
-      <p><span class="hyp-lbl">Alors</span> le vendeur peut confirmer ou corriger son adresse sans contacter le support,</p>
-      <p><span class="hyp-lbl">Parce que</span> un email obsolète bloque l'entrée dans le parcours MFA et le reset via "mot de passe oublié".</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #fde68a"><span class="hyp-lbl">Résultat intermédiaire :</span> test sur 50 IDs · 10 % signalent un email pas à jour → <strong>~2 000 emails potentiellement obsolètes</strong> sur 20 000 utilisateurs actifs. À industrialiser.</p>
+    <!-- T1 — RÉALISÉ -->
+    <div class="exp-card" style="border-top:3px solid #1a7a3c;background:#f0fdf4">
+      <span class="exp-tag tag-dep">Réalisé · 10–15/06/2026</span>
+      <h4>Affichage email rattaché au compte</h4>
+      <p><span class="hyp-lbl">Si</span> l'email rattaché au compte vendeur est affiché dans l'OSP,</p>
+      <p><span class="hyp-lbl">Alors</span> le vendeur peut identifier et signaler une adresse incorrecte avant de configurer son MFA,</p>
+      <p><span class="hyp-lbl">Parce que</span> la configuration MFA nécessite un email à jour — le code de setup est envoyé par mail.</p>
+      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #bbf7d0"><span class="hyp-lbl">Résultat :</span> 5/50 vendeurs signalent un email incorrect (10%). Taux à confirmer sur cohorte élargie.</p>
+      <p><span class="hyp-lbl">Suite :</span> relancer sur 100 vendeurs avec CTA différencié (✓ Correct / ✗ Incorrect). Si >10% confirmé → industrialiser un process de mise à jour automatisé.</p>
     </div>
 
-    <div class="exp-card" style="background:#f3e8ff;border-color:#c084fc">
-      <span class="exp-tag tag-analyse">En analyse</span>
-      <h4>Reset MFA via "mot de passe oublié"</h4>
-      <p><span class="hyp-lbl">Si</span> un vendeur bloqué après changement de téléphone déclenche un reset de mot de passe,</p>
-      <p><span class="hyp-lbl">Alors</span> Keycloak lui propose de reconfigurer son OTP en autonomie (Reset - Conditional OTP natif),</p>
-      <p><span class="hyp-lbl">Parce que</span> 28 cas de perte d'accès liés au changement de téléphone passent aujourd'hui par le support.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #d8b4fe"><span class="hyp-lbl">En cours :</span> vérification que le sous-flow est activé et que l'ancien OTP est bien supprimé (bug connu sur versions antérieures). Résultat attendu : zéro contact support pour changement de téléphone.</p>
-    </div>
-
-    <div class="exp-card">
-      <span class="exp-tag tag-dep">Déployé · 13/04/2026</span>
-      <h4>Simplification parcours MFA</h4>
-      <p><span class="hyp-lbl">Si</span> le parcours MFA est plus clair, guidé et pédagogique,</p>
-      <p><span class="hyp-lbl">Alors</span> les sollicitations liées à l'incompréhension diminuent,</p>
-      <p><span class="hyp-lbl">Parce que</span> les pains UX identifiés (wording, guidage Authenticator, FAQ) sont directement à l'origine de 56 cas d'incompréhension.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #e0e0e0"><span class="hyp-lbl">Impact observé :</span> tickets dev 14/sem → 3/sem (−79%). Contribution partielle mesurée.</p>
-    </div>
-  </div>
-
-  <!-- TESTS À FAIRE -->
-  <div class="section-sep">📬 Tests à faire — Communication ciblée adoption · 6 389 boutiques "Later" segmentées en 4 cohortes</div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px">
-
+    <!-- T2 — À PLANIFIER -->
     <div class="exp-card" style="border-top:3px solid #5b4fcf">
-      <span class="exp-tag" style="background:#ede9fe;color:#312e81">H1a · C1 · ~2 587 boutiques</span>
-      <h4>Lever le frein compte partagé</h4>
+      <span class="exp-tag" style="background:#ede9fe;color:#312e81">À planifier · ~2 500 boutiques</span>
+      <h4>Communication création compte secondaire</h4>
       <p><span class="hyp-lbl">Si</span> on montre aux vendeurs mono-compte "Later" que leur hésitation vient peut-être d'un compte partagé et qu'il existe une solution en 2 clics,</p>
       <p><span class="hyp-lbl">Alors</span> le taux de clic vers la création de compte secondaire augmente et débloque l'activation MFA,</p>
-      <p><span class="hyp-lbl">Parce que</span> 42 % des sollicitations MFA viennent du partage de compte — l'ignorance de la feature est la première cause dans les verbatims.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #ede9fe;font-size:9.5px"><strong>Titre :</strong> Activez le MFA en toute sérénité — même si vous partagez votre accès<br><strong>Corps :</strong> Plusieurs personnes utilisent le même compte ? Créez des accès individuels en 2 clics depuis Gestion des utilisateurs. Chacun aura son propre code.</p>
+      <p><span class="hyp-lbl">Parce que</span> 42 % des sollicitations viennent du partage de compte — l'ignorance de la feature est la première cause dans les verbatims.</p>
     </div>
 
-    <div class="exp-card" style="border-top:3px solid #5b4fcf">
-      <span class="exp-tag" style="background:#ede9fe;color:#312e81">H1b · C1 · ~2 586 boutiques</span>
-      <h4>Insister sur l'obligation réglementaire</h4>
-      <p><span class="hyp-lbl">Si</span> on insiste sur l'obligation réglementaire (sept. 2026) et les bénéfices sécurité, sans mentionner le partage de compte en priorité,</p>
-      <p><span class="hyp-lbl">Alors</span> les vendeurs activent le MFA directement sans chercher à résoudre le problème de partage en amont,</p>
-      <p><span class="hyp-lbl">Parce que</span> certains vendeurs mono-compte n'ont pas de problème de partage — leur friction est l'effort perçu, pas un blocage technique.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #ede9fe;font-size:9.5px"><strong>Titre :</strong> Le MFA devient obligatoire en septembre 2026 — activez-le maintenant<br><strong>Corps :</strong> Protégez votre boutique en 2 minutes. Si vous avez plusieurs utilisateurs, gérez leurs droits depuis Gestion des utilisateurs.</p>
+    <!-- T3 — À PLANIFIER -->
+    <div class="exp-card" style="border-top:3px solid #1a5cbf">
+      <span class="exp-tag" style="background:#ebf4fd;color:#0c447c">À planifier · C3.2</span>
+      <h4>Visuel interdisant le scan depuis l'appareil photo</h4>
+      <p><span class="hyp-lbl">Si</span> on intègre un visuel explicite dans le parcours indiquant que le scan doit être fait depuis l'app Authenticator et non depuis l'appareil photo natif,</p>
+      <p><span class="hyp-lbl">Alors</span> les nouveaux cas de blocage liés à cette confusion disparaissent,</p>
+      <p><span class="hyp-lbl">Parce que</span> ~15 cas sont directement liés à cette erreur de manipulation (C3.2).</p>
     </div>
 
+    <!-- T4 — À PLANIFIER -->
     <div class="exp-card" style="border-top:3px solid #d94f4f">
-      <span class="exp-tag" style="background:#fff1f2;color:#7f1d1d">H2 · C2 · ~655 boutiques</span>
-      <h4>Réactiver les vendeurs avec anciens comptes secondaires</h4>
-      <p><span class="hyp-lbl">Si</span> on rappelle aux vendeurs avec anciens comptes secondaires que chaque utilisateur doit avoir son propre MFA et qu'un compte partagé expose en cas de départ,</p>
-      <p><span class="hyp-lbl">Alors</span> ils vont vérifier leurs comptes actifs et activer le MFA individuellement,</p>
-      <p><span class="hyp-lbl">Parce que</span> ces vendeurs connaissent déjà la feature — leur frein est l'habitude du partage, pas la méconnaissance.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #fff1f2;font-size:9.5px"><strong>Titre :</strong> Vos comptes utilisateurs sont-ils encore à jour ?<br><strong>Corps :</strong> Chaque collaborateur doit avoir son propre accès MFA. Un compte partagé = un risque si quelqu'un quitte l'entreprise. Vérifiez depuis Gestion des utilisateurs.</p>
-    </div>
-
-    <div class="exp-card" style="border-top:3px solid #1a7a3c">
-      <span class="exp-tag" style="background:#e6f4ea;color:#14532d">H3 · C3 · ~565 boutiques</span>
-      <h4>Déclencher l'action sur structure déjà prête</h4>
-      <p><span class="hyp-lbl">Si</span> on indique aux vendeurs avec comptes secondaires récents que l'étape suivante est simplement d'activer le MFA sur chaque compte,</p>
-      <p><span class="hyp-lbl">Alors</span> le taux d'activation sera le plus élevé des 4 cohortes car il n'y a aucun blocage fonctionnel,</p>
-      <p><span class="hyp-lbl">Parce que</span> ces vendeurs ont déjà la bonne structure (comptes individuels) — il ne manque que le déclencheur.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #e6f4ea;font-size:9.5px"><strong>Titre :</strong> Vos comptes sont bien configurés — activez le MFA maintenant<br><strong>Corps :</strong> Il ne reste qu'une étape : chaque collaborateur active son propre MFA. 2 minutes par personne, et votre boutique est sécurisée.</p>
+      <span class="exp-tag" style="background:#fff1f2;color:#7f1d1d">À planifier · C2.4 + C3.1</span>
+      <h4>Revoir UI codes de secours — importance visible</h4>
+      <p><span class="hyp-lbl">Si</span> on revoit l'UI du parcours d'activation pour mettre fortement en avant l'importance de sauvegarder les codes de secours (design, wording, friction intentionnelle),</p>
+      <p><span class="hyp-lbl">Alors</span> le nombre de vendeurs bloqués faute de recovery codes diminue,</p>
+      <p><span class="hyp-lbl">Parce que</span> 50 cas sont liés à des codes perdus ou épuisés — soit <strong>15,7 %</strong> des sollicitations (C2.4 : 23 + C3.1 : 27).</p>
     </div>
 
   </div>
-  <div class="note-footer">Déploiement = évolution mise à disposition de tous. Test = hypothèse vérifiée sur périmètre restreint. H1a vs H1b = test A/B sur population mono-compte "Later" (moitié/moitié). Mesure : taux de clic et d'activation à J+7 et J+14.</div>
+  <div class="note-footer">Réalisé = test exécuté avec résultats disponibles. À planifier = hypothèse définie, périmètre à confirmer. Mesure : taux de clic et d'activation à J+7 et J+14.</div>
 </div>
 
 <!-- BLOC 7 — LEARNINGS -->
@@ -354,15 +454,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
     </div>
     <div class="learn-card">
       <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p><strong>69 % des sollicitations adressables via 2 fonctionnalités Keycloak natives</strong> (ajout OTP + delete OTP self-service), sans dev custom. Ces 2 prérequis conditionnent le passage en MFA obligatoire sans saturer le support.</p>
+      <p><strong>69 % des sollicitations adressables via 2 fonctionnalités Keycloak natives</strong> (ajout OTP + delete OTP self-service). Ces 2 prérequis conditionnent le passage en MFA obligatoire sans saturer le support.</p>
     </div>
     <div class="learn-card">
       <span class="learn-badge lbg-confirm">Confirmé</span>
       <p>Les améliorations UX du parcours (déployées 13/04) ont fait chuter les tickets dev de <strong>14/sem → 3/sem (−79%)</strong>. La simplification du parcours est un levier rapide et directement mesurable.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p>L'opposition se divise en <strong>3 populations distinctes</strong> à traiter différemment : friction quotidienne (17 cas), pas de téléphone pro (18 cas), perte de confiance post-mauvaise expérience. Un traitement uniforme par le support n'est pas efficace.</p>
     </div>
     <div class="learn-card">
       <span class="learn-badge lbg-new">Nouveau</span>
@@ -370,141 +466,18 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
     </div>
     <div class="learn-card">
       <span class="learn-badge lbg-new">Nouveau</span>
-      <p>Test email (50 IDs) : <strong>10 % d'emails pas à jour</strong> → ~2 000 emails potentiellement obsolètes sur 20 000 utilisateurs actifs. À industrialiser — prérequis direct pour le reset MFA via "mot de passe oublié".</p>
+      <p>Test email (50 IDs) : <strong>10 % d'emails pas à jour</strong> → ~2 000 emails potentiellement obsolètes sur 20 000 utilisateurs actifs. Prérequis direct pour le reset MFA via "mot de passe oublié".</p>
     </div>
     <div class="learn-card">
-      <span class="learn-badge lbg-pursue">À poursuivre</span>
-      <p>Taux d'adoption stagne à <strong>~20 %</strong> malgré la progression des vagues. 6 389 boutiques "Later" sont la réserve. Si 14 % activent, l'objectif 30 % est atteint — les tests H1a/H1b/H2/H3 doivent trancher sur le message le plus efficace.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-pursue">À poursuivre</span>
-      <p>Ratio sollicitations/activations hebdo oscille entre <strong>11 % et 14 %</strong> selon les semaines. La stabilisation sous 5 % n'est pas atteinte et conditionne le passage en MFA obligatoire par cohortes.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-invalid">Invalidé</span>
+      <span class="learn-badge lbg-confirm">Confirmé</span>
       <p>Les vendeurs chinois ne sont pas bloqués par les apps Authenticator → le problème n'est pas l'outil mais son intégration dans les <strong>usages collaboratifs</strong>. Confirme que C1 est la cause structurante principale.</p>
     </div>
   </div>
-  <div class="insight">
-    <strong>Insight clé : le problème du MFA n'est pas d'abord technologique — c'est un écart entre un modèle d'authentification individuel et des usages vendeurs collaboratifs. 69 % des sollicitations sont adressables sans dev custom.</strong>
-    Court terme : activer les 2 prérequis Keycloak natifs (ajout OTP + delete OTP self-service) + tester les messages H1a/H1b/H2/H3 sur les 6 389 boutiques "Later". Long terme : step-up auth DSP2 uniquement sur actions sensibles + orienter vers des comptes personnels individuels.
-  </div>
 </div>
 
-<!-- PAGE 2 — ARBRE ROOT CAUSES PLEINE PAGE -->
-<div class="full-card page-break" style="margin-top:20px">
-  <div class="block-title" style="margin-bottom:8px"><span class="block-num">4</span>HYPOTHÈSE ROOT CAUSE — Arbre des causes détaillé</div>
-  <div style="font-size:11px;color:#888;margin-bottom:16px">318 sollicitations · 162 requêtes OSP + 156 emails selfcare · déc. 2025 – juin 2026 · surface proportionnelle au volume · les 2 premières thématiques représentent 73 % des cas</div>
 
-  <svg viewBox="0 0 1100 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;border-radius:8px">
-    <!-- BG -->
-    <rect x="0" y="0" width="1100" height="440" rx="10" fill="#fafaf9" stroke="#e0e0e0" stroke-width="1"/>
+<!-- PAGE 2 supprimée — arbre intégré dans bloc 4 -->
 
-    <!-- ══ C1 MULTI-UTILISATEURS 42% — 456px large ══ -->
-    <rect x="6" y="8" width="456" height="424" rx="8" fill="#ede9fe" stroke="#c4bffa" stroke-width="1.2"/>
-    <text x="234" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#312e81" font-family="system-ui,sans-serif">Multi-utilisateurs</text>
-    <text x="234" y="48" text-anchor="middle" font-size="10" fill="#534ab7" font-family="system-ui,sans-serif">134 sol. · 42%</text>
-
-    <rect x="12" y="62" width="444" height="86" rx="5" fill="#ede9fe" stroke="#c4bffa" stroke-width="0.6" opacity="0.85"/>
-    <text x="234" y="95" text-anchor="middle" font-size="10" font-weight="600" fill="#312e81" font-family="system-ui,sans-serif">Ignorance feature compte secondaire</text>
-    <text x="234" y="110" text-anchor="middle" font-size="9" fill="#534ab7" font-family="system-ui,sans-serif">~46 cas · 34% de C1</text>
-    <text x="234" y="125" text-anchor="middle" font-size="8.5" fill="#6d5fd6" font-family="system-ui,sans-serif">Vendeurs ne savent pas qu'ils peuvent créer des comptes individuels dans OSP</text>
-
-    <rect x="12" y="154" width="444" height="78" rx="5" fill="#ede9fe" stroke="#c4bffa" stroke-width="0.6" opacity="0.70"/>
-    <text x="234" y="184" text-anchor="middle" font-size="10" font-weight="600" fill="#312e81" font-family="system-ui,sans-serif">Mobilité interne</text>
-    <text x="234" y="199" text-anchor="middle" font-size="9" fill="#534ab7" font-family="system-ui,sans-serif">37 cas · départ · remplacement · congé</text>
-    <text x="234" y="214" text-anchor="middle" font-size="8.5" fill="#6d5fd6" font-family="system-ui,sans-serif">MFA lié à un compte partagé — tout changement de personnel bloque l'accès</text>
-
-    <rect x="12" y="238" width="444" height="78" rx="5" fill="#ede9fe" stroke="#c4bffa" stroke-width="0.6" opacity="0.55"/>
-    <text x="234" y="268" text-anchor="middle" font-size="10" font-weight="600" fill="#312e81" font-family="system-ui,sans-serif">Praticité — QR code non partageable</text>
-    <text x="234" y="283" text-anchor="middle" font-size="9" fill="#534ab7" font-family="system-ui,sans-serif">37 cas · accès simultané · QR visible une seule fois</text>
-    <text x="234" y="298" text-anchor="middle" font-size="8.5" fill="#6d5fd6" font-family="system-ui,sans-serif">Impossible d'enrôler plusieurs téléphones après le setup initial</text>
-
-    <rect x="12" y="322" width="444" height="64" rx="5" fill="#ede9fe" stroke="#c4bffa" stroke-width="0.6" opacity="0.38"/>
-    <text x="234" y="349" text-anchor="middle" font-size="10" font-weight="600" fill="#312e81" font-family="system-ui,sans-serif">MFA activé par un tiers à l'insu du principal</text>
-    <text x="234" y="364" text-anchor="middle" font-size="9" fill="#534ab7" font-family="system-ui,sans-serif">14 cas · collègue · prestataire</text>
-    <text x="234" y="378" text-anchor="middle" font-size="8.5" fill="#6d5fd6" font-family="system-ui,sans-serif">Titulaire du compte n'a pas configuré le MFA lui-même</text>
-
-    <!-- ══ C2 RESET OTP 31% — 330px large ══ -->
-    <rect x="468" y="8" width="330" height="424" rx="8" fill="#fff1f2" stroke="#ffbfc5" stroke-width="1.2"/>
-    <text x="633" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d" font-family="system-ui,sans-serif">Reset OTP / Perte d'accès</text>
-    <text x="633" y="48" text-anchor="middle" font-size="10" fill="#e63946" font-family="system-ui,sans-serif">99 sol. · 31%</text>
-
-    <rect x="474" y="62" width="318" height="74" rx="5" fill="#fff1f2" stroke="#ffbfc5" stroke-width="0.6" opacity="0.85"/>
-    <text x="633" y="91" text-anchor="middle" font-size="10" font-weight="600" fill="#7f1d1d" font-family="system-ui,sans-serif">Changement / perte de téléphone</text>
-    <text x="633" y="106" text-anchor="middle" font-size="9" fill="#e63946" font-family="system-ui,sans-serif">28 cas · départ collègue inclus</text>
-    <text x="633" y="121" text-anchor="middle" font-size="8.5" fill="#c0392b" font-family="system-ui,sans-serif">Aucune autonomie de reset depuis l'OSP à ce jour</text>
-
-    <rect x="474" y="142" width="318" height="68" rx="5" fill="#fff1f2" stroke="#ffbfc5" stroke-width="0.6" opacity="0.70"/>
-    <text x="633" y="170" text-anchor="middle" font-size="10" font-weight="600" fill="#7f1d1d" font-family="system-ui,sans-serif">App supprimée / codes épuisés</text>
-    <text x="633" y="185" text-anchor="middle" font-size="9" fill="#e63946" font-family="system-ui,sans-serif">24 cas</text>
-    <text x="633" y="200" text-anchor="middle" font-size="8.5" fill="#c0392b" font-family="system-ui,sans-serif">Passage obligatoire par le support — pas d'autonomie self-service</text>
-
-    <rect x="474" y="216" width="318" height="68" rx="5" fill="#fff1f2" stroke="#ffbfc5" stroke-width="0.6" opacity="0.55"/>
-    <text x="633" y="244" text-anchor="middle" font-size="10" font-weight="600" fill="#7f1d1d" font-family="system-ui,sans-serif">Désactivation demandée</text>
-    <text x="633" y="259" text-anchor="middle" font-size="9" fill="#e63946" font-family="system-ui,sans-serif">24 cas · MFA jugé contraignant</text>
-    <text x="633" y="274" text-anchor="middle" font-size="8.5" fill="#c0392b" font-family="system-ui,sans-serif">Souhait de désactiver — pas d'autonomie self-service actuellement</text>
-
-    <rect x="474" y="290" width="318" height="68" rx="5" fill="#fff1f2" stroke="#ffbfc5" stroke-width="0.6" opacity="0.38"/>
-    <text x="633" y="318" text-anchor="middle" font-size="10" font-weight="600" fill="#7f1d1d" font-family="system-ui,sans-serif">Codes récupération épuisés</text>
-    <text x="633" y="333" text-anchor="middle" font-size="9" fill="#e63946" font-family="system-ui,sans-serif">23 cas · manipulation en erreur</text>
-    <text x="633" y="348" text-anchor="middle" font-size="8.5" fill="#c0392b" font-family="system-ui,sans-serif">Recovery codes mal compris ou non conservés au setup</text>
-
-    <!-- ══ C3 INCOMPRÉHENSION 18% ══ -->
-    <rect x="804" y="8" width="290" height="206" rx="8" fill="#ebf4fd" stroke="#a8c8f0" stroke-width="1.2"/>
-    <text x="949" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#0c447c" font-family="system-ui,sans-serif">Incompréhension</text>
-    <text x="949" y="48" text-anchor="middle" font-size="10" fill="#185fa5" font-family="system-ui,sans-serif">56 sol. · 18%</text>
-
-    <rect x="810" y="62" width="278" height="52" rx="4" fill="#ebf4fd" stroke="#a8c8f0" stroke-width="0.5" opacity="0.85"/>
-    <text x="949" y="83" text-anchor="middle" font-size="9.5" font-weight="600" fill="#0c447c" font-family="system-ui,sans-serif">Codes de secours perdus</text>
-    <text x="949" y="98" text-anchor="middle" font-size="8.5" fill="#185fa5" font-family="system-ui,sans-serif">27 cas · QR code non sauvegardé</text>
-
-    <rect x="810" y="120" width="278" height="44" rx="4" fill="#ebf4fd" stroke="#a8c8f0" stroke-width="0.5" opacity="0.65"/>
-    <text x="949" y="138" text-anchor="middle" font-size="9.5" font-weight="600" fill="#0c447c" font-family="system-ui,sans-serif">Scan photo iOS non fonctionnel</text>
-    <text x="949" y="153" text-anchor="middle" font-size="8.5" fill="#185fa5" font-family="system-ui,sans-serif">~15 cas · confusion avec QR code</text>
-
-    <rect x="810" y="170" width="278" height="30" rx="4" fill="#ebf4fd" stroke="#a8c8f0" stroke-width="0.5" opacity="0.45"/>
-    <text x="949" y="182" text-anchor="middle" font-size="9" font-weight="600" fill="#0c447c" font-family="system-ui,sans-serif">MFA configuré à l'insu</text>
-    <text x="949" y="195" text-anchor="middle" font-size="8" fill="#185fa5" font-family="system-ui,sans-serif">~8 cas · par un tiers / collègue</text>
-
-    <!-- ══ C4 OPPOSITION 11% ══ -->
-    <rect x="804" y="220" width="290" height="130" rx="8" fill="#e1f5ee" stroke="#7ed8b5" stroke-width="1.2"/>
-    <text x="949" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#064e3b" font-family="system-ui,sans-serif">Opposition</text>
-    <text x="949" y="258" text-anchor="middle" font-size="10" fill="#059669" font-family="system-ui,sans-serif">35 sol. · 11%</text>
-
-    <rect x="810" y="270" width="132" height="38" rx="4" fill="#e1f5ee" stroke="#7ed8b5" stroke-width="0.5" opacity="0.80"/>
-    <text x="876" y="284" text-anchor="middle" font-size="9" font-weight="600" fill="#064e3b" font-family="system-ui,sans-serif">Friction quotidienne</text>
-    <text x="876" y="298" text-anchor="middle" font-size="8" fill="#059669" font-family="system-ui,sans-serif">17 cas</text>
-
-    <rect x="956" y="270" width="132" height="38" rx="4" fill="#e1f5ee" stroke="#7ed8b5" stroke-width="0.5" opacity="0.60"/>
-    <text x="1022" y="284" text-anchor="middle" font-size="9" font-weight="600" fill="#064e3b" font-family="system-ui,sans-serif">Pas de tél. pro</text>
-    <text x="1022" y="298" text-anchor="middle" font-size="8" fill="#059669" font-family="system-ui,sans-serif">18 cas</text>
-
-    <text x="949" y="328" text-anchor="middle" font-size="8.5" fill="#065f46" font-family="system-ui,sans-serif">3 populations à traiter distinctement par le support</text>
-
-    <!-- ══ C5 BUG TECHNIQUE 8% ══ -->
-    <rect x="804" y="356" width="290" height="76" rx="8" fill="#f8f7f4" stroke="#d3d1c7" stroke-width="1.2"/>
-    <text x="949" y="378" text-anchor="middle" font-size="12" font-weight="700" fill="#444441" font-family="system-ui,sans-serif">Bug technique</text>
-    <text x="949" y="396" text-anchor="middle" font-size="10" fill="#5f5e5a" font-family="system-ui,sans-serif">25 cas · 8%</text>
-    <text x="949" y="416" text-anchor="middle" font-size="8.5" fill="#777" font-family="system-ui,sans-serif">Correctifs ciblés · −79% depuis mars 2026</text>
-
-    <!-- NOTE BAS -->
-    <text x="10" y="432" font-size="8" fill="#aaa" font-family="system-ui,sans-serif">318 sollicitations totales · 162 requêtes OSP + 156 emails selfcare · déc. 2025 – juin 2026</text>
-  </svg>
-
-  <!-- LÉGENDE + INSIGHT -->
-  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px;font-size:10px">
-    <div style="background:#ede9fe;border-radius:6px;padding:8px 10px;text-align:center"><strong style="color:#312e81">C1 Multi-util.</strong><br><span style="color:#534ab7">134 sol. · 42%</span></div>
-    <div style="background:#fff1f2;border-radius:6px;padding:8px 10px;text-align:center"><strong style="color:#7f1d1d">C2 Reset OTP</strong><br><span style="color:#e63946">99 sol. · 31%</span></div>
-    <div style="background:#ebf4fd;border-radius:6px;padding:8px 10px;text-align:center"><strong style="color:#0c447c">C3 Incompréhension</strong><br><span style="color:#185fa5">56 sol. · 18%</span></div>
-    <div style="background:#e1f5ee;border-radius:6px;padding:8px 10px;text-align:center"><strong style="color:#064e3b">C4 Opposition</strong><br><span style="color:#059669">35 sol. · 11%</span></div>
-    <div style="background:#f8f7f4;border-radius:6px;padding:8px 10px;text-align:center"><strong style="color:#444">C5 Bug technique</strong><br><span style="color:#777">25 cas · 8%</span></div>
-  </div>
-  <div class="insight arbre-insight" style="margin-top:12px">
-    <strong>C1 + C2 = 73 % des sollicitations — adressables par 2 fonctionnalités Keycloak natives (ajout OTP par utilisateur + delete OTP self-service), sans dev custom.</strong>
-    Condition sine qua non du passage en MFA obligatoire : activer ces 2 prérequis avant de déclencher les cohortes. L'arbre confirme que le problème est organisationnel, pas technologique.
-  </div>
-</div>
 
 </div><!-- /a3-wrap -->
 </body>
