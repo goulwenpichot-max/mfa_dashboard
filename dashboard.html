@@ -98,12 +98,16 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
 <div class="grid-top">
   <div class="card">
     <div class="block-title"><span class="block-num">1</span>CONTEXTE</div>
-    <div class="accroche">Le portail vendeurs OSP permet à ~10 485 boutiques actives de réaliser des actions sensibles (paiements, remboursements), nécessitant une authentification forte conforme aux exigences réglementaires DSP2 et aux standards du marché.</div>
-    <div class="body-text">La mise en place d'un MFA obligatoire d'ici <strong>octobre 2026</strong> est un impératif de conformité et de maîtrise du risque. Or, le dispositif actuel, conçu pour un usage individuel, est en décalage avec les usages réels des vendeurs, largement basés sur des organisations collaboratives avec comptes partagés.</div>
+    <div class="accroche">Le portail vendeurs OSP compte <strong>~9 340 vendeurs actifs</strong> réalisant des actions sensibles (paiements, remboursements), nécessitant une authentification forte conforme aux exigences réglementaires DSP2 et aux standards du marché.</div>
+    <div class="body-text">La mise en place d'un MFA obligatoire d'ici <strong>octobre 2026</strong> est un impératif de conformité et de maîtrise du risque. Depuis décembre 2025, le MFA est déployé progressivement en mode optionnel — une phase de test pour valider le dispositif et limiter les risques avant de le rendre obligatoire à grande échelle.</div>
     <div class="stats-row">
-      <div class="stat-box"><span class="stat-val">20,0%</span><div class="stat-lbl">d'adoption boutiques au 14/06/2026</div></div>
-      <div class="stat-box"><span class="stat-val">42%</span><div class="stat-lbl">des sollicitations liées aux comptes multi-utilisateurs</div></div>
-      <div class="stat-box"><span class="stat-val">13,7%</span><div class="stat-lbl">des vendeurs activés génèrent une sollicitation support</div></div>
+      <div class="stat-box">
+        <span class="stat-val">24,8%</span>
+        <div class="stat-lbl">d'adoption sur les 6 460 boutiques actives éligibles</div>
+        <div style="font-size:10px;color:#aaa;margin-top:3px">20,0% tous éligibles confondus</div>
+      </div>
+      <div class="stat-box"><span class="stat-val">13,7%</span><div class="stat-lbl">des vendeurs activés génèrent une sollicitation support (318 sol. depuis déc. 2025)</div></div>
+      <div class="stat-box"><span class="stat-val">69%</span><div class="stat-lbl">des sollicitations liées à un besoin de paramétrage autonome (reset OTP, ajout appareil)</div></div>
     </div>
     <div class="angle">Le sujet n'est donc plus uniquement de déployer le MFA, mais de le rendre adoptable à grande échelle avant de pouvoir le rendre obligatoire.</div>
   </div>
@@ -112,12 +116,25 @@ body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5
     <div class="block-title"><span class="block-num">2</span>SITUATION ACTUELLE</div>
     <div class="ref-date">État au 14/06/2026 — parcours MFA optionnel. 318 sollicitations depuis déc. 2025 (162 requêtes OSP + 156 emails selfcare).</div>
     <div class="stats-row-2">
-      <div class="stat-box-lg"><span class="stat-val-lg">2 098</span><div class="stat-lbl-lg">boutiques MFA activé sur 10 485 éligibles</div></div>
-      <div class="stat-box-lg"><span class="stat-val-lg">8 387</span><div class="stat-lbl-lg">boutiques restant à activer</div></div>
+      <div class="stat-box-lg"><span class="stat-val-lg">1 604</span><div class="stat-lbl-lg">boutiques MFA activé sur 6 460 actives éligibles</div></div>
+      <div class="stat-box-lg"><span class="stat-val-lg">7 736</span><div class="stat-lbl-lg">boutiques restantes à activer d'ici oct. 2026 (base 9 340)</div></div>
     </div>
-    <div class="body-text">Taux de blocage : <strong>13,7 %</strong> (318 sol. / 2 326 OTP actifs). <strong>69 % des sollicitations sont adressables via 2 fonctionnalités Keycloak natives</strong> (ajout OTP par utilisateur + delete OTP self-service) sans dev custom.</div>
-    <div class="risk-box">À dispositif constant, <strong>8 387 boutiques restantes × 13,7 % = ~1 150 vendeurs en difficulté</strong> au passage en MFA obligatoire : blocages, saturation support, rejet global du dispositif.</div>
-    <div class="body-text" style="margin-bottom:0">Nouvelle vague 10/06 : +1 225 boutiques · 115 activations spontanées (9,4%) · 6 389 boutiques "Later" = réserve d'activation principale.</div>
+    <div class="body-text">Le taux de blocage observé est de <strong>13,7 %</strong> — 318 sollicitations reçues depuis déc. 2025 (162 requêtes OSP + 156 emails selfcare).</div>
+    <div style="background:#1a1a1a;border-radius:8px;padding:14px 16px;margin-top:10px">
+      <div style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">⚠️ Risque opérationnel projeté — MFA obligatoire oct. 2026</div>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px">
+        <div style="text-align:center;flex-shrink:0">
+          <div style="font-size:36px;font-weight:800;color:#e63946;line-height:1">~1 060</div>
+          <div style="font-size:10px;color:#aaa;margin-top:2px">sollicitations potentielles</div>
+        </div>
+        <div style="font-size:11px;color:#ccc;line-height:1.7;border-left:2px solid #333;padding-left:14px">
+          <span style="color:#fff;font-weight:700">7 736</span> boutiques restantes<br>
+          × <span style="color:#fff;font-weight:700">13,7 %</span> taux de blocage actuel<br>
+          = <span style="color:#e63946;font-weight:800">~1 060 vendeurs en difficulté</span>
+        </div>
+      </div>
+      <div style="font-size:10px;color:#999;line-height:1.6;border-top:1px solid #333;padding-top:8px">Blocages utilisateurs au moment de l'obligation · saturation du support · risque de rejet global du dispositif</div>
+    </div>
   </div>
 </div>
 
