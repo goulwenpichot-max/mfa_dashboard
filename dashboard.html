@@ -2,483 +2,285 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A3 MFA Obligatoire – Octopia v2.0</title>
+<title>318 sollicitations MFA — Octopia OSP</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;background:#f5f5f3;color:#1a1a1a;padding:20px}
-.a3-wrap{max-width:1400px;margin:0 auto}
-.header{background:#1a1a1a;color:#fff;padding:16px 20px;border-radius:8px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:flex-start}
-.header h1{font-size:18px;font-weight:700;margin-bottom:4px}
-.header .meta{font-size:11px;color:#aaa}
-.header .tag{background:#333;border:1px solid #555;color:#ccc;font-size:10px;padding:3px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-left:16px}
-.grid-top{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.grid-mid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.card{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px}
-.full-card{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px;margin-bottom:12px}
-.block-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#1a1a1a;color:#fff;border-radius:50%;font-size:12px;font-weight:700;margin-right:8px;flex-shrink:0}
-.block-title{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#444;display:flex;align-items:center;margin-bottom:12px}
-.accroche{font-size:13px;font-weight:700;line-height:1.5;margin-bottom:10px}
-.body-text{font-size:12px;line-height:1.6;color:#333;margin-bottom:10px}
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
-.stat-box{background:#faf9f7;border:1px solid #e8e8e8;border-radius:6px;padding:10px 12px;text-align:center}
-.stat-val{font-size:22px;font-weight:800;color:#1a1a1a;display:block;line-height:1.1}
-.stat-lbl{font-size:10px;color:#666;margin-top:3px;line-height:1.4}
-.stats-row-2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
-.stat-box-lg{background:#faf9f7;border:1px solid #e8e8e8;border-radius:6px;padding:10px 12px;text-align:center}
-.stat-val-lg{font-size:28px;font-weight:800;color:#1a1a1a;display:block}
-.stat-lbl-lg{font-size:10px;color:#666;margin-top:3px}
-.risk-box{background:#fff5f5;border-left:3px solid #d94f4f;padding:10px 12px;border-radius:0 4px 4px 0;margin:10px 0;font-size:11px;line-height:1.6;color:#333}
-.risk-box strong{color:#c0392b}
-.angle{font-size:12px;font-weight:700;line-height:1.5;margin-top:10px;color:#1a1a1a}
-.ref-date{font-size:11px;color:#888;margin-bottom:10px}
-.obj-main{background:#1a1a1a;color:#fff;border-radius:6px;padding:12px 16px;margin:8px 0}
-.obj-main .val{font-size:32px;font-weight:800;display:block}
-.obj-main .lbl{font-size:10px;color:#aaa;margin-top:2px}
-.obj-sec{background:#faf9f7;border:1px solid #e0e0e0;border-radius:6px;padding:12px 16px;margin:8px 0;text-align:center}
-.obj-sec .val{font-size:32px;font-weight:800;color:#1a1a1a;display:block}
-.obj-sec .lbl{font-size:10px;color:#666;margin-top:2px}
-.obj-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.pill{font-size:10px;padding:4px 10px;border-radius:20px;font-weight:600}
-.pill-blue{background:#e8f0fd;color:#1a5cbf}
-.pill-green{background:#e6f4ea;color:#1a7a3c}
-.pill-orange{background:#fff3e0;color:#b85c00}
-.rc-pb{background:#ffeaea;border:1px solid #f5c6c6;border-radius:6px;padding:10px 12px;margin-bottom:10px;font-size:11px;font-weight:700;color:#c0392b}
-.rc-hyp{background:#eef3fd;border:1px solid #b8cef5;border-radius:6px;padding:10px 12px;font-size:11px;color:#1a3a7a;font-weight:600;line-height:1.6;margin-top:8px}
-.cm-table{width:100%;border-collapse:collapse;font-size:11px}
-.cm-table th{text-align:left;padding:6px 8px;border-bottom:2px solid #e0e0e0;font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#888}
-.cm-table td{padding:7px 8px;border-bottom:1px solid #f0f0f0;vertical-align:top}
-.cm-table tr:last-child td{border-bottom:none}
-.badge{display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;padding:2px 7px;border-radius:10px;color:#fff}
-.b-c1{background:#5b4fcf}.b-c2{background:#d94f4f}.b-c3{background:#1a5cbf}.b-c4{background:#059669}
-.status-plan{color:#e07b00;font-weight:700}
-.status-dep{color:#1a7a3c;font-weight:700}
-.status-req{color:#5b4fcf;font-weight:700}
-.exp-card{background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:12px;font-size:10px;line-height:1.55}
-.exp-card h4{font-size:11px;font-weight:700;margin:6px 0 6px;color:#1a1a1a}
-.exp-card .hyp-lbl{font-weight:700;color:#333}
-.exp-card p{color:#444;margin-bottom:5px}
-.exp-tag{font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:4px}
-.tag-dep{background:#e6f4ea;color:#1a7a3c}
-.tag-cours{background:#fef3c7;color:#b45309}
-.tag-analyse{background:#f3e8ff;color:#6b21a8}
-.learn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.learn-card{background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:10px;font-size:10px;line-height:1.5;color:#333}
-.learn-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:6px}
-.lbg-confirm{background:#e6f4ea;color:#1a7a3c}
-.lbg-pursue{background:#fff3e0;color:#b85c00}
-.lbg-invalid{background:#ffeaea;color:#c0392b}
-.lbg-new{background:#e8f0fd;color:#1a5cbf}
-.insight{background:#1a1a1a;color:#fff;border-radius:6px;padding:12px 16px;margin-top:10px;font-size:11px;line-height:1.7}
-.insight strong{display:block;margin-bottom:2px}
-.note-footer{font-size:10px;color:#888;border-top:1px solid #eee;margin-top:10px;padding-top:8px;font-style:italic}
-.section-sep{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #eee}
-@media print{
-  body{background:#fff;padding:0}
-  .a3-wrap{max-width:100%}
-  .page-break{page-break-before:always}
-  .header,.obj-main,.insight,.arbre-insight{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-}
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #ffffff;
+    color: #0F172A;
+    padding: 32px 40px;
+  }
+
+  /* ── En-tête ── */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E2E8F0;
+  }
+  .header-left h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 4px;
+  }
+  .header-left p {
+    font-size: 13px;
+    color: #64748B;
+  }
+  .header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .badge {
+    background: #EDE9FE;
+    color: #4F46E5;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 99px;
+    border: 1px solid #C4BFFA;
+  }
+
+  /* ── Légende ── */
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    background: #F8FAFC;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+  }
+  .legend-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── Graphe ── */
+  .chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 24px;
+  }
+
+  /* ── Jalons description ── */
+  .jalons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .jalon-card {
+    padding: 12px 14px;
+    background: #F8FAFC;
+    border-radius: 8px;
+    border-left: 3px solid #6366F1;
+  }
+  .jalon-card .num { font-size: 11px; font-weight: 700; color: #6366F1; margin-bottom: 3px; }
+  .jalon-card .titre { font-size: 12px; font-weight: 700; color: #0F172A; margin-bottom: 2px; }
+  .jalon-card .impact-ok  { font-size: 11px; color: #15803D; font-weight: 600; }
+  .jalon-card .impact-nok { font-size: 11px; color: #64748B; }
+
+  /* ── Pied de page ── */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #E2E8F0;
+    font-size: 11px;
+    color: #94A3B8;
+  }
+  .footer strong { color: #475569; }
+
+  /* ── IMPRESSION A3 ── */
+  @page {
+    size: A3 landscape;
+    margin: 15mm;
+  }
+  @media print {
+    body { padding: 0; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
 </style>
 </head>
 <body>
-<div class="a3-wrap">
 
-<!-- HEADER -->
+<!-- EN-TÊTE -->
 <div class="header">
-  <div>
-    <h1>MFA obligatoire : un dispositif actuel pas adapté et à fort risque opérationnel</h1>
-    <div class="meta">A3 de résolution de problème &middot; Portail vendeurs OSP &middot; Objectif de conformité avant octobre 2026 &middot; Mise à jour du 15/06/2026 &middot; Responsable : Goulwen</div>
+  <div class="header-left">
+    <h1>318 sollicitations vendeurs MFA — par thématique</h1>
+    <p>Octopia OSP · Centre support OSP (requêtes Jira) + Emails selfcare · Déc. 2025 – Juin 2026</p>
   </div>
-  <div class="tag">A3_MFA-Obligatoire_v2.0.html</div>
-</div>
-
-<!-- BLOCS 1 + 2 -->
-<div class="grid-top">
-  <div class="card">
-    <div class="block-title"><span class="block-num">1</span>CONTEXTE</div>
-    <div class="accroche">Le portail vendeurs OSP compte <strong>~9 340 vendeurs actifs</strong> réalisant des actions sensibles (paiements, remboursements), nécessitant une authentification forte conforme aux exigences réglementaires DSP2 et aux standards du marché.</div>
-    <div class="body-text">La mise en place d'un MFA obligatoire d'ici <strong>octobre 2026</strong> est un impératif de conformité et de maîtrise du risque. Depuis décembre 2025, le MFA est déployé progressivement en mode optionnel — une phase de test pour valider le dispositif et limiter les risques avant de le rendre obligatoire à grande échelle.</div>
-    <div class="stats-row">
-      <div class="stat-box">
-        <span class="stat-val">24,8%</span>
-        <div class="stat-lbl">d'adoption sur les 6 460 boutiques actives éligibles</div>
-        <div style="font-size:10px;color:#aaa;margin-top:3px">20,0% tous éligibles confondus</div>
-      </div>
-      <div class="stat-box"><span class="stat-val">13,7%</span><div class="stat-lbl">des vendeurs activés génèrent une sollicitation support (318 sol. depuis déc. 2025)</div></div>
-      <div class="stat-box"><span class="stat-val">69%</span><div class="stat-lbl">des sollicitations liées à un besoin de paramétrage autonome (reset OTP, ajout appareil)</div></div>
-    </div>
-    <div class="angle">Le sujet n'est donc plus uniquement de déployer le MFA, mais de le rendre adoptable à grande échelle avant de pouvoir le rendre obligatoire.</div>
-  </div>
-
-  <div class="card">
-    <div class="block-title"><span class="block-num">2</span>SITUATION ACTUELLE</div>
-    <div class="stats-row-2">
-      <div class="stat-box-lg"><span class="stat-val-lg">1 604</span><div class="stat-lbl-lg">boutiques MFA activé sur 6 460 actives éligibles</div></div>
-      <div class="stat-box-lg"><span class="stat-val-lg">7 736</span><div class="stat-lbl-lg">boutiques restantes à activer d'ici oct. 2026 (base 9 340)</div></div>
-    </div>
-    <div class="body-text">Le taux de blocage observé est de <strong>13,7 %</strong> — 318 sollicitations reçues depuis déc. 2025 (162 requêtes OSP + 156 emails selfcare).</div>
-    <div style="background:#1a1a1a;border-radius:8px;padding:14px 16px;margin-top:10px">
-      <div style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">⚠️ Risque opérationnel projeté — MFA obligatoire oct. 2026</div>
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px">
-        <div style="text-align:center;flex-shrink:0">
-          <div style="font-size:36px;font-weight:800;color:#e63946;line-height:1">~1 060</div>
-          <div style="font-size:10px;color:#aaa;margin-top:2px">sollicitations potentielles</div>
-        </div>
-        <div style="font-size:11px;color:#ccc;line-height:1.7;border-left:2px solid #333;padding-left:14px">
-          <span style="color:#fff;font-weight:700">7 736</span> boutiques restantes<br>
-          × <span style="color:#fff;font-weight:700">13,7 %</span> taux de blocage actuel<br>
-          = <span style="color:#e63946;font-weight:800">~1 060 vendeurs en difficulté</span>
-        </div>
-      </div>
-      <div style="font-size:10px;color:#999;line-height:1.6;border-top:1px solid #333;padding-top:8px">Blocages utilisateurs au moment de l'obligation · saturation du support · risque de rejet global du dispositif</div>
-    </div>
+  <div class="header-right">
+    <span class="badge">318 sollicitations</span>
+    <span class="badge" style="background:#DCFCE7;color:#15803D;border-color:#A7F3D0">Données au 11/06/2026</span>
   </div>
 </div>
 
-<!-- BLOC 3 -->
-<div style="margin-bottom:12px">
-  <div class="card">
-    <div class="block-title"><span class="block-num">3</span>OBJECTIF CIBLE</div>
-    <div class="accroche" style="margin-bottom:10px">Rendre le MFA obligatoire pour 100 % des 9 340 vendeurs d'ici octobre 2026, sans désorganisation opérationnelle.</div>
-    <div class="obj-row">
-      <div class="obj-main"><span class="val">&lt; 5%</span><div class="lbl">objectif prioritaire : ratio sollicitations / nouvelles activations (actuellement 13,7%)</div></div>
-      <div class="obj-sec"><span class="val">30%</span><div class="lbl">objectif secondaire : adoption volontaire avant obligation · ~1 198 boutiques de plus à activer (base 9 340)</div></div>
-    </div>
-    <div class="body-text" style="margin-top:8px">À 50 % d'adoption avant obligation, les ~4 670 boutiques restantes généreraient <strong>~153 sollicitations maximum</strong> à &lt;5 % — absorbables via un déploiement progressif par cohortes.</div>
-    <div class="pills">
-      <span class="pill pill-blue">Déploiement progressif par cohortes</span>
-      <span class="pill pill-green">Stabilisation ratio &lt; 5%</span>
-      <span class="pill pill-orange">Passage obligatoire après validation</span>
-    </div>
+<!-- LÉGENDE -->
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(99,102,241,.85)"></span>Multi-utilisateurs</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(230,57,70,.85)"></span>Reset OTP</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(245,158,11,.85)"></span>Incompréhension</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(13,148,136,.85)"></span>Opposition</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(148,163,184,.85)"></span>Bug</div>
+  <div class="legend-item" style="margin-left:auto">
+    <span style="display:inline-block;width:24px;height:2px;background:#6366F1;border-top:2px dashed #6366F1;vertical-align:middle"></span>
+    &nbsp;Jalons d'amélioration
   </div>
 </div>
 
-<!-- BLOC 4 — pleine largeur pour lisibilité SVG -->
-<div class="full-card">
-  <div class="block-title"><span class="block-num">4</span>HYPOTHÈSE ROOT CAUSE</div>
-  <svg viewBox="0 0 1100 580" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:4px 0">
-  <defs><style>
-    .f{font-family:'Segoe UI',system-ui,sans-serif}
-    .badge{font-size:11px;font-weight:800}
-    .tit{font-size:13px;font-weight:700}
-    .sub{font-size:11px;font-weight:400}
-    .cas{font-size:11px;font-weight:700}
-    .det{font-size:10px;font-weight:400}
-  </style></defs>
-
-  <!-- BG -->
-  <rect x="0" y="0" width="1100" height="580" rx="12" fill="#f8f8f8" stroke="#E2E8F0" stroke-width="1"/>
-
-  <!-- ══════════════════════════════════
-       C1 — MULTI-UTILISATEURS  42% · 134 sol.
-       x:4  w:446  h:572
-  ══════════════════════════════════ -->
-  <rect x="4" y="4" width="446" height="572" rx="8" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="1.2"/>
-  <!-- pastille C1 -->
-  <rect x="14" y="12" width="36" height="20" rx="10" fill="#5B4FCF"/>
-  <text x="32" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C1</text>
-  <text x="60" y="22" dominant-baseline="central" fill="#312E81" class="f tit">Multi-utilisateurs</text>
-  <text x="60" y="38" dominant-baseline="central" fill="#534AB7" class="f sub">134 sol. · 42%</text>
-
-  <!-- C1.1 -->
-  <rect x="10" y="54" width="434" height="118" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.85"/>
-  <rect x="18" y="62" width="40" height="18" rx="9" fill="#5B4FCF"/>
-  <text x="38" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.1</text>
-  <text x="66" y="71" dominant-baseline="central" fill="#312E81" class="f cas">Ignorance feature compte secondaire</text>
-  <text x="18" y="90" dominant-baseline="central" fill="#534AB7" class="f det">Les vendeurs ne savent pas qu'il existe une fonctionnalité</text>
-  <text x="18" y="105" dominant-baseline="central" fill="#534AB7" class="f det">de création de comptes individuels dans OSP.</text>
-  <text x="18" y="122" dominant-baseline="central" fill="#312E81" class="f cas">~46 cas</text>
-  <text x="18" y="138" dominant-baseline="central" fill="#534AB7" class="f det">Cause principale de non-activation chez les mono-comptes</text>
-  <text x="18" y="153" dominant-baseline="central" fill="#534AB7" class="f det">en statut "Later".</text>
-
-  <!-- C1.2 -->
-  <rect x="10" y="178" width="434" height="100" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.70"/>
-  <rect x="18" y="186" width="40" height="18" rx="9" fill="#5B4FCF"/>
-  <text x="38" y="195" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.2</text>
-  <text x="66" y="195" dominant-baseline="central" fill="#312E81" class="f cas">Mobilité interne</text>
-  <text x="18" y="214" dominant-baseline="central" fill="#534AB7" class="f det">Départ · remplacement · congé</text>
-  <text x="18" y="230" dominant-baseline="central" fill="#534AB7" class="f det">Le MFA est lié à un seul compte partagé — tout changement</text>
-  <text x="18" y="245" dominant-baseline="central" fill="#534AB7" class="f det">de personnel bloque l'accès.</text>
-  <text x="18" y="262" dominant-baseline="central" fill="#312E81" class="f cas">37 cas</text>
-
-  <!-- C1.3 -->
-  <rect x="10" y="284" width="434" height="100" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.55"/>
-  <rect x="18" y="292" width="40" height="18" rx="9" fill="#5B4FCF"/>
-  <text x="38" y="301" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.3</text>
-  <text x="66" y="301" dominant-baseline="central" fill="#312E81" class="f cas">Praticité · QR non partageable</text>
-  <text x="18" y="320" dominant-baseline="central" fill="#534AB7" class="f det">Accès simultané requis par plusieurs collaborateurs.</text>
-  <text x="18" y="336" dominant-baseline="central" fill="#534AB7" class="f det">Le QR code n'est visible qu'une seule fois au setup —</text>
-  <text x="18" y="351" dominant-baseline="central" fill="#534AB7" class="f det">impossible d'enrôler un 2ème téléphone après.</text>
-  <text x="18" y="368" dominant-baseline="central" fill="#312E81" class="f cas">37 cas</text>
-
-  <!-- C1.4 -->
-  <rect x="10" y="390" width="434" height="80" rx="6" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.8" opacity="0.38"/>
-  <rect x="18" y="398" width="40" height="18" rx="9" fill="#5B4FCF"/>
-  <text x="38" y="407" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C1.4</text>
-  <text x="66" y="407" dominant-baseline="central" fill="#312E81" class="f cas">MFA activé par un tiers à l'insu du titulaire</text>
-  <text x="18" y="426" dominant-baseline="central" fill="#534AB7" class="f det">Collègue ou prestataire a configuré le MFA — le titulaire</text>
-  <text x="18" y="441" dominant-baseline="central" fill="#534AB7" class="f det">du compte n'a pas l'app et ne peut pas se connecter.</text>
-  <text x="18" y="458" dominant-baseline="central" fill="#312E81" class="f cas">14 cas</text>
-
-  <!-- ══════════════════════════════════
-       C2 — RESET OTP  31% · 99 sol.
-       x:456  w:330  h:572
-  ══════════════════════════════════ -->
-  <rect x="456" y="4" width="330" height="572" rx="8" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="1.2"/>
-  <rect x="466" y="12" width="36" height="20" rx="10" fill="#D94F4F"/>
-  <text x="484" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C2</text>
-  <text x="510" y="22" dominant-baseline="central" fill="#7F1D1D" class="f tit">Reset OTP / Perte d'accès</text>
-  <text x="510" y="38" dominant-baseline="central" fill="#E63946" class="f sub">99 sol. · 31%</text>
-
-  <!-- C2.1 -->
-  <rect x="462" y="54" width="318" height="118" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.85"/>
-  <rect x="470" y="62" width="40" height="18" rx="9" fill="#D94F4F"/>
-  <text x="490" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.1</text>
-  <text x="518" y="71" dominant-baseline="central" fill="#7F1D1D" class="f cas">Chgt / perte de téléphone</text>
-  <text x="470" y="90" dominant-baseline="central" fill="#E63946" class="f det">Départ d'un collègue · appareil perdu ou cassé.</text>
-  <text x="470" y="106" dominant-baseline="central" fill="#E63946" class="f det">Aucune autonomie de reset depuis l'OSP à ce jour —</text>
-  <text x="470" y="122" dominant-baseline="central" fill="#E63946" class="f det">passage obligatoire par le support.</text>
-  <text x="470" y="138" dominant-baseline="central" fill="#7F1D1D" class="f cas">28 cas</text>
-  <text x="470" y="154" dominant-baseline="central" fill="#E63946" class="f det">Cause n°1 de contact support évitable.</text>
-
-  <!-- C2.2 -->
-  <rect x="462" y="178" width="318" height="100" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.70"/>
-  <rect x="470" y="186" width="40" height="18" rx="9" fill="#D94F4F"/>
-  <text x="490" y="195" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.2</text>
-  <text x="518" y="195" dominant-baseline="central" fill="#7F1D1D" class="f cas">App supprimée / codes épuisés</text>
-  <text x="470" y="214" dominant-baseline="central" fill="#E63946" class="f det">App Authenticator supprimée par erreur ou</text>
-  <text x="470" y="230" dominant-baseline="central" fill="#E63946" class="f det">lors d'un changement de téléphone.</text>
-  <text x="470" y="246" dominant-baseline="central" fill="#7F1D1D" class="f cas">24 cas</text>
-  <text x="470" y="262" dominant-baseline="central" fill="#E63946" class="f det">Pas de self-service disponible.</text>
-
-  <!-- C2.3 -->
-  <rect x="462" y="284" width="318" height="100" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.55"/>
-  <rect x="470" y="292" width="40" height="18" rx="9" fill="#D94F4F"/>
-  <text x="490" y="301" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.3</text>
-  <text x="518" y="301" dominant-baseline="central" fill="#7F1D1D" class="f cas">Désactivation demandée</text>
-  <text x="470" y="320" dominant-baseline="central" fill="#E63946" class="f det">MFA jugé contraignant — vendeur souhaite</text>
-  <text x="470" y="336" dominant-baseline="central" fill="#E63946" class="f det">le désactiver mais n'a pas d'autonomie self-service.</text>
-  <text x="470" y="352" dominant-baseline="central" fill="#7F1D1D" class="f cas">24 cas</text>
-
-  <!-- C2.4 -->
-  <rect x="462" y="390" width="318" height="80" rx="6" fill="#FFF1F2" stroke="#FFBFC5" stroke-width="0.8" opacity="0.38"/>
-  <rect x="470" y="398" width="40" height="18" rx="9" fill="#D94F4F"/>
-  <text x="490" y="407" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C2.4</text>
-  <text x="518" y="407" dominant-baseline="central" fill="#7F1D1D" class="f cas">Codes récupération épuisés</text>
-  <text x="470" y="426" dominant-baseline="central" fill="#E63946" class="f det">Recovery codes mal compris ou non conservés.</text>
-  <text x="470" y="442" dominant-baseline="central" fill="#E63946" class="f det">Manipulation en erreur · séquence épuisée.</text>
-  <text x="470" y="458" dominant-baseline="central" fill="#7F1D1D" class="f cas">23 cas</text>
-
-  <!-- ══════════════════════════════════
-       C3 — INCOMPRÉHENSION  18% · 56 sol.
-       x:792  w:304  h:280
-  ══════════════════════════════════ -->
-  <rect x="792" y="4" width="304" height="282" rx="8" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="1.2"/>
-  <rect x="802" y="12" width="36" height="20" rx="10" fill="#1A5CBF"/>
-  <text x="820" y="22" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C3</text>
-  <text x="846" y="22" dominant-baseline="central" fill="#0C447C" class="f tit">Incompréhension</text>
-  <text x="846" y="38" dominant-baseline="central" fill="#185FA5" class="f sub">56 sol. · 18%</text>
-
-  <!-- C3.1 -->
-  <rect x="798" y="54" width="292" height="90" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.85"/>
-  <rect x="806" y="62" width="40" height="18" rx="9" fill="#1A5CBF"/>
-  <text x="826" y="71" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.1</text>
-  <text x="854" y="71" dominant-baseline="central" fill="#0C447C" class="f cas">Codes de secours perdus</text>
-  <text x="806" y="90" dominant-baseline="central" fill="#185FA5" class="f det">QR code non sauvegardé au setup.</text>
-  <text x="806" y="106" dominant-baseline="central" fill="#185FA5" class="f det">Vendeur ne sait pas comment récupérer l'accès.</text>
-  <text x="806" y="124" dominant-baseline="central" fill="#0C447C" class="f cas">27 cas</text>
-
-  <!-- C3.2 -->
-  <rect x="798" y="150" width="292" height="76" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.65"/>
-  <rect x="806" y="158" width="40" height="18" rx="9" fill="#1A5CBF"/>
-  <text x="826" y="167" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.2</text>
-  <text x="854" y="167" dominant-baseline="central" fill="#0C447C" class="f cas">Scan photo iOS</text>
-  <text x="806" y="186" dominant-baseline="central" fill="#185FA5" class="f det">Confusion entre photo et scan QR code.</text>
-  <text x="806" y="202" dominant-baseline="central" fill="#0C447C" class="f cas">~15 cas</text>
-
-  <!-- C3.3 -->
-  <rect x="798" y="232" width="292" height="46" rx="6" fill="#EBF4FD" stroke="#A8C8F0" stroke-width="0.8" opacity="0.45"/>
-  <rect x="806" y="238" width="40" height="18" rx="9" fill="#1A5CBF"/>
-  <text x="826" y="247" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C3.3</text>
-  <text x="854" y="247" dominant-baseline="central" fill="#0C447C" class="f cas">MFA configuré à l'insu · ~8 cas</text>
-  <text x="806" y="264" dominant-baseline="central" fill="#185FA5" class="f det">Par un collègue ou prestataire.</text>
-
-  <!-- ══════════════════════════════════
-       C4 — OPPOSITION  11% · 35 sol.
-       x:792  w:304  h:174  y:294
-  ══════════════════════════════════ -->
-  <rect x="792" y="294" width="304" height="174" rx="8" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="1.2"/>
-  <rect x="802" y="302" width="36" height="20" rx="10" fill="#059669"/>
-  <text x="820" y="312" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C4</text>
-  <text x="846" y="312" dominant-baseline="central" fill="#064E3B" class="f tit">Opposition</text>
-  <text x="846" y="328" dominant-baseline="central" fill="#059669" class="f sub">35 sol. · 11%</text>
-
-  <!-- C4.1 -->
-  <rect x="798" y="344" width="140" height="76" rx="6" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="0.8" opacity="0.80"/>
-  <rect x="806" y="350" width="40" height="18" rx="9" fill="#059669"/>
-  <text x="826" y="359" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C4.1</text>
-  <text x="806" y="378" dominant-baseline="central" fill="#064E3B" class="f cas">Friction quoti.</text>
-  <text x="806" y="394" dominant-baseline="central" fill="#065F46" class="f det">MFA perçu comme</text>
-  <text x="806" y="408" dominant-baseline="central" fill="#065F46" class="f det">trop contraignant.</text>
-  <text x="806" y="424" dominant-baseline="central" fill="#064E3B" class="f cas">17 cas</text>
-
-  <!-- C4.2 -->
-  <rect x="950" y="344" width="140" height="76" rx="6" fill="#E1F5EE" stroke="#7ED8B5" stroke-width="0.8" opacity="0.60"/>
-  <rect x="958" y="350" width="40" height="18" rx="9" fill="#059669"/>
-  <text x="978" y="359" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge" font-size="10">C4.2</text>
-  <text x="958" y="378" dominant-baseline="central" fill="#064E3B" class="f cas">Pas tél. pro</text>
-  <text x="958" y="394" dominant-baseline="central" fill="#065F46" class="f det">Pas de téléphone</text>
-  <text x="958" y="410" dominant-baseline="central" fill="#065F46" class="f det">professionnel fourni.</text>
-  <text x="958" y="426" dominant-baseline="central" fill="#064E3B" class="f cas">18 cas</text>
-
-  <!-- ══════════════════════════════════
-       C5 — BUG TECHNIQUE  8% · 25 cas
-       x:792  w:304  h:100  y:476
-  ══════════════════════════════════ -->
-  <rect x="792" y="476" width="304" height="100" rx="8" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.2"/>
-  <rect x="802" y="484" width="36" height="20" rx="10" fill="#94A3B8"/>
-  <text x="820" y="494" text-anchor="middle" dominant-baseline="central" fill="#fff" class="f badge">C5</text>
-  <text x="846" y="494" dominant-baseline="central" fill="#444441" class="f tit">Bug technique</text>
-  <text x="846" y="510" dominant-baseline="central" fill="#5F5E5A" class="f sub">25 cas · 8%</text>
-  <text x="802" y="534" dominant-baseline="central" fill="#5F5E5A" class="f det">Correctifs techniques ciblés · tickets dev run.</text>
-  <text x="802" y="550" dominant-baseline="central" fill="#5F5E5A" class="f det">Volume réduit de 14/sem → 3/sem (−79%) depuis mars 2026.</text>
-
-  </svg>
+<!-- GRAPHE -->
+<div class="chart-wrapper">
+  <canvas id="chart"></canvas>
 </div>
 
-<!-- BLOC 5 — CONTRE-MESURES -->
-<div class="full-card">
-  <div class="block-title"><span class="block-num">5</span>CONTRE-MESURES PROPOSÉES</div>
-  <table class="cm-table">
-    <thead>
-      <tr>
-        <th style="width:22%">Contre-mesure</th><th style="width:7%">Cause</th><th style="width:9%">Statut</th><th style="width:38%">Mécanisme</th><th>Résultat attendu</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background:#f5f3ff">
-        <td><strong>Acculturer sur la création de compte secondaire</strong></td>
-        <td><span class="badge b-c1">C1.1</span></td>
-        <td><span class="status-plan">Planifiée</span></td>
-        <td>Faire connaître la feature de création de comptes secondaires individuels dans OSP. Tests H1a/H1b/H2/H3 sur les boutiques "Later".</td>
-        <td>Adresse les <strong>46 cas d'ignorance</strong> de la feature — soit <strong>14,5 %</strong> des sollicitations totales.</td>
-      </tr>
-      <tr style="background:#f5f3ff">
-        <td><strong>Ajout OTP par utilisateur</strong></td>
-        <td><span class="badge b-c1">C1.3</span></td>
-        <td><span class="status-plan" style="color:#6b21a8">En analyse</span></td>
-        <td>Chaque collaborateur configure son propre OTP sur son compte secondaire via Keycloak natif.</td>
-        <td>Adresse les <strong>37 cas d'accès simultané</strong> / QR non partageable — soit <strong>11,6 %</strong> des sollicitations.</td>
-      </tr>
-      <tr style="background:#fff1f2">
-        <td><strong>Autonomie reset OTP</strong></td>
-        <td><span class="badge b-c2">C2</span></td>
-        <td><span class="status-plan" style="color:#6b21a8">En analyse</span></td>
-        <td>Possibilité pour le vendeur de réinitialiser son OTP en autonomie depuis l'OSP (Reset Credentials flow Keycloak natif).</td>
-        <td>Adresse <strong>31 %</strong> des sollicitations (99 cas) — changement de téléphone, app supprimée, désactivation demandée.</td>
-      </tr>
-      <tr>
-        <td><strong>Warning sur les codes de secours</strong></td>
-        <td><span style="display:flex;gap:4px"><span class="badge b-c2">C2.4</span><span class="badge b-c3">C3.1</span></span></td>
-        <td><span style="color:#94a3b8;font-weight:700">À prévoir</span></td>
-        <td>Afficher un avertissement explicite au setup et dans les réglages sur l'importance de conserver ses recovery codes. Rappel si codes proches de l'épuisement.</td>
-        <td>Adresse les <strong>50 cas</strong> liés aux codes épuisés/perdus (C2.4 : 23 cas + C3.1 : 27 cas) — soit <strong>15,7 %</strong> des sollicitations.</td>
-      </tr>
-      <tr>
-        <td><strong>Interdire visuellement le scan depuis l'appareil photo</strong></td>
-        <td><span class="badge b-c3">C3.2</span></td>
-        <td><span style="color:#94a3b8;font-weight:700">À prévoir</span></td>
-        <td>Faire comprendre visuellement dans le parcours d'activation que le scan doit être effectué depuis l'app Authenticator et non depuis l'appareil photo natif iOS/Android.</td>
-        <td>Adresse les <strong>~15 cas</strong> de scan photo iOS non fonctionnel. Réduction des incompréhensions 1ère config.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- BLOC 6 — EXPÉRIMENTATIONS -->
-<div class="full-card">
-  <div class="block-title"><span class="block-num">6</span>EXPÉRIMENTATIONS &amp; DÉPLOIEMENTS</div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-
-    <!-- T1 — RÉALISÉ -->
-    <div class="exp-card" style="border-top:3px solid #1a7a3c;background:#f0fdf4">
-      <span class="exp-tag tag-dep">Réalisé · 10–15/06/2026</span>
-      <h4>Affichage email rattaché au compte</h4>
-      <p><span class="hyp-lbl">Si</span> l'email rattaché au compte vendeur est affiché dans l'OSP,</p>
-      <p><span class="hyp-lbl">Alors</span> le vendeur peut identifier et signaler une adresse incorrecte avant de configurer son MFA,</p>
-      <p><span class="hyp-lbl">Parce que</span> la configuration MFA nécessite un email à jour — le code de setup est envoyé par mail.</p>
-      <p style="margin-top:6px;padding-top:6px;border-top:1px solid #bbf7d0"><span class="hyp-lbl">Résultat :</span> 5/50 vendeurs signalent un email incorrect (10%). Taux à confirmer sur cohorte élargie.</p>
-      <p><span class="hyp-lbl">Suite :</span> relancer sur 100 vendeurs avec CTA différencié (✓ Correct / ✗ Incorrect). Si >10% confirmé → industrialiser un process de mise à jour automatisé.</p>
-    </div>
-
-    <!-- T2 — À PLANIFIER -->
-    <div class="exp-card" style="border-top:3px solid #5b4fcf">
-      <span class="exp-tag" style="background:#ede9fe;color:#312e81">À planifier · ~2 500 boutiques</span>
-      <h4>Communication création compte secondaire</h4>
-      <p><span class="hyp-lbl">Si</span> on montre aux vendeurs mono-compte "Later" que leur hésitation vient peut-être d'un compte partagé et qu'il existe une solution en 2 clics,</p>
-      <p><span class="hyp-lbl">Alors</span> le taux de clic vers la création de compte secondaire augmente et débloque l'activation MFA,</p>
-      <p><span class="hyp-lbl">Parce que</span> 42 % des sollicitations viennent du partage de compte — l'ignorance de la feature est la première cause dans les verbatims.</p>
-    </div>
-
-    <!-- T3 — À PLANIFIER -->
-    <div class="exp-card" style="border-top:3px solid #1a5cbf">
-      <span class="exp-tag" style="background:#ebf4fd;color:#0c447c">À planifier · C3.2</span>
-      <h4>Visuel interdisant le scan depuis l'appareil photo</h4>
-      <p><span class="hyp-lbl">Si</span> on intègre un visuel explicite dans le parcours indiquant que le scan doit être fait depuis l'app Authenticator et non depuis l'appareil photo natif,</p>
-      <p><span class="hyp-lbl">Alors</span> les nouveaux cas de blocage liés à cette confusion disparaissent,</p>
-      <p><span class="hyp-lbl">Parce que</span> ~15 cas sont directement liés à cette erreur de manipulation (C3.2).</p>
-    </div>
-
-    <!-- T4 — À PLANIFIER -->
-    <div class="exp-card" style="border-top:3px solid #d94f4f">
-      <span class="exp-tag" style="background:#fff1f2;color:#7f1d1d">À planifier · C2.4 + C3.1</span>
-      <h4>Revoir UI codes de secours — importance visible</h4>
-      <p><span class="hyp-lbl">Si</span> on revoit l'UI du parcours d'activation pour mettre fortement en avant l'importance de sauvegarder les codes de secours (design, wording, friction intentionnelle),</p>
-      <p><span class="hyp-lbl">Alors</span> le nombre de vendeurs bloqués faute de recovery codes diminue,</p>
-      <p><span class="hyp-lbl">Parce que</span> 50 cas sont liés à des codes perdus ou épuisés — soit <strong>15,7 %</strong> des sollicitations (C2.4 : 23 + C3.1 : 27).</p>
-    </div>
-
+<!-- JALONS DESCRIPTION -->
+<div class="jalons-grid">
+  <div class="jalon-card">
+    <div class="num">① 30/03/2026</div>
+    <div class="titre">Durée de session allongée</div>
+    <div class="impact-ok">✓ Impact constaté sur les sollicitations</div>
   </div>
-  <div class="note-footer">Réalisé = test exécuté avec résultats disponibles. À planifier = hypothèse définie, périmètre à confirmer. Mesure : taux de clic et d'activation à J+7 et J+14.</div>
-</div>
-
-<!-- BLOC 7 — LEARNINGS -->
-<div class="full-card">
-  <div class="block-title"><span class="block-num">7</span>LEARNINGS</div>
-  <div class="learn-grid">
-    <div class="learn-card">
-      <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p>Le MFA individuel n'est pas aligné avec l'usage réel : <strong>42 % des sollicitations viennent de comptes multi-utilisateurs</strong>. L'ignorance de la feature compte secondaire est la première cause (~46 cas).</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p><strong>69 % des sollicitations adressables via 2 fonctionnalités Keycloak natives</strong> (ajout OTP + delete OTP self-service). Ces 2 prérequis conditionnent le passage en MFA obligatoire sans saturer le support.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p>Les améliorations UX du parcours (déployées 13/04) ont fait chuter les tickets dev de <strong>14/sem → 3/sem (−79%)</strong>. La simplification du parcours est un levier rapide et directement mesurable.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-new">Nouveau</span>
-      <p>Nouvelle vague 10/06 : <strong>9,4 % d'activation spontanée</strong> en 1 semaine (115/1 225). Le mail relance du 04/06 a généré <strong>1,4 % de conversion</strong> sur 3 703 cibles "Later" en 3 jours — à réévaluer à J+14.</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-new">Nouveau</span>
-      <p>Test email (50 IDs) : <strong>10 % d'emails pas à jour</strong> → ~2 000 emails potentiellement obsolètes sur 20 000 utilisateurs actifs. Prérequis direct pour le reset MFA via "mot de passe oublié".</p>
-    </div>
-    <div class="learn-card">
-      <span class="learn-badge lbg-confirm">Confirmé</span>
-      <p>Les vendeurs chinois ne sont pas bloqués par les apps Authenticator → le problème n'est pas l'outil mais son intégration dans les <strong>usages collaboratifs</strong>. Confirme que C1 est la cause structurante principale.</p>
-    </div>
+  <div class="jalon-card">
+    <div class="num">② 13/04/2026</div>
+    <div class="titre">UX parcours config MFA</div>
+    <div class="impact-ok">✓ Impact — réduction incompréhension</div>
+  </div>
+  <div class="jalon-card">
+    <div class="num">③ 04/05/2026</div>
+    <div class="titre">Email récupération compte</div>
+    <div class="impact-nok">— Neutre sur le volume de sollicitations</div>
+  </div>
+  <div class="jalon-card">
+    <div class="num">④ 04/06/2026</div>
+    <div class="titre">Mail relance activation MFA</div>
+    <div class="impact-ok">✓ +52 activations attribuables</div>
   </div>
 </div>
 
+<!-- PIED DE PAGE -->
+<div class="footer">
+  <span>Source : Jira (requêtes OSP) + Emails selfcare · 318 sollicitations qualifiées manuellement · <strong>Octopia OSP — Déploiement MFA</strong></span>
+  <span>Imprimé le <strong id="print-date"></strong></span>
+</div>
 
-<!-- PAGE 2 supprimée — arbre intégré dans bloc 4 -->
+<script>
+document.getElementById('print-date').textContent = new Date().toLocaleDateString('fr-FR');
 
+Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+Chart.defaults.color = '#64748B';
 
-</div><!-- /a3-wrap -->
+const labels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+
+const jalonPlugin = {
+  id: 'jalons',
+  afterDraw(chart) {
+    const { ctx, chartArea: { top, bottom, right }, scales: { x } } = chart;
+    const COL = '#6366F1';
+    const jals = [
+      { l: '① Durée session · 30/03', d: '30/03', i: '✓ Impact',    ok: true  },
+      { l: '② UX parcours · 13/04',   d: '13/04', i: '✓ Impact',    ok: true  },
+      { l: '③ Email récup. · 04/05',  d: '04/05', i: '— Neutre',    ok: false },
+      { l: '④ Mail relance · 01/06',  d: '01/06', i: '✓ +52 act.',  ok: true  },
+    ];
+    const BH = 36, BP = 7;
+    const yPos = [top + 8, top + 52, top + 96, top + 140];
+
+    jals.forEach((j, i) => {
+      const xi = labels.indexOf(j.d);
+      if (xi < 0) return;
+      const px = x.getPixelForValue(xi);
+      ctx.save();
+      ctx.beginPath(); ctx.strokeStyle = COL; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
+      ctx.moveTo(px, top); ctx.lineTo(px, bottom); ctx.stroke(); ctx.setLineDash([]);
+
+      ctx.font = "600 10px 'Plus Jakarta Sans'";
+      const bw = Math.max(ctx.measureText(j.l).width, ctx.measureText(j.i).width) + BP * 2 + 4;
+      const oY = yPos[i];
+      const bx = (px + bw + 6 > right) ? px - bw - 4 : px + 4;
+      const tx = bx + bw / 2;
+
+      ctx.fillStyle = 'rgba(99,102,241,.12)'; ctx.strokeStyle = COL; ctx.lineWidth = 0.8;
+      ctx.beginPath(); ctx.roundRect(bx, oY, bw, BH, 4); ctx.fill(); ctx.stroke();
+
+      ctx.fillStyle = '#4F46E5'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.font = "600 10px 'Plus Jakarta Sans'";
+      ctx.fillText(j.l, tx, oY + 12);
+      ctx.fillStyle = j.ok ? '#15803D' : '#64748B';
+      ctx.font = "500 9.5px 'Plus Jakarta Sans'";
+      ctx.fillText(j.i, tx, oY + 26);
+      ctx.restore();
+    });
+  }
+};
+
+new Chart(document.getElementById('chart'), {
+  type: 'bar',
+  plugins: [jalonPlugin],
+  data: {
+    labels,
+    datasets: [
+      { label: 'Multi-utilisateurs', backgroundColor: 'rgba(99,102,241,.82)',  borderRadius: 0, stack: 's', data: [1,0,2,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,1] },
+      { label: 'Reset OTP',          backgroundColor: 'rgba(230,57,70,.82)',   borderRadius: 0, stack: 's', data: [1,0,0,0,0,2,3,2,5,1,1,1,6,2,1,2,1,1,2,3,1,1,6,2,4,2,3] },
+      { label: 'Incompréhension',    backgroundColor: 'rgba(245,158,11,.82)',  borderRadius: 0, stack: 's', data: [1,1,0,0,1,4,3,1,5,1,3,5,4,3,0,2,0,1,0,0,1,0,0,1,0,1,1] },
+      { label: 'Opposition',         backgroundColor: 'rgba(13,148,136,.82)',  borderRadius: 0, stack: 's', data: [0,0,0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,1] },
+      { label: 'Bug',                backgroundColor: 'rgba(148,163,184,.75)', borderRadius: 0, stack: 's', data: [2,0,0,0,0,1,1,4,3,0,0,3,0,2,0,0,0,0,0,0,0,0,1,1,0,4,2] },
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: { padding: { top: 10, right: 10, bottom: 8 } },
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          title: c => 'Semaine du ' + c[0].label,
+          footer: items => 'Total : ' + items.reduce((s, i) => s + i.parsed.y, 0) + ' sollicitations'
+        }
+      }
+    },
+    scales: {
+      x: {
+        stacked: true,
+        grid: { display: false },
+        ticks: { font: { size: 11 }, maxRotation: 45, color: '#475569' }
+      },
+      y: {
+        stacked: true,
+        beginAtZero: true,
+        grid: { color: '#F1F5F9' },
+        title: { display: true, text: 'Sollicitations / semaine', font: { size: 11 }, color: '#64748B' },
+        ticks: { precision: 0, font: { size: 11 } }
+      }
+    }
+  }
+});
+</script>
+
 </body>
 </html>
