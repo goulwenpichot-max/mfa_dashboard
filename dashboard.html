@@ -151,34 +151,25 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <!-- CHALLENGE 1 : SOLLICITATIONS -->
   <div class="st">🎯 Challenge 1 — Réduire les sollicitations de −5%</div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px">
-    <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
-      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:16px;text-transform:uppercase;letter-spacing:.4px">État actuel vs objectif</div>
-      <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:20px">
-        <div>
-          <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#F59E0B;line-height:1">13,7%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">318 sol. / 2 326 OTP actifs</div>
-        </div>
-        <div style="font-size:24px;color:var(--mut)">→</div>
-        <div>
-          <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
-          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#10B981;line-height:1">&lt; 5%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">Seuil cible : &lt; 5% sol./activations</div>
-        </div>
+  <div style="background:var(--srf);border-radius:var(--rad);padding:24px;margin-bottom:28px">
+    <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:16px;text-transform:uppercase;letter-spacing:.4px">État actuel vs objectif</div>
+    <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:20px">
+      <div>
+        <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
+        <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#F59E0B;line-height:1">13,4%</div>
+        <div style="font-size:12px;color:var(--mut);margin-top:4px">351 sol. / 2 625 OTP actifs</div>
       </div>
-      <!-- Barre de progression -->
-      <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:72%;height:100%;border-radius:99px;transition:width .6s"></div>
+      <div style="font-size:24px;color:var(--mut)">→</div>
+      <div>
+        <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
+        <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#10B981;line-height:1">&lt; 5%</div>
+        <div style="font-size:12px;color:var(--mut);margin-top:4px">Seuil cible : &lt; 5% sol./activations</div>
       </div>
-      <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong>11–14%</strong> selon les semaines · objectif : passer sous <strong style="color:#10B981">5%</strong></div>
     </div>
-
-    <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
-      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px">Ratio hebdo : sol. / nouvelles activations</div>
-      <div class="cw" style="height:160px"><canvas id="ov_ratio"></canvas></div>
-      <div style="font-size:11px;color:var(--mut);margin-top:8px">Objectif : ratio sollicitations / nouvelles activations <strong style="color:#10B981">&lt; 5%</strong></div>
+    <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
+      <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:72%;height:100%;border-radius:99px;transition:width .6s"></div>
     </div>
+    <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong>13,4%</strong> · objectif : passer sous <strong style="color:#10B981">5%</strong></div>
   </div>
 
   <!-- CHALLENGE 2 : ADOPTION -->
@@ -186,55 +177,69 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
   <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px">
 
-    <!-- PRIMAIRE : taux vendeurs actifs -->
+    <!-- PRIMAIRE : taux vendeurs connectés 30j -->
     <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
-      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Taux d'adoption — vendeurs actifs</div>
-      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Périmètre : 6 465 vendeurs actifs éligibles (hors inactifs/interdits)</div>
+      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Taux d'adoption — vendeurs connectés (20/05–19/06)</div>
+      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Périmètre : 14 192 vendeurs éligibles MFA connectés au moins 1 fois sur les 30 derniers jours</div>
       <div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:20px">
         <div>
           <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-          <div style="font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#10B981;line-height:1">25,5%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">1 647 / 6 465 boutiques actives</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#10B981;line-height:1">16,8%</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">2 384 / 14 192 boutiques connectées</div>
         </div>
         <div style="font-size:24px;color:var(--mut)">→</div>
         <div>
           <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
           <div style="font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#10B981;line-height:1">30%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">~291 boutiques actives de plus</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">~1 874 boutiques connectées de plus</div>
         </div>
       </div>
       <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-        <div style="background:linear-gradient(90deg,#10B981,#34D399);width:85%;height:100%;border-radius:99px"></div>
+        <div style="background:#10B981;width:56%;height:100%;border-radius:99px"></div>
       </div>
-      <div style="font-size:12px;color:var(--mut);margin-bottom:16px">85% du chemin parcouru · +4,5 pts restants</div>
-      <div class="cw" style="height:140px"><canvas id="ov_adoption_actifs"></canvas></div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:16px">56% de l'objectif atteint · +13,2 pts restants</div>
+      <!-- Répartition Substate des connectés -->
+      <div style="background:var(--bg);border-radius:var(--rads);padding:12px 14px;margin-top:4px">
+        <div style="font-size:11px;font-weight:700;color:var(--mut);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px">Répartition des 12 448 vendeurs connectés 30j</div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:10px;height:10px;border-radius:50%;background:#10B981;flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--txt)"><strong>9 332</strong> vendeurs captifs</span>
+            <span style="font-size:11px;color:var(--mut)">(ActiveSeller + Holidays · 74,9%)</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:10px;height:10px;border-radius:50%;background:#E63946;flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--txt)"><strong>3 116</strong> interdits à la vente</span>
+            <span style="font-size:11px;color:var(--mut)">(BannedSeller · 25,0%)</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- SECONDAIRE : taux global -->
+    <!-- SECONDAIRE : taux global éligibles -->
     <div style="background:var(--srf);border-radius:var(--rad);padding:24px;opacity:.85">
       <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Taux global (tous éligibles)</div>
-      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Base officielle · 10 707 boutiques dont 40% inactives</div>
+      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Base officielle · 17 734 boutiques mfa_active_via_vague</div>
       <div style="margin-bottom:20px">
         <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-        <div style="font-family:'Outfit',sans-serif;font-size:36px;font-weight:800;color:#F59E0B;line-height:1">20,4%</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:4px">2 180 / 10 707 boutiques</div>
+        <div style="font-family:'Outfit',sans-serif;font-size:36px;font-weight:800;color:#F59E0B;line-height:1">14,8%</div>
+        <div style="font-size:12px;color:var(--mut);margin-top:4px">2 625 / 17 734 boutiques</div>
       </div>
       <div style="background:var(--bg);border-radius:99px;height:8px;overflow:hidden;margin-bottom:6px">
-        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:68%;height:100%;border-radius:99px"></div>
+        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:49%;height:100%;border-radius:99px"></div>
       </div>
-      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">68% du chemin · +9,6 pts restants · +0,4pt/semaine</div>
-      <div class="cw" style="height:100px"><canvas id="ov_adoption"></canvas></div>
+      <div style="font-size:11px;color:var(--mut)">49% du chemin · +15,2 pts restants</div>
     </div>
   </div>
 
   <!-- TABLEAU PAYS sous Challenge 2 -->
   <div style="background:var(--card);border-radius:var(--rad);padding:20px 24px;border:1px solid var(--brd);box-shadow:var(--sh);margin-bottom:28px">
-    <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:14px">📊 Taux d'adoption par région — vendeurs actifs</div>
+    <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:14px">📊 Taux d'adoption par région — vendeurs connectés 30j (20/05–19/06)</div>
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead>
         <tr style="background:var(--bg)">
           <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mut)">Région</th>
-          <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Boutiques actives</th>
+          <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Connectés éligibles</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">MFA actif</th>
           <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Taux</th>
           <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Progression</th>
@@ -243,76 +248,34 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
       <tbody>
         <tr>
           <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🇫🇷 France</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">3 146</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--g)">873</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">27,7%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#10B981;width:27.7%;height:7px;border-radius:4px"></div></div></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">7 065</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--g)">1 358</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">19,2%</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#10B981;width:19.2%;height:7px;border-radius:4px"></div></div></td>
         </tr>
         <tr>
           <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🌍 Europe (hors FR)</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">2 180</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">377</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">17,3%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:17.3%;height:7px;border-radius:4px"></div></div></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">5 542</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">757</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">13,7%</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:13.7%;height:7px;border-radius:4px"></div></div></td>
         </tr>
         <tr>
           <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🇨🇳 CN & HK</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">1 009</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">146</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">14,5%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:14.5%;height:7px;border-radius:4px"></div></div></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">1 352</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">224</td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">16,6%</span></td>
+          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:16.6%;height:7px;border-radius:4px"></div></div></td>
         </tr>
         <tr>
           <td style="padding:9px 12px;font-weight:600">🌐 Reste du monde</td>
-          <td style="padding:9px 12px;text-align:center">14</td>
-          <td style="padding:9px 12px;text-align:center;font-weight:700;color:var(--mut)">3</td>
-          <td style="padding:9px 12px;text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">21,4%</span></td>
-          <td style="padding:9px 12px"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#94A3B8;width:21.4%;height:7px;border-radius:4px"></div></div></td>
+          <td style="padding:9px 12px;text-align:center">233</td>
+          <td style="padding:9px 12px;text-align:center;font-weight:700;color:var(--mut)">45</td>
+          <td style="padding:9px 12px;text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">19,3%</span></td>
+          <td style="padding:9px 12px"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#94A3B8;width:19.3%;height:7px;border-radius:4px"></div></div></td>
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <!-- PROCHAINES ÉTAPES -->
-  <div class="st">🚀 Ce qu'il faut débloquer</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px">
-
-    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff">
-      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:10px;letter-spacing:.4px;text-transform:uppercase">Pour réduire les sollicitations</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#4F46E5;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">1</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#A5B4FC">Ajout OTP par utilisateur</strong> — Keycloak natif · adresse 38% des sollicitations · prérequis n°1</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#E63946;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">2</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FCA5A5">Delete OTP self-service</strong> — Keycloak natif · adresse 31% des sollicitations · prérequis n°2</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#F59E0B;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">3</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FDE68A">Afficher l'email dans les réglages OSP</strong> — quick win UX · source de confusion identifiée sur le terrain</div>
-        </div>
-      </div>
-    </div>
-
-    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff">
-      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:10px;letter-spacing:.4px;text-transform:uppercase">Pour augmenter l'adoption</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#10B981;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">1</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#6EE7B7">Relancer les 3 312 cibles "Later"</strong> qui n'ont pas répondu au mail du 04/06 · 1,6% de conversion observée</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#6366F1;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">2</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#A5B4FC">Suivre les +1 000 nouveaux éligibles (10/06)</strong> — taux d'activation spontanée à mesurer au prochain snapshot</div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="background:#F59E0B;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">3</span>
-          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FDE68A">Acculturer les vendeurs</strong> à la création de comptes individuels — connaissance de la fonctionnalité insuffisante (cas Wine & Co)</div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <!-- FOCUS NOUVELLE VAGUE -->
@@ -338,7 +301,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
       <div style="text-align:center;padding:16px;background:#FFF1F2;border-radius:var(--rads);border:1px solid #FECDD3">
         <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#9F1239">5</div>
         <div style="font-size:12px;font-weight:600;color:#BE123C;margin-top:4px">Boutiques sollicitations</div>
-        <div style="font-size:11px;color:#E11D48;margin-top:2px">vague 10 · taux 0,5% · sous seuil 5%</div>
+        <div style="font-size:11px;color:#E11D48;margin-top:2px">vague 10 · taux 3,6% · sous seuil 5%</div>
       </div>
     </div>
 
@@ -347,22 +310,29 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
       <div style="padding:14px 16px;background:var(--bg);border-radius:var(--rads);border-left:3px solid #10B981">
         <div style="font-size:11px;font-weight:700;color:#15803D;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Challenge adoption</div>
         <div style="font-size:13px;color:var(--txt);font-weight:600">Taux d'adoption de la vague 10/06</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:3px">Aujourd'hui : <strong>14,0%</strong> · Objectif : <strong>30%</strong> · il manque ~160 boutiques</div>
+        <div style="font-size:12px;color:var(--mut);margin-top:3px">140 boutiques / 999 éligibles · <strong style="color:#15803D">14,0%</strong> · objectif : atteindre <strong>30%</strong></div>
+        <div style="margin-top:8px;position:relative">
+          <div style="background:#E2E8F0;border-radius:4px;height:8px;overflow:hidden">
+            <div style="background:#10B981;width:46.7%;height:8px;border-radius:4px"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:3px">
+            <span style="color:#15803D;font-weight:700">14,0%</span>
+            <span style="font-weight:700;color:#15803D">objectif 30% ▶</span>
+          </div>
+        </div>
       </div>
       <div style="padding:14px 16px;background:var(--bg);border-radius:var(--rads);border-left:3px solid #6366F1">
         <div style="font-size:11px;font-weight:700;color:#4F46E5;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Challenge sollicitations</div>
         <div style="font-size:13px;color:var(--txt);font-weight:600">Taux de sollicitations vague 10/06</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:3px">5 boutiques / 999 éligibles · <strong style="color:#15803D">0,5%</strong> · objectif : rester sous <strong>5%</strong></div>
+        <div style="font-size:12px;color:var(--mut);margin-top:3px">5 boutiques / 140 activations · <strong style="color:#15803D">3,6%</strong> · objectif : rester sous <strong>5%</strong></div>
         <div style="margin-top:8px;position:relative">
           <div style="background:#E2E8F0;border-radius:4px;height:8px;overflow:hidden">
-            <div style="background:#6366F1;width:10%;height:8px;border-radius:4px"></div>
+            <div style="background:#6366F1;width:72%;height:8px;border-radius:4px"></div>
           </div>
           <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:3px">
-            <span style="color:#4F46E5;font-weight:700">0,5%</span>
-            <span>seuil 5% ▼</span>
-            <span>10%</span>
+            <span style="color:#4F46E5;font-weight:700">3,6%</span>
+            <span style="font-weight:700;color:#E63946">seuil 5% ▶</span>
           </div>
-          <div style="position:absolute;top:0;left:50%;width:1px;height:8px;background:#E63946;opacity:.6"></div>
         </div>
       </div>
     </div>
@@ -1381,28 +1351,6 @@ function initEvolution(){
 function initOverview(){
   const G='#10B981', P='#6366F1', O='#F59E0B', R='#E63946', GR='#94A3B8';
 
-  // Ratio hebdo sol/activations
-  const ratioC=document.getElementById('ov_ratio');
-  if(ratioC){
-    new Chart(ratioC,{type:'line',
-      data:{labels:['11/05','18/05','25/05','01/06','08/06'],
-        datasets:[
-          {label:'Ratio sol./activations (%)',data:[12.9,11.2,13.6,13.4,11.3],
-            borderColor:O,backgroundColor:'rgba(245,158,11,.1)',borderWidth:2.5,
-            fill:true,tension:0.3,pointRadius:5,pointHoverRadius:7},
-          {label:'Objectif < 5%',data:[5,5,5,5,5],
-            borderColor:G,borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false,tension:0}
-        ]},
-      options:{responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{position:'top',labels:{font:{size:11},padding:12,usePointStyle:true,pointStyleWidth:8}},
-          tooltip:{callbacks:{label:i=>` ${i.dataset.label}: ${i.parsed.y}%`}}},
-        scales:{
-          x:{grid:{display:false},ticks:{font:{size:11}}},
-          y:{min:8,max:18,grid:{color:'#F1F5F9'},ticks:{font:{size:11},callback:v=>v+'%'}}
-        }}
-    });
-  }
-
   // Tickets dev par semaine
   const tickC=document.getElementById('ov_tickets');
   if(tickC){
@@ -1425,49 +1373,6 @@ function initOverview(){
     });
   }
 
-  // Courbe adoption vendeurs actifs
-  const adoptActifsC=document.getElementById('ov_adoption_actifs');
-  if(adoptActifsC){
-    new Chart(adoptActifsC,{type:'line',
-      data:{labels:['07/05','11/05','18/05','24/05','31/05','07/06','14/06','21/06'],
-        datasets:[
-          {label:'Taux actifs (%)',data:[24.7,24.7,25.1,25.3,25.4,26.4,24.8,25.5],
-            borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,
-            fill:true,tension:0.4,pointRadius:4,pointHoverRadius:7},
-          {label:'Objectif 30%',data:[30,30,30,30,30,30,30,30],
-            borderColor:G,borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false}
-        ]},
-      options:{responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{display:false},
-          tooltip:{callbacks:{label:i=>` ${i.dataset.label}: ${i.parsed.y}%`}}},
-        scales:{
-          x:{grid:{display:false},ticks:{font:{size:10}}},
-          y:{min:20,max:35,grid:{color:'#F1F5F9'},ticks:{font:{size:10},callback:v=>v+'%'}}
-        }}
-    });
-  }
-
-  // Courbe adoption
-  const adoptC=document.getElementById('ov_adoption');
-  if(adoptC){
-    new Chart(adoptC,{type:'line',
-      data:{labels:['07/05','11/05','18/05','24/05','31/05','07/06','14/06','21/06'],
-        datasets:[
-          {label:'Taux adoption (%)',data:[19.8,19.8,20.1,20.0,20.1,20.9,20.0,20.4],
-            borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,
-            fill:true,tension:0.4,pointRadius:5,pointHoverRadius:7},
-          {label:'Objectif 30%',data:[30,30,30,30,30,30,30,30],
-            borderColor:G,borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false,tension:0}
-        ]},
-      options:{responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{position:'top',labels:{font:{size:11},padding:12,usePointStyle:true,pointStyleWidth:8}},
-          tooltip:{callbacks:{label:i=>` ${i.dataset.label}: ${i.parsed.y}%`}}},
-        scales:{
-          x:{grid:{display:false},ticks:{font:{size:11}}},
-          y:{min:15,max:35,grid:{color:'#F1F5F9'},ticks:{font:{size:11},callback:v=>v+'%'}}
-        }}
-    });
-  }
 }
 
 /* ── ANALYSE REQUÊTES ── */
