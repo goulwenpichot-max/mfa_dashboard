@@ -319,7 +319,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div class="st">🆕 Focus — Nouvelle vague 10/06/2026</div>
   <div style="background:var(--srf);border-radius:var(--rad);padding:24px;border:1px solid var(--brd);box-shadow:var(--sh);margin-bottom:32px">
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:24px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px">
       <div style="text-align:center;padding:16px;background:#EDE9FE;border-radius:var(--rads)">
         <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#312E81">999</div>
         <div style="font-size:12px;font-weight:600;color:#534AB7;margin-top:4px">Nouvelles boutiques éligibles</div>
@@ -335,6 +335,11 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
         <div style="font-size:12px;font-weight:600;color:#B45309;margin-top:4px">Objectif d'adoption</div>
         <div style="font-size:11px;color:#92400E;margin-top:2px">~160 boutiques à activer</div>
       </div>
+      <div style="text-align:center;padding:16px;background:#FFF1F2;border-radius:var(--rads);border:1px solid #FECDD3">
+        <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#9F1239">5</div>
+        <div style="font-size:12px;font-weight:600;color:#BE123C;margin-top:4px">Boutiques sollicitations</div>
+        <div style="font-size:11px;color:#E11D48;margin-top:2px">vague 10 · taux 0,5% · sous seuil 5%</div>
+      </div>
     </div>
 
     <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:12px">📡 Indicateurs à suivre chaque semaine</div>
@@ -346,8 +351,19 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
       </div>
       <div style="padding:14px 16px;background:var(--bg);border-radius:var(--rads);border-left:3px solid #6366F1">
         <div style="font-size:11px;font-weight:700;color:#4F46E5;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Challenge sollicitations</div>
-        <div style="font-size:13px;color:var(--txt);font-weight:600">Ratio sol. / activations vague 10/06</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:3px">À mesurer dès le prochain snapshot · objectif : rester sous <strong>5%</strong> comme la vague principale</div>
+        <div style="font-size:13px;color:var(--txt);font-weight:600">Taux de sollicitations vague 10/06</div>
+        <div style="font-size:12px;color:var(--mut);margin-top:3px">5 boutiques / 999 éligibles · <strong style="color:#15803D">0,5%</strong> · objectif : rester sous <strong>5%</strong></div>
+        <div style="margin-top:8px;position:relative">
+          <div style="background:#E2E8F0;border-radius:4px;height:8px;overflow:hidden">
+            <div style="background:#6366F1;width:10%;height:8px;border-radius:4px"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:3px">
+            <span style="color:#4F46E5;font-weight:700">0,5%</span>
+            <span>seuil 5% ▼</span>
+            <span>10%</span>
+          </div>
+          <div style="position:absolute;top:0;left:50%;width:1px;height:8px;background:#E63946;opacity:.6"></div>
+        </div>
       </div>
     </div>
 
@@ -582,7 +598,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div class="hero" style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 40%,#4F46E5 100%)">
     <div class="htag">📬 Sollicitations vendeurs & Tickets dev · déc. 2025 – juin 2026</div>
     <h1>Sollicitations vendeurs & Tickets dev MFA</h1>
-    <p>318 sollicitations reçues via 2 canaux (requêtes OSP + emails selfcare) · analyse des root causes · 140 tickets dev générés par les sollicitations nécessitant une intervention technique.</p>
+    <p>351 sollicitations reçues via 2 canaux (requêtes OSP + emails selfcare) · analyse des root causes · 157 tickets dev générés par les sollicitations nécessitant une intervention technique.</p>
   </div>
 
   <!-- ENTONNOIR -->
@@ -590,9 +606,9 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
     <!-- Bloc 318 -->
     <div style="text-align:center;padding:12px 16px;background:#EDE9FE;border-radius:var(--rads);border:1px solid #C4BFFA">
-      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#312E81;line-height:1">318</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#312E81;line-height:1">351</div>
       <div style="font-size:12px;font-weight:600;color:#534AB7;margin-top:3px">sollicitations</div>
-      <div style="font-size:11px;color:#7C72D8;margin-top:2px">162 requêtes + 156 emails</div>
+      <div style="font-size:11px;color:#7C72D8;margin-top:2px">183 requêtes + 168 emails</div>
     </div>
 
     <!-- Flèche 1 -->
@@ -601,11 +617,11 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
     <!-- Blocs N2 côte à côte -->
     <div style="display:flex;flex-direction:column;gap:8px">
       <div style="padding:10px 14px;background:#EBF4FD;border-radius:var(--rads);border:1px solid #A8C8F0">
-        <div style="font-size:12px;font-weight:700;color:#0C447C">162 requêtes OSP</div>
+        <div style="font-size:12px;font-weight:700;color:#0C447C">183 requêtes OSP</div>
         <div style="font-size:11px;color:#185FA5;margin-top:1px">Jira · 4,8 échanges moy.</div>
       </div>
       <div style="padding:10px 14px;background:#FAECE7;border-radius:var(--rads);border:1px solid #F0B89A">
-        <div style="font-size:12px;font-weight:700;color:#712B13">156 emails selfcare</div>
+        <div style="font-size:12px;font-weight:700;color:#712B13">168 emails selfcare</div>
         <div style="font-size:11px;color:#993C1D;margin-top:1px">Vendeurs bloqués avant connexion</div>
       </div>
     </div>
@@ -615,7 +631,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
     <!-- Bloc 140 -->
     <div style="text-align:center;padding:12px 16px;background:#F1EFE8;border-radius:var(--rads);border:1px solid #D3D1C7">
-      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#444441;line-height:1">140</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#444441;line-height:1">157</div>
       <div style="font-size:12px;font-weight:600;color:#5F5E5A;margin-top:3px">tickets dev — run</div>
       <div style="font-size:11px;color:#888780;margin-top:2px">intervention technique requise</div>
     </div>
@@ -625,17 +641,17 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <!-- KPIs -->
   <div class="st">📊 Chiffres clés</div>
   <div class="kgrid">
-    <div class="kcard pu"><div class="kico">📋</div><div class="kval">318</div><div class="klbl">Sollicitations totales</div><div class="ksub">162 requêtes OSP + 156 emails selfcare · sans doublons entre les deux sources</div></div>
+    <div class="kcard pu"><div class="kico">📋</div><div class="kval">351</div><div class="klbl">Sollicitations totales</div><div class="ksub">183 requêtes OSP + 168 emails selfcare · sans doublons entre les deux sources</div></div>
     <div class="kcard or"><div class="kico">↔️</div><div class="kval">4,7</div><div class="klbl">Échanges moy. / sollicitation</div><div class="ksub">4,8 moy. requêtes OSP · 4,5 moy. emails selfcare · max 20 sur les deux</div></div>
     <div class="kcard gn"><div class="kico">✅</div><div class="kval">69%</div><div class="klbl">Adressables en autonomie</div><div class="ksub">Multi-utilisateurs (42%) + Reset OTP (31%) — 2 fonctionnalités Keycloak natives suffisent</div></div>
-    <div class="kcard rd"><div class="kico">🔧</div><div class="kval">140</div><div class="klbl">Tickets dev générés</div><div class="ksub">Déc. 2025 → juin 2026 · −79% post-actions · pic à 14/sem en fév. → 3/sem aujourd'hui</div></div>
+    <div class="kcard rd"><div class="kico">🔧</div><div class="kval">157</div><div class="klbl">Tickets dev générés</div><div class="ksub">Déc. 2025 → juin 2026 · −79% post-actions · pic à 14/sem en fév. → 10/sem sem. 15/06</div></div>
   </div>
 
   <!-- GRAPHES ÉVOLUTION -->
   <div class="st">📅 Évolution hebdomadaire des sollicitations</div>
 
   <div class="cc" style="margin-bottom:24px">
-    <h4>318 sollicitations par thématique — déc. 2025 – juin 2026</h4>
+    <h4>351 sollicitations par thématique — déc. 2025 – juin 2026</h4>
     <div class="csub" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px">
       <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#6366F1;display:inline-block"></span>Multi-utilisateurs</span>
       <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#E63946;display:inline-block"></span>Reset OTP</span>
@@ -647,7 +663,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   </div>
 
   <div class="cc" style="margin-bottom:32px">
-    <h4>Tickets dev — run · 140 tickets · déc. 2025 – juin 2026</h4>
+    <h4>Tickets dev — run · 157 tickets · déc. 2025 – juin 2026</h4>
     <div class="csub">Zone grisée = ouverture MFA par vague · Traits violets = jalons d'amélioration · Trait bleu = MFA par défaut nouveaux vendeurs</div>
     <div class="cw h420"><canvas id="s1"></canvas></div>
   </div>
@@ -656,7 +672,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div class="st">🌳 Root causes — 5 thématiques</div>
   <div class="cc" style="margin-bottom:32px">
     <h4>Répartition par thématique — surface proportionnelle au volume</h4>
-    <div class="csub">318 sollicitations · requêtes OSP + emails selfcare · les 2 premières thématiques représentent 73% des cas</div>
+    <div class="csub">351 sollicitations · requêtes OSP + emails selfcare · les 2 premières thématiques représentent 73% des cas</div>
     <div style="overflow-x:auto;padding:8px 0;background:#fff;border-radius:12px">
 <svg viewBox="0 0 1050 360" role="img" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
 <defs><style>
@@ -1534,27 +1550,27 @@ function initRequetes(){
   }
 
   // ── GRAPHE 1 : OSP ───────────────────────────────────────────────
-  const ospLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+  const ospLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
   stackedBar('rq_osp', ospLabels, [
-    {label:'Multi-utilisateurs',data:[1,0,1,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,0],backgroundColor:ALPHA.multi},
-    {label:'Reset OTP',         data:[1,0,0,0,0,2,3,1,5,1,1,1,6,2,1,2,1,1,2,3,1,0,6,2,4,2,3],backgroundColor:ALPHA.reset},
-    {label:'Incompréhension',   data:[0,0,0,0,1,3,3,1,4,1,3,5,3,1,0,2,0,1,0,0,1,0,0,1,0,1,1],backgroundColor:ALPHA.incomp},
-    {label:'Opposition',        data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],backgroundColor:ALPHA.oppos},
-    {label:'Bug',               data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:ALPHA.bug}
+    {label:'Multi-utilisateurs',data:[1,0,1,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,0,0,2],backgroundColor:ALPHA.multi},
+    {label:'Reset OTP',         data:[1,0,0,0,0,2,3,1,5,1,1,1,6,2,1,2,1,1,2,3,1,0,6,2,4,2,3,4,10],backgroundColor:ALPHA.reset},
+    {label:'Incompréhension',   data:[0,0,0,0,1,3,3,1,4,1,3,5,3,1,0,2,0,1,0,0,1,0,0,1,0,1,1,1,2],backgroundColor:ALPHA.incomp},
+    {label:'Opposition',        data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1],backgroundColor:ALPHA.oppos},
+    {label:'Bug',               data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],backgroundColor:ALPHA.bug}
   ], 'osp');
 
   // ── GRAPHE 2 : SELFCARE ──────────────────────────────────────────
-  const scLabels = ['08/12','15/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+  const scLabels = ['08/12','15/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
   stackedBar('rq_sc', scLabels, [
-    {label:'Multi-utilisateurs',data:[0,2,2,0,3,2,2,1,2,4,3,2,2,4,1,0,1,0,1,0,0,1,0,0,1],backgroundColor:ALPHA.multi},
-    {label:'Reset OTP',         data:[0,0,0,2,0,1,3,4,1,2,0,1,6,1,2,0,3,3,0,2,1,3,1,3,3],backgroundColor:ALPHA.reset},
-    {label:'Incompréhension',   data:[1,0,0,1,1,2,3,1,3,4,3,4,1,1,2,1,1,1,2,1,3,1,2,1,1],backgroundColor:ALPHA.incomp},
-    {label:'Opposition',        data:[0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,0],backgroundColor:ALPHA.oppos},
-    {label:'Bug technique',     data:[2,0,0,1,1,4,3,0,0,0,3,0,2,0,0,2,0,0,0,0,0,1,1,0,4],backgroundColor:ALPHA.bug}
+    {label:'Multi-utilisateurs',data:[0,2,2,0,3,2,2,1,2,4,3,2,2,4,1,0,1,0,1,0,0,1,0,0,1,2,2],backgroundColor:ALPHA.multi},
+    {label:'Reset OTP',         data:[0,0,0,2,0,1,3,4,1,2,0,1,6,1,2,0,3,3,0,2,1,3,1,3,3,4,1],backgroundColor:ALPHA.reset},
+    {label:'Incompréhension',   data:[1,0,0,1,1,2,3,1,3,4,3,4,1,1,2,1,1,1,2,1,3,1,2,1,1,1,1],backgroundColor:ALPHA.incomp},
+    {label:'Opposition',        data:[0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0],backgroundColor:ALPHA.oppos},
+    {label:'Bug technique',     data:[2,0,0,1,1,4,3,0,0,0,3,0,2,0,0,2,0,0,0,0,0,1,1,0,4,1,0],backgroundColor:ALPHA.bug}
   ], 'sc');
 
   // ── GRAPHE 3 : 318 sollicitations par thématique ───────────────
-  const cumulLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+  const cumulLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
   // Plugin jalons décalés verticalement (anti-chevauchement avec les barres)
   const jalonPluginCumul={id:'jalonsCumul',afterDraw(chart){
     const{ctx,chartArea:{top,bottom,right},scales:{x}}=chart;
@@ -1593,11 +1609,11 @@ function initRequetes(){
       type:'bar',
       plugins:[jalonPluginCumul],
       data:{labels:cumulLabels,datasets:[
-        {label:'Multi-utilisateurs',backgroundColor:'rgba(99,102,241,.82)', borderRadius:0,stack:'s',data:[1,0,2,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,1]},
-        {label:'Reset OTP',         backgroundColor:'rgba(230,57,70,.82)',  borderRadius:0,stack:'s',data:[1,0,0,0,0,2,3,2,5,1,1,1,6,2,1,2,1,1,2,3,1,1,6,2,4,2,3]},
-        {label:'Incompréhension',   backgroundColor:'rgba(245,158,11,.82)', borderRadius:0,stack:'s',data:[1,1,0,0,1,4,3,1,5,1,3,5,4,3,0,2,0,1,0,0,1,0,0,1,0,1,1]},
-        {label:'Opposition',        backgroundColor:'rgba(13,148,136,.82)', borderRadius:0,stack:'s',data:[0,0,0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,1]},
-        {label:'Bug',               backgroundColor:'rgba(148,163,184,.75)',borderRadius:0,stack:'s',data:[2,0,0,0,0,1,1,4,3,0,0,3,0,2,0,0,0,0,0,0,0,0,1,1,0,4,2]}
+        {label:'Multi-utilisateurs',backgroundColor:'rgba(99,102,241,.82)', borderRadius:0,stack:'s',data:[1,0,2,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,1,2,4]},
+        {label:'Reset OTP',         backgroundColor:'rgba(230,57,70,.82)',  borderRadius:0,stack:'s',data:[1,0,0,0,0,2,3,2,5,1,1,1,6,2,1,2,1,1,2,3,1,1,6,2,4,2,3,8,11]},
+        {label:'Incompréhension',   backgroundColor:'rgba(245,158,11,.82)', borderRadius:0,stack:'s',data:[1,1,0,0,1,4,3,1,5,1,3,5,4,3,0,2,0,1,0,0,1,0,0,1,0,1,1,2,3]},
+        {label:'Opposition',        backgroundColor:'rgba(13,148,136,.82)', borderRadius:0,stack:'s',data:[0,0,0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,1,0,1]},
+        {label:'Bug',               backgroundColor:'rgba(148,163,184,.75)',borderRadius:0,stack:'s',data:[2,0,0,0,0,1,1,4,3,0,0,3,0,2,0,0,0,0,0,0,0,0,1,1,0,4,2,2,0]}
       ]},
       options:{
         responsive:true,maintainAspectRatio:false,
@@ -1669,8 +1685,8 @@ function initRequetes(){
   setTimeout(initSupport, 60);
 }
 function initSupport(){
-  const weeks=['08/12','15/12','22/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
-  const totals=[4,4,1,1,5,3,2,13,6,3,14,12,9,11,4,1,4,5,6,5,3,3,8,4,6,3];
+  const weeks=['08/12','15/12','22/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
+  const totals=[4,4,1,1,5,3,2,13,6,3,14,12,9,11,4,1,4,5,6,5,3,3,8,4,6,8,10,2];
   const AC='#6D28D9';
   function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();}
   const ap={id:'aS',
