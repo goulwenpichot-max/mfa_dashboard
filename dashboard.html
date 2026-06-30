@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Octopia OSP – État des lieux MFA | 21/06/2026</title>
+<title>Octopia OSP – État des lieux MFA | 28/06/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -117,276 +117,223 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 <header>
   <div class="hi">
     <div class="logo">Octopia OSP</div>
-    <div class="hbadge">🔐 État des lieux MFA · 21/06/2026</div>
+    <div class="hbadge">🔐 État des lieux MFA · 28/06/2026</div>
     <div class="hdate">Mise à jour hebdomadaire</div>
     <div class="hkpis">
-      <div><div class="hkv g">10 707</div><div class="hkl">Boutiques éligibles</div></div>
-      <div><div class="hkv p">2 180</div><div class="hkl">Boutiques MFA activé</div></div>
-      <div><div class="hkv o">20,4%</div><div class="hkl">Taux d'adoption</div></div>
-      <div><div class="hkv r">17 734</div><div class="hkl">Comptes éligibles</div></div>
+      <div><div class="hkv g">9 263</div><div class="hkl">Boutiques éligibles</div></div>
+      <div><div class="hkv p">1 932</div><div class="hkl">Boutiques MFA activé</div></div>
+      <div><div class="hkv o">20,9%</div><div class="hkl">Taux d'adoption</div></div>
+      <div><div class="hkv r">15 303</div><div class="hkl">Comptes éligibles</div></div>
     </div>
   </div>
 </header>
 
 <div class="tabs">
-  <button class="tbtn active"  onclick="openTab('overview',this)">🎯 Suivi challenges</button>
-  <button class="tbtn"         onclick="openTab('etat',this)">🔐 État des lieux MFA</button>
+  <button class="tbtn active"  onclick="openTab('etat',this)">🔐 État des lieux MFA</button>
+  <button class="tbtn"         onclick="openTab('overview',this)">🎯 Suivi challenges</button>
   <button class="tbtn"         onclick="openTab('evolution',this)">📈 Évolution</button>
-  <button class="tbtn"         onclick="openTab('requetes',this)">📬 Sollicitations</button>
-  <button class="tbtn" onclick="openTab('analytics',this)">📊 Analytics</button>
+  <button class="tbtn"         onclick="openTab('requetes',this)">📬 Sollicitations vendeurs</button>
+  <button class="tbtn"         onclick="openTab('support',this)">🔧 Tickets dev — run</button>
+  <button class="tbtn" disabled>📊 Analytics (soon)</button>
 </div>
 
 <main>
 
 <!-- ═══ OVERVIEW ═══ -->
-<div id="tab-overview" class="tab active">
+<div id="tab-overview" class="tab">
 
   <div class="hero" style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#312E81 100%)">
     <div class="htag">🔐 Octopia OSP · Déploiement MFA · Vue d'ensemble</div>
     <h1>Suivi challenges — Déploiement MFA OSP</h1>
-    <p>Mise à jour hebdomadaire · Dernière mise à jour : <strong>21/06/2026</strong></p>
-
+    <p>Mise à jour hebdomadaire · Dernière mise à jour : <strong>28/06/2026</strong></p>
+    <div class="hstats">
+      <div><div class="hsv g">20,9%</div><div class="hsl">Taux d'adoption</div><div class="hss">Objectif : 30% avant MFA obligatoire</div></div>
+      <div><div class="hsv o">~12%</div><div class="hsl">Ratio sol./activations</div><div class="hss">Objectif : &lt; 5% par semaine</div></div>
+      <div><div class="hsv p">1 932</div><div class="hsl">Boutiques MFA actives</div><div class="hss">Sur 9 263 boutiques éligibles</div></div>
+      <div><div class="hsv r">140</div><div class="hsl">Tickets dev ouverts</div><div class="hss">Run · depuis déc. 2025</div></div>
+    </div>
   </div>
 
   <!-- CHALLENGE 1 : SOLLICITATIONS -->
   <div class="st">🎯 Challenge 1 — Réduire les sollicitations de −5%</div>
 
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px">
+    <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
+      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:16px;text-transform:uppercase;letter-spacing:.4px">État actuel vs objectif</div>
+      <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:20px">
+        <div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#F59E0B;line-height:1">13,7%</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">318 sol. / 2 326 OTP actifs</div>
+        </div>
+        <div style="font-size:24px;color:var(--mut)">→</div>
+        <div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#10B981;line-height:1">&lt; 5%</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">Seuil cible : &lt; 5% sol./activations</div>
+        </div>
+      </div>
+      <!-- Barre de progression -->
+      <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
+        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:72%;height:100%;border-radius:99px;transition:width .6s"></div>
+      </div>
+      <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong>11–14%</strong> selon les semaines · objectif : passer sous <strong style="color:#10B981">5%</strong></div>
+    </div>
+
+    <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
+      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px">Ratio hebdo : sol. / nouvelles activations</div>
+      <div class="cw" style="height:160px"><canvas id="ov_ratio"></canvas></div>
+      <div style="font-size:11px;color:var(--mut);margin-top:8px">Objectif : ratio sollicitations / nouvelles activations <strong style="color:#10B981">&lt; 5%</strong></div>
+    </div>
+  </div>
+
+  <!-- Tickets dev evolution -->
   <div style="background:var(--srf);border-radius:var(--rad);padding:24px;margin-bottom:28px">
-    <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:16px;text-transform:uppercase;letter-spacing:.4px">État actuel vs objectif</div>
-    <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:20px">
-      <div>
-        <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-        <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#F59E0B;line-height:1">13,4%</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:4px">352 sol. / 2 625 OTP actifs</div>
-      </div>
-      <div style="font-size:24px;color:var(--mut)">→</div>
-      <div>
-        <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
-        <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#10B981;line-height:1">&lt; 5%</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:4px">Seuil cible : &lt; 5% sol./activations</div>
-      </div>
-    </div>
-    <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-      <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:72%;height:100%;border-radius:99px;transition:width .6s"></div>
-    </div>
-    <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong>13,4%</strong> · objectif : passer sous <strong style="color:#10B981">5%</strong></div>
+    <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Tickets dev — run · évolution hebdomadaire</div>
+    <div style="font-size:13px;color:var(--mut);margin-bottom:16px">Ces tickets émanent des sollicitations non résolues en self-service — leur volume reflète directement la charge générée sur les équipes dev.</div>
+    <div class="cw" style="height:160px"><canvas id="ov_tickets"></canvas></div>
   </div>
 
   <!-- CHALLENGE 2 : ADOPTION -->
   <div class="st">📈 Challenge 2 — Atteindre 30% d'adoption avant MFA obligatoire</div>
 
-  <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px">
-
-    <!-- PRIMAIRE : taux vendeurs connectés 30j -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px">
     <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
-      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Taux d'adoption — vendeurs connectés (20/05–19/06)</div>
-      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Périmètre : 7 515 boutiques éligibles MFA connectées au moins 1 fois sur les 30 derniers jours (20/05–19/06)</div>
-      <div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:20px">
+      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:16px;text-transform:uppercase;letter-spacing:.4px">État actuel vs objectif</div>
+      <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:20px">
         <div>
           <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-          <div style="font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#F59E0B;line-height:1">25,8%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">1 940 / 7 515 boutiques connectées</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#F59E0B;line-height:1">20,9%</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">2 267 / 10 973 boutiques</div>
         </div>
         <div style="font-size:24px;color:var(--mut)">→</div>
         <div>
           <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Objectif</div>
-          <div style="font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#10B981;line-height:1">30%</div>
-          <div style="font-size:12px;color:var(--mut);margin-top:4px">~315 boutiques connectées de plus</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:40px;font-weight:800;color:#10B981;line-height:1">30%</div>
+          <div style="font-size:12px;color:var(--mut);margin-top:4px">~840 boutiques de plus</div>
         </div>
       </div>
+      <!-- Barre de progression -->
       <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-        <div style="background:linear-gradient(90deg,#10B981 60%,#F59E0B);width:86%;height:100%;border-radius:99px"></div>
+        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:70%;height:100%;border-radius:99px;transition:width .6s"></div>
       </div>
-      <div style="font-size:12px;color:var(--mut);margin-bottom:16px">86% de l'objectif atteint · +4,2 pts restants</div>
-      <!-- Répartition Substate des connectés -->
-      <div style="background:var(--bg);border-radius:var(--rads);padding:12px 14px;margin-top:4px">
-        <div style="font-size:11px;font-weight:700;color:var(--mut);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px">Répartition des 12 448 vendeurs connectés 30j</div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap">
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="width:10px;height:10px;border-radius:50%;background:#10B981;flex-shrink:0"></div>
-            <span style="font-size:12px;color:var(--txt)"><strong>9 332</strong> vendeurs captifs</span>
-            <span style="font-size:11px;color:var(--mut)">(ActiveSeller + Holidays · 74,9%)</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="width:10px;height:10px;border-radius:50%;background:#E63946;flex-shrink:0"></div>
-            <span style="font-size:12px;color:var(--txt)"><strong>3 116</strong> interdits à la vente</span>
-            <span style="font-size:11px;color:var(--mut)">(BannedSeller · 25,0%)</span>
-          </div>
+      <div style="font-size:12px;color:var(--mut)">69% du chemin parcouru · +9,2 pts restants · rythme actuel : +0,5pt/semaine</div>
+    </div>
+
+    <div style="background:var(--srf);border-radius:var(--rad);padding:24px">
+      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px">Courbe d'adoption — 6 snapshots</div>
+      <div class="cw" style="height:160px"><canvas id="ov_adoption"></canvas></div>
+      <div style="font-size:11px;color:var(--mut);margin-top:8px">Objectif <strong style="color:#10B981">30%</strong> marqué en pointillé vert</div>
+    </div>
+  </div>
+
+  <!-- PROCHAINES ÉTAPES -->
+  <div class="st">🚀 Ce qu'il faut débloquer</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px">
+
+    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff">
+      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:10px;letter-spacing:.4px;text-transform:uppercase">Pour réduire les sollicitations</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#4F46E5;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">1</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#A5B4FC">Ajout OTP par utilisateur</strong> — Keycloak natif · adresse 38% des sollicitations · prérequis n°1</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#E63946;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">2</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FCA5A5">Delete OTP self-service</strong> — Keycloak natif · adresse 31% des sollicitations · prérequis n°2</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#F59E0B;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">3</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FDE68A">Afficher l'email dans les réglages OSP</strong> — quick win UX · source de confusion identifiée sur le terrain</div>
         </div>
       </div>
     </div>
 
-    <!-- SECONDAIRE : taux global éligibles -->
-    <div style="background:var(--srf);border-radius:var(--rad);padding:24px;opacity:.85">
-      <div style="font-size:12px;font-weight:700;color:var(--mut);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px">Taux global (tous éligibles)</div>
-      <div style="font-size:11px;color:var(--mut);margin-bottom:16px">Base officielle · 17 734 boutiques mfa_active_via_vague</div>
-      <div style="margin-bottom:20px">
-        <div style="font-size:11px;color:var(--mut);margin-bottom:4px">Aujourd'hui</div>
-        <div style="font-family:'Outfit',sans-serif;font-size:36px;font-weight:800;color:#F59E0B;line-height:1">20,4%</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:4px">2 180 / 10 707 boutiques</div>
-      </div>
-      <div style="background:var(--bg);border-radius:99px;height:8px;overflow:hidden;margin-bottom:6px">
-        <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:68%;height:100%;border-radius:99px"></div>
-      </div>
-      <div style="font-size:11px;color:var(--mut)">68% du chemin · +9,6 pts restants</div>
-    </div>
-  </div>
-
-  <!-- TABLEAU PAYS sous Challenge 2 -->
-  <div style="background:var(--card);border-radius:var(--rad);padding:20px 24px;border:1px solid var(--brd);box-shadow:var(--sh);margin-bottom:28px">
-    <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:14px">📊 Taux d'adoption par région — vendeurs connectés 30j (20/05–19/06)</div>
-    <table style="width:100%;border-collapse:collapse;font-size:13px">
-      <thead>
-        <tr style="background:var(--bg)">
-          <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mut)">Région</th>
-          <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Connectés éligibles</th>
-          <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">MFA actif</th>
-          <th style="padding:8px 12px;text-align:center;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Taux</th>
-          <th style="padding:8px 12px;text-align:left;border-bottom:2px solid var(--brd);font-size:11px;text-transform:uppercase;color:var(--mut)">Progression</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🇫🇷 France</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">5 368</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--g)">1 130</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">21,1%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#10B981;width:21.1%;height:7px;border-radius:4px"></div></div></td>
-        </tr>
-        <tr>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🌍 Europe (hors FR)</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">3 768</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">549</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">14,6%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:14.6%;height:7px;border-radius:4px"></div></div></td>
-        </tr>
-        <tr>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);font-weight:600">🇨🇳 CN & HK</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center">2 911</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--o)">216</td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">7,4%</span></td>
-          <td style="padding:9px 12px;border-bottom:1px solid var(--brd)"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#F59E0B;width:7.4%;height:7px;border-radius:4px"></div></div></td>
-        </tr>
-        <tr>
-          <td style="padding:9px 12px;font-weight:600">🌐 Reste du monde</td>
-          <td style="padding:9px 12px;text-align:center">401</td>
-          <td style="padding:9px 12px;text-align:center;font-weight:700;color:var(--mut)">45</td>
-          <td style="padding:9px 12px;text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:2px 8px;border-radius:12px;font-weight:700;font-size:12px">11,2%</span></td>
-          <td style="padding:9px 12px"><div style="background:#E2E8F0;border-radius:4px;height:7px"><div style="background:#94A3B8;width:11.2%;height:7px;border-radius:4px"></div></div></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- FOCUS NOUVELLE VAGUE -->
-  <div class="st">🆕 Focus — Nouvelle vague 10/06/2026</div>
-  <div style="background:var(--srf);border-radius:var(--rad);padding:24px;border:1px solid var(--brd);box-shadow:var(--sh);margin-bottom:32px">
-
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px">
-      <div style="text-align:center;padding:16px;background:#EDE9FE;border-radius:var(--rads)">
-        <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#312E81">999</div>
-        <div style="font-size:12px;font-weight:600;color:#534AB7;margin-top:4px">Nouvelles boutiques éligibles</div>
-        <div style="font-size:11px;color:#7C72D8;margin-top:2px">Entrées en vague le 10/06</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#DCFCE7;border-radius:var(--rads)">
-        <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#14532D">140</div>
-        <div style="font-size:12px;font-weight:600;color:#15803D;margin-top:4px">Activations spontanées</div>
-        <div style="font-size:11px;color:#166534;margin-top:2px">14,0% après 2 semaines</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#FEF3C7;border-radius:var(--rads)">
-        <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#78350F">30%</div>
-        <div style="font-size:12px;font-weight:600;color:#B45309;margin-top:4px">Objectif d'adoption</div>
-        <div style="font-size:11px;color:#92400E;margin-top:2px">~160 boutiques à activer</div>
-      </div>
-      <div style="text-align:center;padding:16px;background:#FFF1F2;border-radius:var(--rads);border:1px solid #FECDD3">
-        <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#9F1239">5</div>
-        <div style="font-size:12px;font-weight:600;color:#BE123C;margin-top:4px">Boutiques sollicitations</div>
-        <div style="font-size:11px;color:#E11D48;margin-top:2px">vague 10 · taux 3,6% · sous seuil 5%</div>
-      </div>
-    </div>
-
-    <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:12px">📡 Indicateurs à suivre chaque semaine</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div style="padding:14px 16px;background:var(--bg);border-radius:var(--rads);border-left:3px solid #10B981">
-        <div style="font-size:11px;font-weight:700;color:#15803D;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Challenge adoption</div>
-        <div style="font-size:13px;color:var(--txt);font-weight:600">Taux d'adoption de la vague 10/06</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:3px">140 boutiques / 999 éligibles · <strong style="color:#15803D">14,0%</strong> · objectif : atteindre <strong>30%</strong></div>
-        <div style="margin-top:8px;position:relative">
-          <div style="background:#E2E8F0;border-radius:4px;height:8px;overflow:hidden">
-            <div style="background:#10B981;width:46.7%;height:8px;border-radius:4px"></div>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:3px">
-            <span style="color:#15803D;font-weight:700">14,0%</span>
-            <span style="font-weight:700;color:#15803D">objectif 30% ▶</span>
-          </div>
+    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff">
+      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:10px;letter-spacing:.4px;text-transform:uppercase">Pour augmenter l'adoption</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#10B981;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">1</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#6EE7B7">Relancer les 3 312 cibles "Later"</strong> qui n'ont pas répondu au mail du 04/06 · 1,6% de conversion observée</div>
         </div>
-      </div>
-      <div style="padding:14px 16px;background:var(--bg);border-radius:var(--rads);border-left:3px solid #6366F1">
-        <div style="font-size:11px;font-weight:700;color:#4F46E5;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Challenge sollicitations</div>
-        <div style="font-size:13px;color:var(--txt);font-weight:600">Taux de sollicitations vague 10/06</div>
-        <div style="font-size:12px;color:var(--mut);margin-top:3px">5 boutiques / 140 activations · <strong style="color:#15803D">3,6%</strong> · objectif : rester sous <strong>5%</strong></div>
-        <div style="margin-top:8px;position:relative">
-          <div style="background:#E2E8F0;border-radius:4px;height:8px;overflow:hidden">
-            <div style="background:#6366F1;width:72%;height:8px;border-radius:4px"></div>
-          </div>
-          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-top:3px">
-            <span style="color:#4F46E5;font-weight:700">3,6%</span>
-            <span style="font-weight:700;color:#E63946">seuil 5% ▶</span>
-          </div>
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#6366F1;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">2</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#A5B4FC">Suivre les +1 000 nouveaux éligibles (10/06)</strong> — taux d'activation spontanée à mesurer au prochain snapshot</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="background:#F59E0B;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">3</span>
+          <div style="font-size:13px;opacity:.9;line-height:1.5"><strong style="color:#FDE68A">Acculturer les vendeurs</strong> à la création de comptes individuels — connaissance de la fonctionnalité insuffisante (cas Wine & Co)</div>
         </div>
       </div>
     </div>
 
   </div>
-
 
 </div><!-- /tab-overview -->
 
 
 <!-- ═══ ÉTAT DES LIEUX ═══ -->
-<div id="tab-etat" class="tab">
+<div id="tab-etat" class="tab active">
 
   <div class="hero" style="background:linear-gradient(135deg,var(--p) 0%,#4F46E5 50%,#7C3AED 100%)">
-    <div class="htag">🔐 État des lieux · Boutiques éligibles · 21/06/2026</div>
+    <div class="htag">🔐 État des lieux · Boutiques éligibles · 28/06/2026</div>
     <h1>Déploiement MFA sur le portail vendeur OSP</h1>
     <p>Analyse du taux d'adoption du MFA (optionnel, conseillé) auprès des boutiques vendeurs ayant accès à la fonctionnalité.</p>
-
+    <div class="hstats">
+      <div><div class="hsv">20,9%</div><div class="hsl">Boutiques avec MFA activé</div><div class="hss">2 267 / 10 973 boutiques</div></div>
+      <div><div class="hsv">9 263</div><div class="hsl">Boutiques éligibles</div><div class="hss">+132 vs 31/05</div></div>
+      <div><div class="hsv">15 303</div><div class="hsl">Comptes éligibles</div><div class="hss">+202 vs 31/05</div></div>
+      <div><div class="hsv">15,2%</div><div class="hsl">Comptes OTP actifs</div><div class="hss">2 736 / 18 087 comptes</div></div>
+    </div>
   </div>
 
   <div class="st">📊 Indicateurs clés</div>
   <div class="kgrid">
     <div class="kcard gn">
       <div class="kico">✅</div>
-      <div class="kdel up">▲ +82 boutiques vs 14/06 · +589 vs 07/05</div>
-      <div class="kval">20,4%</div>
+      <div class="kdel up">▲ +94 boutiques vs 31/05 · +341 vs 07/05</div>
+      <div class="kval">20,9%</div>
       <div class="klbl">Boutiques MFA activé</div>
-      <div class="ksub">2 180 boutiques · +222 nouvelles boutiques éligibles</div>
+      <div class="ksub">1 932 boutiques · dont +52 post-mail relance 04/06</div>
     </div>
     <div class="kcard or">
       <div class="kico">⏳</div>
-      <div class="kdel up">▲ +0,5pt</div>
-      <div class="kval">62,3%</div>
+      <div class="kdel eq">= stable</div>
+      <div class="kval">65,3%</div>
       <div class="klbl">Remis à plus tard</div>
-      <div class="ksub">À chaque connexion, ces vendeurs cliquent sur "Plus tard" · 6 590 boutiques</div>
+      <div class="ksub">À chaque connexion, ces vendeurs cliquent sur "Plus tard" · 6 051 boutiques</div>
     </div>
     <div class="kcard rd">
       <div class="kico">😶</div>
-      <div class="kdel up">▼ −0,6pt</div>
-      <div class="kval">18,9%</div>
+      <div class="kdel eq">= stable</div>
+      <div class="kval">18,4%</div>
       <div class="klbl">Aucune interaction</div>
-      <div class="ksub">Ces vendeurs ne se connectent pas (ou très peu) à leur OSP · 2 001 boutiques</div>
+      <div class="ksub">Ces vendeurs ne se connectent pas (ou très peu) à leur OSP · 1 708 boutiques</div>
     </div>
-
+    <div class="kcard pu">
+      <div class="kico">⚠️</div>
+      <div class="kdel eq">= stable</div>
+      <div class="kval">0,6%</div>
+      <div class="klbl">Initié non complété</div>
+      <div class="ksub">Ont cliqué "Yes" mais OTP non encore actif · 59 boutiques</div>
+    </div>
   </div>
 
-
-
+  <div class="st">👥 Répartition des 15 303 comptes issus des 9 263 boutiques éligibles</div>
   <div class="cgrid">
-    <div class="cc"><h4>🍩 Comptes principaux vs secondaires</h4><div class="csub">10 572 principaux · 7 162 secondaires</div><div class="cw h220"><canvas id="c1"></canvas></div></div>
-    <div class="cc"><h4>📊 OTP actif — principaux vs secondaires</h4><div class="csub">Principaux : 18,4% OTP · Secondaires : 9,5% OTP</div><div class="cw h220"><canvas id="c2"></canvas></div></div>
+    <div class="cc"><h4>🍩 Comptes principaux vs secondaires</h4><div class="csub">9 107 principaux · 6 196 secondaires</div><div class="cw h220"><canvas id="c1"></canvas></div></div>
+    <div class="cc"><h4>📊 OTP actif — principaux vs secondaires</h4><div class="csub">Principaux : 18,9% OTP · Secondaires : 9,8% OTP</div><div class="cw h220"><canvas id="c2"></canvas></div></div>
+    <div class="cc"><h4>📦 Nombre de comptes par boutique</h4><div class="csub">81,3% des boutiques ont un seul compte · moyenne : 1,65 compte/boutique</div><div class="cw h220"><canvas id="c3"></canvas></div></div>
+    <div class="cc"><h4>🔐 mfa_choice — Comptes principaux</h4><div class="csub">Répartition sur les 9 107 comptes principaux · Later 61,7% · Yes 19,3% · Sans interaction 19,0%</div><div class="cw h220"><canvas id="c4"></canvas></div></div>
   </div>
 
-
+  <div class="cc" style="margin-bottom:32px">
+    <h4>📏 Progression par statut — Boutiques éligibles</h4><div class="csub" style="margin-bottom:20px">Base : 9 263 boutiques</div>
+    <div class="prw"><div class="prl"><span>✅ MFA activé</span><span style="color:var(--g);font-weight:800">20,9% · 1 932</span></div><div class="prt"><div class="prf" style="width:20.9%;background:linear-gradient(90deg,var(--g),#34D399)"></div></div></div>
+    <div class="prw"><div class="prl"><span>⏳ Remis à plus tard</span><span style="color:var(--o);font-weight:800">65,3% · 6 051</span></div><div class="prt"><div class="prf" style="width:65.3%;background:linear-gradient(90deg,var(--o),#FCD34D)"></div></div></div>
+    <div class="prw"><div class="prl"><span>😶 Aucune interaction</span><span style="color:var(--mut);font-weight:800">18,4% · 1 708</span></div><div class="prt"><div class="prf" style="width:18.4%;background:linear-gradient(90deg,#94A3B8,#CBD5E1)"></div></div></div>
+    <div class="prw" style="margin-bottom:0"><div class="prl"><span>⚠️ Initié non complété</span><span style="color:var(--p);font-weight:800">0,6% · 51</span></div><div class="prt"><div class="prf" style="width:0.6%;background:linear-gradient(90deg,var(--p),var(--pl));min-width:6px"></div></div></div>
+  </div>
 
   <div class="st">🆕 Focus — Nouveaux vendeurs (sellerid ≥ 418 448)</div>
   <div class="dbox">
@@ -394,21 +341,21 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
     <p>À partir du sellerid <strong style="color:#F8FAFC">418 448</strong>, les nouvelles boutiques ont le MFA optionnel activé par défaut dès leur création. Ces vendeurs n'ont jamais connu l'OSP sans MFA. Leur taux progresse semaine après semaine : <span class="hl">13,9% → 14,3% → 15,0% → 15,4% → 16,0%</span></p>
   </div>
   <div class="two">
-    <div class="cc"><h4>📊 Taux d'adoption MFA — Nouveaux vs Anciens vendeurs</h4><div class="csub">Boutiques avec MFA actif — 21/06/2026</div><div class="cw h220"><canvas id="c5"></canvas></div></div>
-    <div class="cc"><h4>🍩 Répartition — Nouveaux vendeurs</h4><div class="csub">3 975 boutiques · sellerid ≥ 418 448</div><div class="cw h220"><canvas id="c6"></canvas></div></div>
+    <div class="cc"><h4>📊 Taux d'adoption MFA — Nouveaux vs Anciens vendeurs</h4><div class="csub">Boutiques avec MFA actif — 28/06/2026</div><div class="cw h220"><canvas id="c5"></canvas></div></div>
+    <div class="cc"><h4>🍩 Répartition — Nouveaux vendeurs</h4><div class="csub">3 477 boutiques · sellerid ≥ 418 448</div><div class="cw h220"><canvas id="c6"></canvas></div></div>
   </div>
   <div class="three">
-    <div class="pbox or"><div class="pt">📉 Écart persistant avec les anciens</div><p>16,0% vs 22,9% pour les anciens — l'écart reste de ~6,9 pts. La vague 10/06 (nouveaux sellerids) a temporairement dilué le taux avant de remonter.</p></div>
-    <div class="pbox gn"><div class="pt">📈 Progression continue semaine après semaine</div><p>13,9% → 14,3% → 15,0% → 15,4% → 15,8% → <strong>16,0%</strong>. La cohorte progresse régulièrement, retrouvant son niveau après la dilution de la vague 10.</p></div>
-    <div class="pbox bl"><div class="pt">🎯 Projection : ~17% d'ici fin juillet</div><p>Si le rythme se maintient (+0,5pt/sem), le taux des nouveaux vendeurs atteindra <strong>~18%</strong> mi-juillet 2026, réduisant l'écart avec les anciens à ~5 pts.</p></div>
+    <div class="pbox or"><div class="pt">📉 Écart persistant avec les anciens</div><p>16,0% vs 23,8% pour les anciens — l'écart reste de ~7,8 pts. La progression est régulière : 13,9% → 14,3% → 15,0% → 15,0% → 15,4% → 16,0%.</p></div>
+    <div class="pbox gn"><div class="pt">📈 Progression continue semaine après semaine</div><p>13,9% → 14,3% → 15,0% → 15,4% → <strong>16,0%</strong>. La cohorte progresse de +0,5 pt/semaine en moyenne sur les 5 semaines.</p></div>
+    <div class="pbox bl"><div class="pt">🎯 Projection : ~17% en 4 semaines</div><p>Si le rythme se maintient (+0,5pt/sem), le taux des nouveaux vendeurs atteindra <strong>~18%</strong> fin juin 2026, réduisant l'écart avec les anciens à ~6 pts.</p></div>
   </div>
 
-  <div class="st">😶 Focus — Boutiques sans aucune interaction (2 001 boutiques)</div>
+  <div class="st">😶 Focus — Boutiques sans aucune interaction (1 738 boutiques)</div>
   <div class="two">
     <div class="cc"><h4>📅 Ancienneté des boutiques sans interaction</h4><div class="csub">Année de création du compte le plus ancien</div><div class="cw h220"><canvas id="c7"></canvas></div></div>
-    <div class="cc"><h4>👥 Profil des comptes</h4><div class="csub">Sur les 2 001 boutiques sans interaction</div><div class="cw h180"><canvas id="c8"></canvas></div>
+    <div class="cc"><h4>👥 Profil des comptes</h4><div class="csub">Sur les 1 738 boutiques sans interaction</div><div class="cw h180"><canvas id="c8"></canvas></div>
       <div style="margin-top:14px">
-        <div class="srow"><span class="srl">Boutiques mono-compte</span><span class="srv" style="color:var(--p)">~1 826 <small style="font-weight:400;font-size:12px;color:var(--mut)">(~94%)</small></span></div>
+        <div class="srow"><span class="srl">Boutiques mono-compte</span><span class="srv" style="color:var(--p)">~1 640 <small style="font-weight:400;font-size:12px;color:var(--mut)">(~94%)</small></span></div>
         <div class="srow"><span class="srl">Nb comptes moyen / boutique</span><span class="srv">1,11</span></div>
         <div class="srow"><span class="srl">Profil dominant</span><span class="srv" style="font-size:13px">Créés en 2026</span></div>
       </div>
@@ -417,7 +364,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
   <div class="st">📅 Profil adoption MFA — par année de création</div>
   <div class="cgrid">
-    <div class="cc"><h4>📊 Taux OTP par année de création (comptes principaux)</h4><div class="csub">Taux OTP actif (%) + volume comptes éligibles · 21/06/2026</div><div class="cw h260"><canvas id="c9"></canvas></div></div>
+    <div class="cc"><h4>📊 Taux OTP par année de création (comptes principaux)</h4><div class="csub">Taux OTP actif (%) + volume comptes éligibles · 31/05/2026</div><div class="cw h260"><canvas id="c9"></canvas></div></div>
     <div class="cc"><h4>📊 Distribution éligibles vs adoptants — par année</h4><div class="csub">2022 sur-représenté dans les adoptants · 2026 monte en puissance</div><div class="cw h260"><canvas id="c10"></canvas></div></div>
   </div>
 
@@ -428,14 +375,14 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 <div id="tab-evolution" class="tab">
 
   <div class="hero" style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 60%,#312E81 100%)">
-    <div class="htag">📈 Évolution · 7 snapshots · 07/05 → 21/06/2026</div>
+    <div class="htag">📈 Évolution · 6 snapshots · 07/05 → 28/06/2026</div>
     <h1>Progression de l'adoption MFA dans le temps</h1>
-    <p>Suivi du déploiement sur 7 snapshots (07/05 → 21/06).</p>
-  </div>
-
-  <div class="kgrid" style="margin-bottom:28px">
-    <div class="kcard pu"><div class="kico">📈</div><div class="kval">+589</div><div class="klbl">Boutiques MFA en 45 jours</div><div class="ksub">07/05 → 21/06 · rythme moyen +84/semaine</div></div>
-    <div class="kcard gn"><div class="kico">📊</div><div class="kval">+82</div><div class="klbl">Nouvelles boutiques MFA cette semaine</div><div class="ksub">Semaine du 21/06 · dont 25 nouvelles boutiques vague 10/06 · 57 activations autres</div></div>
+    <p>Suivi du déploiement sur 6 snapshots (07/05 → 07/06).</p>
+    <div class="hstats">
+      <div><div class="hsv">+341</div><div class="hsl">Boutiques MFA en 31 jours</div><div class="hss">07/05 → 07/06 · +94 cette semaine</div></div>
+      <div><div class="hsv">+1 209</div><div class="hsl">Nouvelles boutiques éligibles</div><div class="hss">8 054 → 9 263</div></div>
+      <div><div class="hsv">20,9%</div><div class="hsl">Taux d'adoption actuel</div><div class="hss">Franchit 20% pour la 1ère fois</div></div>
+    </div>
   </div>
 
   <div class="cc" style="margin-bottom:32px">
@@ -445,9 +392,9 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   </div>
 
   <div class="three">
-    <div class="pbox gn"><div class="pt">✅ 20,4% — taux en progression malgré l'élargissement du parc</div><p>+222 boutiques éligibles cette semaine. Sur les <strong>+82</strong> activations, <strong>25 viennent de la vague 10/06</strong> (cumul : 140, soit 14,0%) et <strong>57 d'autres boutiques</strong>.</p></div>
-    <div class="pbox or"><div class="pt">📧 Mail relance 04/06 : 1,4% de conversion</div><p>52 nouveaux activateurs sur 3 703 cibles en seulement 3 jours. Taux faible mais attendu sur une période courte — impact à consolider sur la durée.</p></div>
-    <div class="pbox bl"><div class="pt">📉 Vague 10/06 : dilution du taux absorbée</div><p>La vague 10/06 (+999 boutiques) avait temporairement comprimé le taux global à 20,0%. La remontée à <strong>20,4%</strong> confirme que le parc historique continue d'activer régulièrement.</p></div>
+    <div class="pbox gn"><div class="pt">✅ 20,9% — franchissement vers le haut</div><p>Après stabilisation à 20,0–20,1%, le taux monte à <strong>20,9%</strong> le 07/06. +94 boutiques MFA en 7 jours, dont <strong>+52 attribuables au mail relance du 04/06</strong>.</p></div>
+    <div class="pbox or"><div class="pt">📧 Mail relance 04/06 : 1,4% de conversion</div><p>52 nouveaux activateurs sur 3 703 cibles en seulement 3 jours. Taux faible mais attendu sur une période courte — à réévaluer au prochain snapshot.</p></div>
+    <div class="pbox bl"><div class="pt">🆕 +1 000 nouveaux éligibles dès aujourd'hui</div><p>Nouvelle ouverture vague le 10/06. Ces nouveaux vendeurs éligibles grossiront le dénominateur — à surveiller pour voir si le taux d'adoption se maintient ou recule temporairement.</p></div>
   </div>
   <div class="st">📋 Suivi des 6 snapshots</div>
   <div class="cc" style="margin-bottom:32px">
@@ -495,23 +442,23 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
           <td>15 101 <span class="pill up">+272</span></td><td>2 211 <span class="pill up">+67</span></td><td>14,6%</td>
           <td>5 962 <span class="pill up">+146</span></td><td>1 738 <span class="pill up">+37</span></td><td>15,4%</td>
         </tr>
-        <tr>
-          <td><strong>07/06</strong></td>
-          <td>9 263 <span class="pill up">+132</span></td><td><strong>1 932</strong> <span class="pill up">+94</span></td><td><span class="pill o">20,9%</span></td>
+        <tr class="latest">
+          <td><strong>07/06</strong><br><span style="font-size:11px;color:var(--p);font-weight:700">← Dernier</span></td>
+          <td>9 263 <span class="pill up">+132</span></td><td><strong>1 932</strong> <span class="pill up">+94</span></td><td><span class="pill g">20,9% 📈</span></td>
           <td>15 303 <span class="pill up">+202</span></td><td>2 326 <span class="pill up">+115</span></td><td>15,2%</td>
           <td>6 051 <span class="pill up">+89</span></td><td>1 708 <span class="pill up">-30</span></td><td>16,0%</td>
         </tr>
-        <tr>
-          <td><strong>14/06</strong></td>
-          <td>10 485 <span class="pill up">+1222</span></td><td><strong>2 098</strong> <span class="pill up">+166</span></td><td><span class="pill g">20,0%</span></td>
-          <td>17 447 <span class="pill up">+2144</span></td><td>2 523 <span class="pill up">+197</span></td><td>14,5%</td>
-          <td>6 389 <span class="pill up">+338</span></td><td>2 020 <span class="pill up">+312</span></td><td>16,6%</td>
-        </tr>
         <tr class="latest">
-          <td><strong>21/06</strong><br><span style="font-size:11px;color:var(--p);font-weight:700">← Dernier</span></td>
-          <td>10 707 <span class="pill up">+222</span></td><td><strong>2 180</strong> <span class="pill up">+82</span></td><td><span class="pill g">20,4% 📈</span></td>
-          <td>17 734 <span class="pill up">+287</span></td><td>2 625 <span class="pill up">+102</span></td><td>14,8%</td>
-          <td>6 590 <span class="pill up">+201</span></td><td>2 001 <span class="pill gy">−19</span></td><td>16,0%</td>
+          <td><strong>28/06</strong><br><span style="font-size:11px;color:var(--p);font-weight:700">â† Dernier</span></td>
+          <td>10 973 <span class="pill up">+0</span></td>
+          <td><strong>2 267</strong> <span class="pill up">+0</span></td>
+          <td><span class="pill g">20,7%</span></td>
+          <td>18 087 <span class="pill up">+0</span></td>
+          <td>2 736 <span class="pill up">+0</span></td>
+          <td>15,1%</td>
+          <td>6 651 <span class="pill up">+0</span></td>
+          <td>2 055 <span class="pill up">+0</span></td>
+          <td>16,5%</td>
         </tr>
       </tbody>
     </table>
@@ -521,6 +468,8 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div class="st">📈 Visualisations</div>
   <div class="cgrid">
     <div class="cc"><h4>📈 Taux d'adoption — courbe sur 6 snapshots</h4><div class="csub">Taux boutiques MFA (%) et taux comptes OTP (%) · annotations : mail relance + ouverture vague</div><div class="cw h260"><canvas id="e1"></canvas></div></div>
+    <div class="cc"><h4>🏪 Volume boutiques MFA actif vs éligibles</h4><div class="csub">Croissance absolue sur les 5 snapshots</div><div class="cw h260"><canvas id="e2"></canvas></div></div>
+    <div class="cc"><h4>🆕 Évolution taux — Nouveaux vs Anciens vendeurs</h4><div class="csub">Progression hebdomadaire des 2 cohortes</div><div class="cw h260"><canvas id="e3"></canvas></div></div>
     <div class="cc"><h4>📦 Évolution volume par statut (boutiques)</h4><div class="csub">MFA actif, Later, Aucune interaction — en valeur absolue</div><div class="cw h260"><canvas id="e4"></canvas></div></div>
   </div>
 
@@ -532,21 +481,21 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
       <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
       <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Objectif</div>
       <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#F59E0B;margin-bottom:4px">30%</div>
-      <div style="font-size:13px;opacity:.85;line-height:1.6">Taux d'activation cible avant passage en MFA obligatoire. Aujourd'hui à <strong style="color:#10B981">20,4%</strong> — il reste <strong style="color:#F59E0B">9,6 pts</strong> à gagner, soit ~1 032 boutiques supplémentaires à activer.</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Taux d'activation cible avant passage en MFA obligatoire. Aujourd'hui à <strong style="color:#10B981">20,9%</strong> — il reste <strong style="color:#F59E0B">9,1 pts</strong> à gagner, soit ~840 boutiques supplémentaires à activer.</div>
     </div>
 
     <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
       <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
       <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Levier principal</div>
-      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#6366F1;margin-bottom:4px">6 590</div>
-      <div style="font-size:13px;opacity:.85;line-height:1.6">Boutiques en statut <strong style="color:#F8FAFC">«&nbsp;Later&nbsp;»</strong> (62,3%) — la réserve d'activation principale. Si 16% de ces boutiques activent, l'objectif 30% est atteint. 3 312 ont déjà reçu un mail relance sans activer.</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#6366F1;margin-bottom:4px">6 051</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Boutiques en statut <strong style="color:#F8FAFC">«&nbsp;Later&nbsp;»</strong> (65,3%) — la réserve d'activation principale. Si 14% de ces boutiques activent, l'objectif 30% est atteint. 3 312 ont déjà reçu un mail relance sans activer.</div>
     </div>
 
     <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
       <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
       <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Signal semaine</div>
-      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#10B981;margin-bottom:4px">+82</div>
-      <div style="font-size:13px;opacity:.85;line-height:1.6">Nouvelles boutiques MFA la semaine du 21/06 — rythme soutenu après le record de 14/06 (+166). La vague 10/06 contribue <strong style="color:#F8FAFC">+25</strong> activations supplémentaires (cumul 140, 14,0%).</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#10B981;margin-bottom:4px">+94</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Nouvelles boutiques MFA la semaine du 07/06 — meilleur chiffre depuis le démarrage. Le mail relance du 04/06 a contribué <strong style="color:#F8FAFC">+52 boutiques</strong> en 3 jours, soit 55% du total hebdo.</div>
     </div>
 
   </div>
@@ -558,159 +507,220 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 <div id="tab-requetes" class="tab">
 
   <div class="hero" style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 40%,#4F46E5 100%)">
-    <div class="htag">📬 Sollicitations vendeurs & Tickets dev · déc. 2025 – juin 2026</div>
-    <h1>Sollicitations vendeurs & Tickets dev MFA</h1>
-    <p>352 sollicitations reçues via 2 canaux (requêtes OSP + emails selfcare) · analyse des root causes · 157 tickets dev générés par les sollicitations nécessitant une intervention technique.</p>
+    <div class="htag">📬 Sollicitations vendeurs · déc. 2025 – juin 2026</div>
+    <h1>Analyse des sollicitations MFA vendeurs</h1>
+    <p>2 canaux · 318 sollicitations analysées · qualification des root causes · identification des prérequis avant MFA obligatoire.</p>
   </div>
 
-  <!-- ENTONNOIR -->
-  <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:0;margin-bottom:32px;background:var(--card);border-radius:var(--rad);padding:24px 28px;border:1px solid var(--brd);box-shadow:var(--sh)">
-
-    <!-- Bloc 318 -->
-    <div style="text-align:center;padding:12px 16px;background:#EDE9FE;border-radius:var(--rads);border:1px solid #C4BFFA">
-      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#312E81;line-height:1">352</div>
-      <div style="font-size:12px;font-weight:600;color:#534AB7;margin-top:3px">sollicitations</div>
-      <div style="font-size:11px;color:#7C72D8;margin-top:2px">184 requêtes + 168 emails</div>
+  <!-- 2 SOURCES -->
+  <div class="st">📬 Deux canaux de sollicitations vendeurs</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px">
+    <div style="background:var(--srf);border-radius:var(--rad);padding:24px;border-left:4px solid #6366F1">
+      <div style="font-size:12px;font-weight:700;color:var(--pd);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px">🖥️ Centre de support OSP</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:var(--pd);margin-bottom:8px">162 requêtes</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Formulaire accessible <strong>uniquement depuis la plateforme OSP</strong> une fois connecté. Suivi dans Jira. Déc. 2025 → juin 2026. Moy. <strong>4,8 échanges / requête</strong> · max 20 échanges.</div>
     </div>
-
-    <!-- Flèche 1 -->
-    <div style="text-align:center;padding:0 8px;color:var(--mut);font-size:18px">→</div>
-
-    <!-- Blocs N2 côte à côte -->
-    <div style="display:flex;flex-direction:column;gap:8px">
-      <div style="padding:10px 14px;background:#EBF4FD;border-radius:var(--rads);border:1px solid #A8C8F0">
-        <div style="font-size:12px;font-weight:700;color:#0C447C">184 requêtes OSP</div>        <div style="font-size:11px;color:#185FA5;margin-top:1px">Jira · 4,8 échanges moy.</div>
-      </div>
-      <div style="padding:10px 14px;background:#FAECE7;border-radius:var(--rads);border:1px solid #F0B89A">
-        <div style="font-size:12px;font-weight:700;color:#712B13">168 emails selfcare</div>
-        <div style="font-size:11px;color:#993C1D;margin-top:1px">Vendeurs bloqués avant connexion</div>
-      </div>
+    <div style="background:var(--srf);border-radius:var(--rad);padding:24px;border-left:4px solid #E63946">
+      <div style="font-size:12px;font-weight:700;color:var(--r);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px">📧 Adresse selfcare (provisoire)</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:var(--r);margin-bottom:8px">156 emails</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Adresse <strong>seller-selfcare@octopia.com</strong> pour vendeurs <strong>bloqués avant connexion</strong>. Solution provisoire en attente d'un canal scalable. Moy. <strong>4,5 échanges / email</strong> · max 20 échanges.</div>
     </div>
-
-    <!-- Flèche 2 -->
-    <div style="text-align:center;padding:0 8px;color:var(--mut);font-size:18px">→</div>
-
-    <!-- Bloc 157 -->
-    <div style="text-align:center;padding:12px 16px;background:#F1EFE8;border-radius:var(--rads);border:1px solid #D3D1C7">
-      <div style="font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#444441;line-height:1">157</div>
-      <div style="font-size:12px;font-weight:600;color:#5F5E5A;margin-top:3px">tickets dev — run</div>
-      <div style="font-size:11px;color:#888780;margin-top:2px">intervention technique requise</div>
-      <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:20px;padding:3px 10px">
-        <span style="font-size:11px;font-weight:700;color:#92400E">45,5%</span>
-        <span style="font-size:13px;font-weight:800;color:#16A34A">↑</span>
-        <span style="font-size:10px;color:#888780">sol. → ticket dev</span>
-      </div>
-      <div style="font-size:10px;color:#A8A69F;margin-top:3px">44,4% sem. 08/06 → 45,5% sem. 15/06</div>
-    </div>
-
   </div>
 
+  <!-- KPIs -->
+  <div class="st">📊 Chiffres clés</div>
+  <div class="kgrid">
+    <div class="kcard pu"><div class="kico">📋</div><div class="kval">318</div><div class="klbl">Sollicitations totales</div><div class="ksub">162 requêtes OSP · 156 emails selfcare · sans doublons entre les deux sources</div></div>
+    <div class="kcard or"><div class="kico">↔️</div><div class="kval">4,7</div><div class="klbl">Échanges moy. / sollicitation</div><div class="ksub">4,8 moy. sur requêtes OSP · 4,5 moy. sur emails selfcare · max 20 échanges sur les deux</div></div>
+    <div class="kcard gn"><div class="kico">📊</div><div class="kval">~12%</div><div class="klbl">Ratio sol./activations (hebdo)</div><div class="ksub">Moy. 12,1% sur 5 semaines — objectif : passer sous 5% de sollicitations par nouvelle activation</div></div>
+    <div class="kcard rd"><div class="kico">🎯</div><div class="kval">69%</div><div class="klbl">Adressables en autonomie</div><div class="ksub">Multi-utilisateurs (38%) + Reset OTP (31%) = les 2 frictions structurelles avant MFA obligatoire</div></div>
+  </div>
 
-  <!-- ARBRE ROOT CAUSES -->
-  <div class="st">🌳 Root causes — 5 thématiques</div>
+  <!-- GRAPHE RATIO HEBDO -->
+  <div class="st">📈 Suivi hebdomadaire du taux de sollicitations</div>
   <div class="cc" style="margin-bottom:32px">
-    <h4>Répartition par thématique — surface proportionnelle au volume</h4>
-    <div class="csub">350 sollicitations · requêtes OSP + emails selfcare · analyse issue de la lecture intégrale de tous les échanges vendeur ↔ support</div>
-    <div style="overflow-x:auto;padding:8px 0;background:#fff;border-radius:12px">
-<svg viewBox="0 0 1050 360" role="img" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
-<defs><style>.tmt{font-family:'Outfit',sans-serif}.tms{font-family:'Plus Jakarta Sans',sans-serif}</style></defs>
-<rect x="0" y="0" width="1050" height="360" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
-
-<!-- ===== F1 — COMPTE PARTAGÉ · 125 sol. · 36% · x=4 w=368 ===== -->
-<rect x="4" y="16" width="368" height="338" rx="8" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="1"/>
-<text x="188" y="32" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#312E81" class="tmt">Compte partagé</text>
-<text x="188" y="48" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="#534AB7" class="tms">125 sol. · 36%</text>
-<rect x="9" y="62" width="358" height="154" rx="5" fill="#DDD6FE" stroke="#C4BFFA" stroke-width="0.5"/>
-<text x="188" y="126" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="600" fill="#312E81" class="tmt">Un seul téléphone pour toute l'équipe</text>
-<text x="188" y="141" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#534AB7" class="tms">66 cas — MFA liée à un seul appareil, les autres collègues sont bloqués</text>
-<rect x="9" y="219" width="358" height="90" rx="5" fill="#C4BFFA" stroke="#C4BFFA" stroke-width="0.5" opacity="0.5"/>
-<text x="188" y="257" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="600" fill="#312E81" class="tmt">Blocage par absence du détenteur</text>
-<text x="188" y="271" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#534AB7" class="tms">40 cas — congés, déplacement, arrêt maladie</text>
-<rect x="9" y="312" width="358" height="42" rx="4" fill="#EDE9FE" stroke="#C4BFFA" stroke-width="0.5" opacity="0.7"/>
-<text x="188" y="329" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="600" fill="#534AB7" class="tmt">MFA configurée par un tiers / départ collaborateur · 19 cas</text>
-<text x="188" y="344" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#7C72D8" class="tms">tiers ou ex-employé détient l'accès OTP</text>
-
-<!-- ===== F2 — PERTE D'ACCÈS · 82 sol. · 23% · x=376 w=268 ===== -->
-<rect x="376" y="16" width="268" height="338" rx="8" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
-<text x="510" y="32" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#9F1239" class="tmt">Perte d'accès</text>
-<text x="510" y="48" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="#BE123C" class="tms">82 sol. · 23%</text>
-<rect x="381" y="62" width="258" height="160" rx="5" fill="#FEE2E2" stroke="#FECDD3" stroke-width="0.5"/>
-<text x="510" y="132" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="600" fill="#9F1239" class="tmt">Téléphone perdu / volé / cassé / changé</text>
-<text x="510" y="147" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#BE123C" class="tms">52 cas — plus d'accès à l'app authenticator</text>
-<rect x="381" y="225" width="258" height="85" rx="5" fill="#FECDD3" stroke="#FECDD3" stroke-width="0.5" opacity="0.55"/>
-<text x="510" y="259" text-anchor="middle" dominant-baseline="central" font-size="9" font-weight="600" fill="#9F1239" class="tmt">App supprimée / token effacé</text>
-<text x="510" y="273" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#BE123C" class="tms">15 cas — désinstallation accidentelle</text>
-<rect x="381" y="313" width="258" height="41" rx="4" fill="#FECDD3" stroke="#FECDD3" stroke-width="0.5" opacity="0.35"/>
-<text x="510" y="330" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="600" fill="#9F1239" class="tmt">Départ collaborateur avec tél. perso · 15 cas</text>
-<text x="510" y="344" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#BE123C" class="tms">OTP inaccessible après départ</text>
-
-<!-- ===== F3 — OPPOSITION / REFUS · 53 sol. · 15% · x=648 w=150 ===== -->
-<rect x="648" y="16" width="150" height="338" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1"/>
-<text x="723" y="32" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="700" fill="#9A3412" class="tmt">Opposition</text>
-<text x="723" y="48" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#C2410C" class="tms">53 sol. · 15%</text>
-<rect x="653" y="62" width="140" height="191" rx="5" fill="#FFEDD5" stroke="#FDBA74" stroke-width="0.5"/>
-<text x="723" y="143" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="600" fill="#9A3412" class="tmt">Friction quotidienne</text>
-<text x="723" y="157" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#C2410C" class="tms">34 cas</text>
-<text x="723" y="170" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#C2410C" class="tms">reconnexions trop fréquentes</text>
-<rect x="653" y="256" width="140" height="98" rx="5" fill="#FFEDD5" stroke="#FDBA74" stroke-width="0.5" opacity="0.55"/>
-<text x="723" y="297" text-anchor="middle" dominant-baseline="central" font-size="8.5" font-weight="600" fill="#9A3412" class="tmt">Pas de tél. professionnel</text>
-<text x="723" y="311" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#C2410C" class="tms">19 cas</text>
-
-<!-- ===== F4 — CONFIG INITIALE RATÉE · 42 sol. · 12% · x=802 w=122 ===== -->
-<rect x="802" y="16" width="122" height="338" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
-<text x="863" y="32" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-weight="700" fill="#78350F" class="tmt">Config initiale</text>
-<text x="863" y="48" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#92400E" class="tms">42 sol. · 12%</text>
-<rect x="807" y="62" width="112" height="181" rx="5" fill="#FEF3C7" stroke="#FDE68A" stroke-width="0.5"/>
-<text x="863" y="140" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#78350F" class="tmt">QR scanné avec</text>
-<text x="863" y="153" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#78350F" class="tmt">l'appareil photo</text>
-<text x="863" y="167" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#92400E" class="tms">26 cas</text>
-<rect x="807" y="246" width="112" height="108" rx="5" fill="#FEF3C7" stroke="#FDE68A" stroke-width="0.5" opacity="0.55"/>
-<text x="863" y="289" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#78350F" class="tmt">QR affiché une</text>
-<text x="863" y="302" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#78350F" class="tmt">seule fois</text>
-<text x="863" y="315" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#92400E" class="tms">16 cas</text>
-
-<!-- ===== AUTRES · 48 sol. · 14% · x=928 w=118 ===== -->
-<rect x="928" y="16" width="118" height="338" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
-<text x="987" y="32" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="700" fill="#475569" class="tmt">Autres</text>
-<text x="987" y="48" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#64748B" class="tms">48 sol. · 14%</text>
-<rect x="933" y="62" width="108" height="167" rx="5" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5"/>
-<text x="987" y="134" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#475569" class="tmt">Code OTP invalide</text>
-<text x="987" y="148" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#64748B" class="tms">28 cas</text>
-<text x="987" y="161" text-anchor="middle" dominant-baseline="central" font-size="7" fill="#94A3B8" class="tms">désync. horloge</text>
-<rect x="933" y="232" width="108" height="77" rx="5" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5" opacity="0.6"/>
-<text x="987" y="262" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#475569" class="tmt">Bug technique</text>
-<text x="987" y="276" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#64748B" class="tms">13 cas</text>
-<text x="987" y="288" text-anchor="middle" dominant-baseline="central" font-size="7" fill="#94A3B8" class="tms">Android / saisie OTP</text>
-<rect x="933" y="312" width="108" height="42" rx="4" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5" opacity="0.4"/>
-<text x="987" y="329" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#475569" class="tmt">Incompréhension</text>
-<text x="987" y="344" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#64748B" class="tms">7 cas</text>
-</svg>
-    </div>
+    <h4>Ratio : sollicitations semaine / nouvelles activations semaine — depuis le 11/05</h4>
+    <div class="csub">Plus ce ratio est bas, moins les nouvelles activations génèrent de sollicitations. Objectif : descendre sous 13% (−5% vs taux global de 13,7%)</div>
+    <div class="cw h260"><canvas id="rq_ratio"></canvas></div>
   </div>
 
-  <!-- GRAPHES ÉVOLUTION -->
-  <div class="st">📅 Évolution hebdomadaire des sollicitations</div>
+  <!-- 3 GRAPHES -->
+  <div class="st">📅 Évolution hebdomadaire des sollicitations — par source</div>
 
   <div class="cc" style="margin-bottom:24px">
-    <h4>352 sollicitations par thématique — déc. 2025 – juin 2026</h4>
+    <h4>📋 Centre support OSP (Jira) — 162 requêtes</h4>
     <div class="csub" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px">
-      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#6366F1;display:inline-block"></span>Compte partagé</span>
-      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#E63946;display:inline-block"></span>Perte d'accès</span>
-      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#F59E0B;display:inline-block"></span>Config initiale ratée</span>
-      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#D97706;display:inline-block"></span>Opposition / Refus</span>
-      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#94A3B8;display:inline-block"></span>Autres</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#6366F1;display:inline-block"></span>Multi-utilisateurs</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#E63946;display:inline-block"></span>Reset OTP</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#F59E0B;display:inline-block"></span>Incompréhension</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#D97706;display:inline-block"></span>Opposition</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#94A3B8;display:inline-block"></span>Bug</span>
     </div>
-    <div class="cw h420"><canvas id="rq_cumul"></canvas></div>
+    <div class="cw h380"><canvas id="rq_osp"></canvas></div>
+  </div>
+
+  <div class="cc" style="margin-bottom:24px">
+    <h4>📧 Selfcare email (provisoire) — 156 emails</h4>
+    <div class="csub" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px">
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#6366F1;display:inline-block"></span>Multi-utilisateurs</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#E63946;display:inline-block"></span>Reset OTP</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#F59E0B;display:inline-block"></span>Incompréhension</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#D97706;display:inline-block"></span>Opposition</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:#94A3B8;display:inline-block"></span>Bug</span>
+    </div>
+    <div class="cw h380"><canvas id="rq_sc"></canvas></div>
   </div>
 
   <div class="cc" style="margin-bottom:32px">
-    <h4>Tickets dev — run · 157 tickets · déc. 2025 – juin 2026</h4>
-    <div class="csub">Zone grisée = ouverture MFA par vague · Traits violets = jalons d'amélioration · Trait bleu = MFA par défaut nouveaux vendeurs</div>
-    <div class="cw h420"><canvas id="s1"></canvas></div>
+    <h4>🔀 Cumul OSP + Selfcare — 318 sollicitations</h4>
+    <div class="csub" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px">
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:rgba(99,102,241,.85);display:inline-block"></span>Centre OSP</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--mut)"><span style="width:9px;height:9px;border-radius:2px;background:rgba(230,57,70,.75);display:inline-block"></span>Selfcare email</span>
+    </div>
+    <div class="cw h300"><canvas id="rq_cumul"></canvas></div>
+  </div>
+
+  <!-- ARBRE ROOT CAUSES -->
+  <div class="st">🌳 Root causes — 5 thématiques unifiées</div>
+  <div class="cc" style="margin-bottom:32px">
+    <h4>318 sollicitations · OSP + Selfcare · déc. 2025 – juin 2026</h4>
+    <div class="csub">Causes racines identifiées à la lecture des 318 verbatims · les 2 premières thématiques représentent 69% des sollicitations</div>
+    <div style="overflow-x:auto;padding:8px 0">
+<svg  viewBox="0 0 691 502" style="font-family:'Plus Jakarta Sans',sans-serif;width:100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Treemap sollicitations MFA — 318 cas, cellules proportionnelles au volume</title>
+<desc>Multi-utilisateurs 134, Reset OTP 99, Incompréhension 56, Opposition 35, Bug 25.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<text x="4" y="16" dominant-baseline="central" fill="var(--color-text-secondary)">318 sollicitations · OSP + Selfcare · déc. 2025 – juin 2026 · surface ∝ volume</text>
+
+
+<g>
+  <rect x="4" y="26" width="283" height="466" rx="8" stroke-width="1.5"/>
+  <text x="145" y="46" text-anchor="middle" dominant-baseline="central">Multi-utilisateurs</text>
+  <text x="145" y="62" text-anchor="middle" dominant-baseline="central">134 sol. · 42%</text>
+</g>
+
+
+<g>
+  <rect x="10" y="74" width="271" height="139" rx="5" stroke-width="0.5" opacity="0.75"/>
+  <text x="145" y="137" text-anchor="middle" dominant-baseline="central">Ignorance feature</text>
+  <text x="145" y="155" text-anchor="middle" dominant-baseline="central">compte secondaire · 46 cas</text>
+</g>
+
+<g>
+  <rect x="10" y="216" width="271" height="112" rx="5" stroke-width="0.5" opacity="0.55"/>
+  <text x="145" y="264" text-anchor="middle" dominant-baseline="central">Mobilité interne</text>
+  <text x="145" y="282" text-anchor="middle" dominant-baseline="central">départ · remplacement · congé · 37 cas</text>
+</g>
+
+<g>
+  <rect x="10" y="331" width="271" height="112" rx="5" stroke-width="0.5" opacity="0.42"/>
+  <text x="145" y="379" text-anchor="middle" dominant-baseline="central">Praticité · QR non partageable</text>
+  <text x="145" y="397" text-anchor="middle" dominant-baseline="central">accès simultané · 37 cas</text>
+</g>
+
+<g>
+  <rect x="10" y="446" width="271" height="42" rx="5" stroke-width="0.5" opacity="0.28"/>
+  <text x="145" y="461" text-anchor="middle" dominant-baseline="central">MFA activée par tiers</text>
+  <text x="145" y="477" text-anchor="middle" dominant-baseline="central">collègue · prestataire · 14 cas</text>
+</g>
+
+
+<g>
+  <rect x="291" y="26" width="209" height="466" rx="8" stroke-width="1.5"/>
+  <text x="395" y="46" text-anchor="middle" dominant-baseline="central">Reset OTP</text>
+  <text x="395" y="62" text-anchor="middle" dominant-baseline="central">99 sol. · 31%</text>
+</g>
+
+<g>
+  <rect x="297" y="74" width="197" height="115" rx="5" stroke-width="0.5" opacity="0.75"/>
+  <text x="395" y="124" text-anchor="middle" dominant-baseline="central">Chgt / perte téléphone</text>
+  <text x="395" y="142" text-anchor="middle" dominant-baseline="central">départ collègue · 28 cas</text>
+</g>
+
+<g>
+  <rect x="297" y="192" width="197" height="98" rx="5" stroke-width="0.5" opacity="0.6"/>
+  <text x="395" y="234" text-anchor="middle" dominant-baseline="central">App supprimée</text>
+  <text x="395" y="252" text-anchor="middle" dominant-baseline="central">codes épuisés · 24 cas</text>
+</g>
+
+<g>
+  <rect x="297" y="293" width="197" height="98" rx="5" stroke-width="0.5" opacity="0.45"/>
+  <text x="395" y="335" text-anchor="middle" dominant-baseline="central">Désactivation demandée</text>
+  <text x="395" y="353" text-anchor="middle" dominant-baseline="central">MFA jugé contraignant · 24 cas</text>
+</g>
+
+<g>
+  <rect x="297" y="394" width="197" height="94" rx="5" stroke-width="0.5" opacity="0.3"/>
+  <text x="395" y="433" text-anchor="middle" dominant-baseline="central">Codes récup. épuisés</text>
+  <text x="395" y="451" text-anchor="middle" dominant-baseline="central">manip. erreur · 23 cas</text>
+</g>
+
+
+<g>
+  <rect x="504" y="26" width="172" height="300" rx="8" stroke-width="1.5"/>
+  <text x="590" y="46" text-anchor="middle" dominant-baseline="central">Incompréhension</text>
+  <text x="590" y="62" text-anchor="middle" dominant-baseline="central">56 sol. · 18%</text>
+</g>
+
+<g>
+  <rect x="510" y="74" width="160" height="122" rx="5" stroke-width="0.5" opacity="0.75"/>
+  <text x="590" y="127" text-anchor="middle" dominant-baseline="central">Codes de secours perdus</text>
+  <text x="590" y="145" text-anchor="middle" dominant-baseline="central">27 cas</text>
+</g>
+
+<g>
+  <rect x="510" y="199" width="160" height="68" rx="5" stroke-width="0.5" opacity="0.6"/>
+  <text x="590" y="227" text-anchor="middle" dominant-baseline="central">Scan photo iOS</text>
+  <text x="590" y="245" text-anchor="middle" dominant-baseline="central">15 cas</text>
+</g>
+
+<g>
+  <rect x="510" y="270" width="160" height="36" rx="5" stroke-width="0.5" opacity="0.45"/>
+  <text x="590" y="288" text-anchor="middle" dominant-baseline="central">MFA origine inconnue · 8 cas</text>
+</g>
+
+<g>
+  <rect x="510" y="309" width="160" height="17" rx="5" stroke-width="0.5" opacity="0.3"/>
+  <text x="590" y="318" text-anchor="middle" dominant-baseline="central">Email non visible · 6 cas</text>
+</g>
+
+
+<g>
+  <rect x="504" y="330" width="172" height="118" rx="8" stroke-width="1.5"/>
+  <text x="590" y="350" text-anchor="middle" dominant-baseline="central">Opposition</text>
+  <text x="590" y="366" text-anchor="middle" dominant-baseline="central">35 sol. · 11%</text>
+</g>
+
+<g>
+  <rect x="510" y="376" width="80" height="64" rx="5" stroke-width="0.5" opacity="0.7"/>
+  <text x="550" y="400" text-anchor="middle" dominant-baseline="central">Friction</text>
+  <text x="550" y="418" text-anchor="middle" dominant-baseline="central">quoti. · 17 cas</text>
+</g>
+
+<g>
+  <rect x="596" y="376" width="74" height="64" rx="5" stroke-width="0.5" opacity="0.5"/>
+  <text x="633" y="400" text-anchor="middle" dominant-baseline="central">Pas de</text>
+  <text x="633" y="418" text-anchor="middle" dominant-baseline="central">tél. pro · 18 cas</text>
+</g>
+
+
+<g>
+  <rect x="504" y="452" width="172" height="40" rx="6" stroke-width="1.5"/>
+  <text x="590" y="466" text-anchor="middle" dominant-baseline="central">Bug technique</text>
+  <text x="590" y="482" text-anchor="middle" dominant-baseline="central">25 cas · 8%</text>
+</g>
+
+</svg>
+</div>
   </div>
 
   <!-- TABLEAU SYNTHÈSE -->
-  <div class="st">🎯 Synthèse — requêtes OSP + emails selfcare</div>
+  <div class="st">🎯 Synthèse — les 2 sources unifiées</div>
   <div class="cc" style="margin-bottom:32px">
     <div style="overflow-x:auto">
       <table style="width:100%;border-collapse:collapse;font-size:13px">
@@ -727,375 +737,144 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
         </thead>
         <tbody>
           <tr style="background:#F5F3FF">
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:700;color:var(--pd)">👥 Compte partagé<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">OTP lié à un seul appareil, toute l'équipe est bloquée · absence du détenteur (congés, départ) · MFA configurée par un tiers</div></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--pd)">72</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--pd)">53</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--pd)">125</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#EDE9FE;color:var(--pd);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">36%</span></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>T1 — Adapter la réponse support</strong> au fonctionnement réel : accepter le compte partagé comme pratique courante, répondre sans friction pour ce cas.<div style="margin-top:6px"><strong>Vision cible — Comptes secondaires</strong> (Keycloak natif) : communication ciblée auprès des structures avec peu d'utilisateurs sur un même compte pour encourager la création de comptes individuels · chaque collaborateur configure sa propre MFA · résout structurellement le problème du compte partagé</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:700;color:var(--pd)">👥 Gestion multi-utilisateurs + MFA par tiers<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">OTP lié à 1 appareil · mobilité interne (départ/congé) · praticité · MFA activée par collègue/prestataire à l'insu du vendeur</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--pd)">55</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--pd)">65</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--pd)">120</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#EDE9FE;color:var(--pd);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">38%</span></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>Ajout OTP par utilisateur</strong> · Keycloak natif · chaque collaborateur configure son propre OTP sur son compte secondaire</td>
             <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">✓ OUI</span></td>
           </tr>
           <tr style="background:#FFF1F2">
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:700;color:var(--r)">📵 Perte d'accès<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">Téléphone perdu/volé/cassé/changé · app authenticator supprimée · départ d'un collaborateur avec son téléphone perso</div></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--r)">48</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--r)">34</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--r)">82</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEE2E2;color:var(--r);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">23%</span></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>Self-reset MFA en autonomie</strong> — Delete OTP (Keycloak natif) : le vendeur supprime et reconfigure son OTP sans passer par le support · recommander apps avec cloud backup (Authenticator, Authy)</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:700;color:var(--r)">🔄 Reset OTP / Perte d'accès<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">Changement tél. · app supprimée · départ collègue · codes épuisés · aucune autonomie depuis l'OSP → passage obligatoire par le support</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--r)">52</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:700;color:var(--r)">47</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--r)">99</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEE2E2;color:var(--r);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">31%</span></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>Delete OTP</strong> · Keycloak natif · vendeur supprime et reconfigure son OTP en autonomie sans contacter le support</td>
             <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">✓ OUI</span></td>
           </tr>
-          <tr style="background:#FFF7ED">
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600;color:#9A3412">❌ Opposition / Refus<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">2 populations distinctes : friction quotidienne liée aux reconnexions fréquentes (64%) · contrainte structurelle — pas de téléphone professionnel (36%)</div></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600;color:#9A3412">32</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600;color:#9A3412">21</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:#9A3412">53</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FFEDD5;color:#9A3412;padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">15%</span></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>Allonger la durée de session</strong> (levier n°1 — 64% de la population) · réponses différenciées selon le motif : friction ≠ contrainte structurelle · qualifier avant de traiter</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">~ PARTIEL</span></td>
-          </tr>
-          <tr style="background:#FFFBEB">
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600;color:#78350F">⚙️ Config initiale ratée<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">QR scanné avec l'appareil photo (pas une app authenticator) · QR affiché une seule fois — vendeur n'a pas compris qu'il faut le scanner immédiatement</div></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600;color:#78350F">20</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600;color:#78350F">22</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:#78350F">42</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#78350F;padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">12%</span></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>UX activation améliorée</strong> — avertissement explicite "ce QR code s'affiche une seule fois" · guide visuel illustré (utiliser une app, pas l'appareil photo) · option de régénération du QR dans les paramètres</td>
+          <tr>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600">❓ Incompréhension / 1ère config<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">QR code non sauvegardé · codes séquentiels incompris · MFA configurée par un tiers à l'insu · email non visible dans les réglages OSP</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">27</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">43</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--mut)">56</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">18%</span></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)">UX parcours config · aide contextuelle in-app · afficher l'email de connexion dans les réglages</td>
             <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">— NON</span></td>
           </tr>
-          <tr>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600">🔧 Autres<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">Code OTP invalide (désynchronisation horloge) · bug Android / saisie OTP défectueuse · incompréhension de base du fonctionnement MFA</div></td>
+          <tr style="background:#FFFBEB">
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600">❌ Opposition / Désactivation<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">3 populations : friction quotidienne · contrainte structurelle (pas de téléphone pro) · perte de confiance post-mauvaise expérience · traitées identiquement par le support aujourd'hui</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">25</td>
             <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">10</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">38</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--mut)">48</td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">14%</span></td>
-            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)"><strong>Aide contextuelle ciblée</strong> — message "vérifiez l'heure de votre téléphone" sur l'erreur OTP · correctif bug Android déployé · guide de démarrage MFA pour les nouveaux vendeurs</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:#B45309">35</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">11%</span></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)">Qualifier le motif de refus · 3 réponses distinctes selon la population · Delete OTP en autonomie</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#FEF3C7;color:#B45309;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">~ PARTIEL</span></td>
+          </tr>
+          <tr>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-weight:600">🐛 Bug technique<div style="font-size:11px;color:var(--mut);font-weight:400;margin-top:4px">Codes 8 chiffres au lieu de 6 · décalage horloge · champ saisie Android défectueux · codes de l'app non reconnus</div></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">1</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-weight:600">24</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center;font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:var(--mut)">25</td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:3px 9px;border-radius:20px;font-size:12px;font-weight:700">8%</span></td>
+            <td style="padding:13px 14px;border-bottom:1px solid var(--brd);font-size:12px;color:var(--txt)">Correctifs techniques ciblés · tickets dev run</td>
             <td style="padding:13px 14px;border-bottom:1px solid var(--brd);text-align:center"><span style="background:#F1F5F9;color:var(--mut);padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700">— NON</span></td>
           </tr>
         </tbody>
         <tfoot>
           <tr style="background:var(--bg)">
             <td style="padding:12px 14px;font-weight:700;font-size:14px">Total</td>
-            <td style="padding:12px 14px;text-align:center;font-weight:700">182</td>
-            <td style="padding:12px 14px;text-align:center;font-weight:700">168</td>
-            <td style="padding:12px 14px;text-align:center;font-family:'Outfit',sans-serif;font-size:20px;font-weight:800">350</td>
+            <td style="padding:12px 14px;text-align:center;font-weight:700">162</td>
+            <td style="padding:12px 14px;text-align:center;font-weight:700">156</td>
+            <td style="padding:12px 14px;text-align:center;font-family:'Outfit',sans-serif;font-size:20px;font-weight:800">318</td>
             <td style="padding:12px 14px;text-align:center;font-weight:700">100%</td>
-            <td style="padding:12px 14px;font-size:12px;color:var(--mut)">Prérequis : Comptes secondaires + Delete OTP (Keycloak natif · sans dev custom) · adressent 59% des sollicitations</td>
-            <td style="padding:12px 14px;text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700">59% adressés</span></td>
+            <td style="padding:12px 14px;font-size:12px;color:var(--mut)">Prérequis : Ajout OTP utilisateur + Delete OTP (Keycloak natif · sans dev custom)</td>
+            <td style="padding:12px 14px;text-align:center"><span style="background:#DCFCE7;color:#15803D;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700">69% adressés</span></td>
           </tr>
         </tfoot>
       </table>
     </div>
   </div>
 
-  <!-- CARDS CONCLUSION -->
+  <!-- CARDS CONCLUSION — objectif -5% -->
+  <div class="st">📌 Conclusion — Objectif -5% de sollicitations</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:32px">
+
+    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
+      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Taux actuel</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#F59E0B;margin-bottom:4px">~12%</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Ratio actuel : ~12 sollicitations pour 100 nouvelles activations / semaine. Sans action, ce volume va exploser avec le passage en MFA obligatoire.</div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
+      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Objectif</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#10B981;margin-bottom:4px">&lt; 5%</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Objectif : <strong style="color:#F8FAFC">moins de 5 sollicitations pour 100 nouvelles activations</strong> par semaine. Les 2 fonctionnalités Keycloak natives permettent d'y arriver sans dev custom.</div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
+      <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Les 2 prérequis</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:18px;font-weight:800;color:#6366F1;margin-bottom:8px;line-height:1.3">Ajout OTP + Delete OTP</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">Keycloak natif · sans dev custom. Ces 2 fonctionnalités adressent <strong style="color:#F8FAFC">69% des sollicitations</strong> et sont les conditions pour rendre le MFA obligatoire sans saturer le support.</div>
+    </div>
 
   </div>
 
 </div><!-- /tab-requetes -->
 
 
+<!-- ═══ TICKETS DEV RUN ═══ -->
+<div id="tab-support" class="tab">
 
-
-
-<!-- ═══ ANALYTICS ═══ -->
-<div id="tab-analytics" class="tab">
-<style>
-  #tab-analytics *{box-sizing:border-box}
-
-
-#tab-analytics .card{background:#fff;border-radius:16px;padding:32px 28px;border:1px solid #E2E8F0;box-shadow:0 1px 8px rgba(0,0,0,.06);margin-bottom:24px}
-#tab-analytics .st{font-size:13px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.6px;margin:28px 0 12px;border-left:3px solid #6366F1;padding-left:10px}
-#tab-analytics .funnel{display:flex;align-items:flex-start;gap:0;overflow-x:auto;padding-bottom:8px}
-
-/* STEP */
-#tab-analytics .step{display:flex;flex-direction:column;align-items:center;width:200px;flex-shrink:0}
-#tab-analytics .step-lbl{font-size:9px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px;text-align:center;min-height:22px;display:flex;align-items:center;justify-content:center}
-#tab-analytics .screen{border-radius:10px;overflow:hidden;width:185px;border:2px solid transparent;box-shadow:0 4px 14px rgba(0,0,0,.10)}
-#tab-analytics .screen img{width:100%;display:block}
-#tab-analytics .screen.hot{border-color:#E63946;box-shadow:0 0 0 3px rgba(230,57,70,.14),0 4px 14px rgba(0,0,0,.10)}
-#tab-analytics .screen.ok{border-color:#10B981;box-shadow:0 0 0 3px rgba(16,185,129,.12),0 4px 14px rgba(0,0,0,.10)}
-#tab-analytics .screen.warn{border-color:#F59E0B;box-shadow:0 0 0 3px rgba(245,158,11,.14),0 4px 14px rgba(0,0,0,.10)}
-#tab-analytics .screen.purple{border-color:#8B5CF6;box-shadow:0 0 0 3px rgba(139,92,246,.12),0 4px 14px rgba(0,0,0,.10)}
-#tab-analytics .sname{font-family:Outfit,sans-serif;font-size:12px;font-weight:700;margin-top:8px;text-align:center;color:#1E293B}
-
-/* GAUGE BLOCK */
-#tab-analytics .gb{width:100%;margin-top:10px}
-#tab-analytics .gbar{height:12px;border-radius:6px;overflow:hidden;display:flex;margin-bottom:8px}
-#tab-analytics .gg{background:#10B981}
-#tab-analytics .gr{background:#F87171}
-#tab-analytics .srow{display:flex;justify-content:space-between;align-items:flex-start}
-#tab-analytics .sn{font-family:Outfit,sans-serif;font-size:22px;font-weight:800;line-height:1}
-#tab-analytics .sl{font-size:9px;font-weight:600;line-height:1.3}
-#tab-analytics .green{color:#10B981}
-#tab-analytics .red{color:#E63946}
-#tab-analytics .note{font-size:9px;color:#64748B;line-height:1.4;margin-top:5px;padding:5px 7px;background:#F8FAFC;border-radius:6px;border:1px solid #E2E8F0}
-#tab-analytics .note.danger{color:#B91C1C;background:#FFF5F5;border-color:#FCA5A5}
-#tab-analytics .note.warn{color:#B45309;background:#FFFBEB;border-color:#FDE68A}
-
-/* CONNECTOR */
-#tab-analytics .conn{display:flex;flex-direction:column;align-items:center;justify-content:center;width:48px;flex-shrink:0;padding-top:48px;gap:3px}
-#tab-analytics .conn.wide{width:62px}
-#tab-analytics .cline{width:2px;background:#CBD5E1;height:18px;border-radius:2px}
-#tab-analytics .carr{font-size:10px;color:#CBD5E1}
-#tab-analytics .cbadge{border-radius:8px;padding:3px 7px;font-size:10px;font-weight:800;white-space:nowrap;text-align:center;color:#fff}
-#tab-analytics .cdrop{font-size:8px;font-weight:700;text-align:center;white-space:nowrap}
-
-/* BILAN */
-#tab-analytics .bilan{margin-top:20px;padding-top:18px;border-top:1px solid #E2E8F0;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
-#tab-analytics .kpi-box{background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:14px;padding:16px 20px;color:#fff}
-#tab-analytics .kn{font-family:Outfit,sans-serif;font-size:38px;font-weight:900;color:#10B981;line-height:1}
-#tab-analytics .ks{font-size:11px;opacity:.8;margin-top:4px;line-height:1.5}
-#tab-analytics .ptrack{height:14px;background:#F1F5F9;border-radius:8px;overflow:hidden;display:flex;margin:8px 0}
-#tab-analytics .pfill{display:flex;align-items:center;justify-content:center}
-#tab-analytics .pfill span{font-size:9px;font-weight:800;color:#fff}
-
-/* RATIO GAUGE Funnel 2 */
-#tab-analytics .rbar{height:28px;border-radius:10px;overflow:hidden;display:flex;margin:10px 0}
-#tab-analytics .rapp{background:#6366F1;display:flex;align-items:center;padding:0 10px}
-#tab-analytics .rbk{background:#F59E0B;display:flex;align-items:center;justify-content:flex-end;padding:0 8px}
-#tab-analytics .rapp span,.rbk span{font-size:10px;font-weight:800;color:#fff}
-#tab-analytics .rleg{display:flex;gap:12px;font-size:11px;font-weight:600;margin-top:6px}
-#tab-analytics .rdot{width:10px;height:10px;border-radius:3px;flex-shrink:0;display:inline-block;margin-right:4px;vertical-align:middle}
-</style>
-<div style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 55%,#6D28D9 100%);border-radius:16px;padding:28px 32px;margin-bottom:20px;color:#fff">
-  <div style="display:inline-block;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;margin-bottom:14px">📊 Analytics · Microsoft Clarity · 15/06→22/06/2026</div>
-  <h2 style="font-family:Outfit,sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:8px">Analyse comportementale — Parcours MFA</h2>
-  <p style="font-size:12px;opacity:.75;line-height:1.6">8 jours de données · Tags custom authentication_* · Suivi semaine par semaine pour mesurer la réduction des abandons.</p>
-</div>
-<!-- FUNNEL 1 -->
-<!-- FUNNEL 1 -->
-<div class="st">🔑 Funnel 1 — Configuration MFA · Suivi des abandons</div>
-<div class="card" style="padding:24px 28px">
-  <div style="display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start">
-
-    <!-- LEFT: funnel cumulé -->
-    <div>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:#EEF2FF;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:#4338CA;margin-bottom:16px">
-        <span>📊</span><span>Données cumulées depuis le déploiement des tags · 15/06→22/06</span>
-      </div>
-      <div style="font-size:11px;color:#64748B;margin-bottom:20px">244 vendeurs ayant cliqué "Sécuriser" · de la proposition jusqu'à la 1ère activation</div>
-
-      <div style="display:flex;align-items:flex-start;gap:0;overflow-x:auto;padding-top:4px">
-
-        <!-- GROUPE E1-E2-E3 + bilan sous eux -->
-        <div style="display:flex;flex-direction:column;flex-shrink:0">
-
-          <!-- ligne des étapes 1-3 -->
-          <div style="display:flex;align-items:stretch;gap:0">
-
-            <!-- E1 -->
-            <div style="flex-shrink:0;width:152px;background:#F8FAFC;border-radius:12px;padding:14px 12px;border:1.5px solid #E2E8F0;text-align:center">
-              <div style="font-size:9px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Étape 1</div>
-              <div style="font-size:11px;font-weight:700;color:#1E293B;margin-bottom:10px;line-height:1.3">Proposition<br>MFA</div>
-              <div style="font-family:Outfit,sans-serif;font-size:28px;font-weight:900;color:#1E293B;line-height:1">244</div>
-              <div style="font-size:9px;color:#64748B;margin-top:4px">cliquent "Sécuriser"</div>
-              <div style="font-size:8px;color:#94A3B8;margin-top:2px">sur 9 651 propositions</div>
-            </div>
-
-            <div style="flex-shrink:0;width:32px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px">
-              <div style="width:100%;height:2px;background:#CBD5E1"></div>
-              <div style="font-size:9px;color:#CBD5E1;line-height:1">▶</div>
-            </div>
-
-            <!-- E2 -->
-            <div style="flex-shrink:0;width:162px;background:#FEF2F2;border-radius:12px;padding:10px 12px 14px;border:2px solid #E63946;text-align:center">
-              <div style="background:#E63946;color:#fff;font-size:8px;font-weight:800;border-radius:8px;padding:3px 8px;margin-bottom:8px;display:inline-block">⚠ Point de friction n°1</div>
-              <div style="font-size:9px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Étape 2</div>
-              <div style="font-size:11px;font-weight:700;color:#9F1239;margin-bottom:8px;line-height:1.3">Vérification<br>email</div>
-              <div style="font-family:Outfit,sans-serif;font-size:34px;font-weight:900;color:#E63946;line-height:1">−53%</div>
-              <div style="font-size:9px;color:#B91C1C;font-weight:600;margin-top:4px">129 abandonnent</div>
-              <div style="height:7px;background:#F1F5F9;border-radius:4px;overflow:hidden;margin-top:8px">
-                <div style="width:47%;height:100%;background:#10B981;border-radius:4px"></div>
-              </div>
-              <div style="font-size:8px;color:#64748B;margin-top:4px">47% continuent · 115 restants</div>
-            </div>
-
-            <div style="flex-shrink:0;width:32px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px">
-              <div style="width:100%;height:2px;background:#CBD5E1"></div>
-              <div style="font-size:9px;color:#CBD5E1;line-height:1">▶</div>
-            </div>
-
-            <!-- E3 -->
-            <div style="flex-shrink:0;width:162px;background:#FFF7ED;border-radius:12px;padding:10px 12px 14px;border:1.5px solid #FDE68A;text-align:center">
-              <div style="background:#10B981;color:#fff;font-size:8px;font-weight:800;border-radius:8px;padding:3px 8px;margin-bottom:8px;display:inline-block">🔐 MFA activé à l'issue</div>
-              <div style="font-size:9px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Étape 3</div>
-              <div style="font-size:11px;font-weight:700;color:#78350F;margin-bottom:8px;line-height:1.3">Configuration<br>MFA</div>
-              <div style="font-family:Outfit,sans-serif;font-size:34px;font-weight:900;color:#F59E0B;line-height:1">−21%</div>
-              <div style="font-size:9px;color:#B45309;font-weight:600;margin-top:4px">24 abandonnent</div>
-              <div style="height:7px;background:#F1F5F9;border-radius:4px;overflow:hidden;margin-top:8px">
-                <div style="width:79%;height:100%;background:#10B981;border-radius:4px"></div>
-              </div>
-              <div style="font-size:8px;color:#64748B;margin-top:4px">79% passent · 91 MFA activés</div>
-            </div>
-
-          </div><!-- /steps E1-E3 -->
-
-          <!-- Bilan sous E1-E3 uniquement -->
-          <div style="margin-top:12px;background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:12px;padding:14px 20px;display:flex;align-items:center;gap:24px">
-            <div style="text-align:center;flex-shrink:0">
-              <div style="font-family:Outfit,sans-serif;font-size:32px;font-weight:900;color:#10B981;line-height:1">37%</div>
-              <div style="font-size:10px;color:rgba(255,255,255,.65);margin-top:3px">conversion globale<br><span style="font-size:8px;opacity:.7">étapes 1→3</span></div>
-            </div>
-            <div style="width:1px;height:40px;background:rgba(255,255,255,.15);flex-shrink:0"></div>
-            <div style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.7">Sur 244 vendeurs ayant lancé la config · <strong style="color:#fff">91 MFA activés</strong><br><span style="color:#E63946;font-weight:700">Étape vérif. email = principal point de perte</span></div>
-          </div>
-
-        </div><!-- /groupe E1-E3 -->
-
-        <!-- séparateur avant E4 -->
-        <div style="flex-shrink:0;width:38px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;align-self:flex-start;margin-top:60px">
-          <div style="width:100%;height:2px;background:repeating-linear-gradient(90deg,#A5B4FC 0 6px,transparent 6px 10px)"></div>
-          <div style="font-size:9px;color:#6366F1;font-weight:700;line-height:1">▶</div>
-        </div>
-
-        <!-- E4: codes secours — visuellement à part -->
-        <div style="flex-shrink:0;width:162px;background:#F5F3FF;border-radius:12px;padding:10px 12px 14px;border:2px dashed #A5B4FC;text-align:center;align-self:flex-start">
-          <div style="background:#6366F1;color:#fff;font-size:8px;font-weight:800;border-radius:8px;padding:3px 8px;margin-bottom:8px;display:inline-block">Post-activation</div>
-          <div style="font-size:9px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Étape 4</div>
-          <div style="font-size:11px;font-weight:700;color:#3730A3;margin-bottom:8px;line-height:1.3">Codes<br>de secours</div>
-          <div style="font-family:Outfit,sans-serif;font-size:34px;font-weight:900;color:#6366F1;line-height:1">70%</div>
-          <div style="font-size:9px;color:#4338CA;font-weight:600;margin-top:4px">valident · 64 sur 91</div>
-          <div style="height:7px;background:#E0E7FF;border-radius:4px;overflow:hidden;margin-top:8px">
-            <div style="width:70%;height:100%;background:#6366F1;border-radius:4px"></div>
-          </div>
-          <div style="font-size:8px;color:#E63946;font-weight:600;margin-top:5px;line-height:1.3">27 sans codes · si perte du tél. :<br>seule l'App reste utilisable</div>
-        </div>
-
-      </div>
+  <div class="hero" style="background:linear-gradient(135deg,#1E293B 0%,#1D4ED7 65%,#6366F1 100%)">
+    <div class="htag">🔧 Tickets dev — run · Jira · 11/12/2025 – 10/06/2026</div>
+    <h1>Suivi des tickets support liés au MFA</h1>
+    <p>Évolution hebdomadaire corrélée aux jalons de déploiement et aux actions d'amélioration.</p>
+    <div class="hstats">
+      <div><div class="hsv">140</div><div class="hsl">Tickets total</div><div class="hss">11/12/2025 → 10/06/2026</div></div>
+      <div><div class="hsv">14</div><div class="hsl">Pic hebdomadaire</div><div class="hss">Semaine du 23/02/2026</div></div>
+      <div><div class="hsv">5,4</div><div class="hsl">Tickets / semaine moy.</div><div class="hss">Sur toute la période</div></div>
+      <div><div class="hsv">−79%</div><div class="hsl">Baisse post-actions</div><div class="hss">14 → 3 tickets/semaine</div></div>
     </div>
-
-    <!-- RIGHT: suivi semaine/semaine -->
-    <div>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:#F0FDF4;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:#065F46;margin-bottom:16px">
-        <span>📈</span><span>Suivi semaine / semaine</span>
-      </div>
-      <div style="font-size:10px;color:#64748B;margin-bottom:14px">Objectif : baisse du taux d'abandon à chaque étape</div>
-      <table style="width:100%;border-collapse:collapse;font-size:11px">
-        <thead>
-          <tr style="border-bottom:2px solid #E2E8F0">
-            <th style="text-align:left;padding:7px 8px;color:#64748B;font-weight:600;font-size:10px">Snapshot</th>
-            <th style="text-align:center;padding:7px 8px;color:#E63946;font-weight:700;font-size:10px">Email<br><span style="font-weight:400;font-size:8px">abandon</span></th>
-            <th style="text-align:center;padding:7px 8px;color:#F59E0B;font-weight:700;font-size:10px">Config<br><span style="font-weight:400;font-size:8px">abandon</span></th>
-            <th style="text-align:center;padding:7px 8px;color:#6366F1;font-weight:700;font-size:10px">Conv.<br><span style="font-weight:400;font-size:8px">globale</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #F1F5F9;background:#FEF2F2">
-            <td style="padding:8px;font-weight:700;color:#1E293B">22/06</td>
-            <td style="padding:8px;text-align:center;color:#E63946;font-weight:800;font-size:15px">53%</td>
-            <td style="padding:8px;text-align:center;color:#F59E0B;font-weight:800;font-size:15px">21%</td>
-            <td style="padding:8px;text-align:center;color:#6366F1;font-weight:800;font-size:15px">37%</td>
-          </tr>
-          <tr style="border-bottom:1px solid #F1F5F9;color:#94A3B8">
-            <td style="padding:8px;font-style:italic">30/06</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-          </tr>
-          <tr style="border-bottom:1px solid #F1F5F9;color:#94A3B8">
-            <td style="padding:8px;font-style:italic">07/07</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
   </div>
-</div>
 
-<!-- FUNNEL 2 -->
-<div class="st">🔐 Funnel 2 — Méthode de connexion · OTP vs codes de secours</div>
-<div class="card" style="padding:24px 28px">
-  <div style="display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start">
-
-    <!-- LEFT: données cumulées -->
-    <div>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:#EEF2FF;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:#4338CA;margin-bottom:16px">
-        <span>📊</span><span>Données cumulées depuis le déploiement des tags · 15/06→22/06</span>
-      </div>
-      <div style="font-size:11px;color:#64748B;margin-bottom:16px">2 207 connexions MFA analysées · vendeurs avec MFA actif</div>
-
-      <div style="font-size:10px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Répartition méthode de connexion</div>
-      <div style="height:36px;border-radius:12px;overflow:hidden;display:flex;margin-bottom:10px">
-        <div style="width:93.5%;background:#6366F1;display:flex;align-items:center;padding:0 12px">
-          <span style="font-size:10px;font-weight:800;color:#fff">App TOTP · 93,5%</span>
-        </div>
-        <div style="width:6.5%;background:#F59E0B"></div>
-      </div>
-      <div style="display:flex;gap:16px;font-size:10px;font-weight:600;margin-bottom:20px">
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#6366F1;margin-right:4px;vertical-align:middle"></span>App TOTP : <strong>2 064</strong></span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#F59E0B;margin-right:4px;vertical-align:middle"></span>Code secours : <strong>143</strong></span>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:24px">
-        <div style="text-align:center;flex-shrink:0">
-          <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Part codes de secours</div>
-          <div style="font-family:Outfit,sans-serif;font-size:44px;font-weight:900;color:#F59E0B;line-height:1">6,5%</div>
-        </div>
-        <div style="width:1px;height:50px;background:rgba(255,255,255,.15);flex-shrink:0"></div>
-        <div style="font-size:11px;color:rgba(255,255,255,.75);line-height:1.6">Signal : perte d'accès à l'app ou partage de compte.<br>Une hausse prolongée = incidents en augmentation.</div>
-      </div>
-    </div>
-
-    <!-- RIGHT: suivi semaine/semaine -->
-    <div>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:#F0FDF4;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:#065F46;margin-bottom:16px">
-        <span>📈</span><span>Suivi semaine / semaine</span>
-      </div>
-      <div style="font-size:10px;color:#64748B;margin-bottom:14px">Surveiller l'évolution de la part codes de secours</div>
-      <table style="width:100%;border-collapse:collapse;font-size:11px">
-        <thead>
-          <tr style="border-bottom:2px solid #E2E8F0">
-            <th style="text-align:left;padding:7px 8px;color:#64748B;font-weight:600;font-size:10px">Snapshot</th>
-            <th style="text-align:center;padding:7px 8px;color:#6366F1;font-weight:700;font-size:10px">📱 App TOTP</th>
-            <th style="text-align:center;padding:7px 8px;color:#F59E0B;font-weight:700;font-size:10px">🔑 Code secours</th>
-            <th style="text-align:center;padding:7px 8px;color:#64748B;font-weight:600;font-size:10px">Total cnx</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #F1F5F9;background:#F8FAFC">
-            <td style="padding:8px;font-weight:700;color:#1E293B">22/06</td>
-            <td style="padding:8px;text-align:center;color:#6366F1;font-weight:800;font-size:15px">93,5%</td>
-            <td style="padding:8px;text-align:center;color:#F59E0B;font-weight:800;font-size:15px">6,5%</td>
-            <td style="padding:8px;text-align:center;color:#64748B">2 207</td>
-          </tr>
-          <tr style="border-bottom:1px solid #F1F5F9;color:#94A3B8">
-            <td style="padding:8px;font-style:italic">30/06</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-          </tr>
-          <tr style="border-bottom:1px solid #F1F5F9;color:#94A3B8">
-            <td style="padding:8px;font-style:italic">07/07</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-            <td style="padding:8px;text-align:center">—</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
+  <div class="kgrid">
+    <div class="kcard pu"><div class="kico">🎫</div><div class="kval">140</div><div class="klbl">Total tickets</div><div class="ksub">11/12/2025 → 10/06/2026 · issus du centre support OSP + adresse selfcare · nécessitent une intervention dev</div></div>
+    <div class="kcard or"><div class="kico">📈</div><div class="kval">14</div><div class="klbl">Pic — Sem. 23/02/2026</div><div class="ksub">Juste avant le passage MFA par défaut (11/03)</div></div>
+    <div class="kcard gn"><div class="kico">📉</div><div class="kval">−79%</div><div class="klbl">Baisse post-actions</div><div class="ksub">14 tickets → 3 après améliorations UX d'avril</div></div>
+    <div class="kcard rd"><div class="kico">🔁</div><div class="kval">Reset</div><div class="klbl">Nature dominante</div><div class="ksub">Quasi-totalité = réinitialisations MFA vendeur</div></div>
   </div>
-</div>
-</div>
-</div><!-- /tab-analytics -->
-</div><!-- /tab-analytics -->
 
+  <div class="st">📊 Évolution hebdomadaire</div>
+  <div class="cc" style="margin-bottom:32px">
+    <h4>Tickets support MFA par semaine</h4>
+    <div class="csub">Zone grisée = ouverture MFA par vague · Traits violets = actions d'amélioration · Trait bleu = MFA par défaut nouveaux vendeurs</div>
+    <div class="cw h420"><canvas id="s1"></canvas></div>
+  </div>
 
+  <div class="three">
+    <div class="pbox bl"><div class="pt">📈 Pic lié à la montée en charge de la vague</div><p>Les semaines du <strong>02/02</strong> (13) et <strong>23/02</strong> (14) correspondent à l'extension de la vague MFA.</p></div>
+    <div class="pbox gn"><div class="pt">✅ Impact visible des améliorations post-30/03</div><p>Après durée session (30/03), UX (13/04) et email récupération (04/05), volume tombé à <strong>3–5 tickets/semaine</strong>.</p></div>
+    <div class="pbox or"><div class="pt">🔁 Tickets = réinitialisations, pas des bugs</div><p>97,5% sont des <strong>demandes de service</strong> (reset MFA). Besoin d'accompagnement, pas un problème technique.</p></div>
+  </div>
+
+</div><!-- /tab-support -->
 
 </main>
 
 <footer>
-  <strong>Octopia OSP · État des lieux MFA</strong> · Dernier snapshot : 21/06/2026 · 7 snapshots : 07/05 → 21/06 · 17 734 comptes · 10 707 boutiques éligibles · Tickets support : 140 tickets au 10/06/2026
+  <strong>Octopia OSP · État des lieux MFA</strong> · Dernier snapshot : 28/06/2026 · 5 snapshots : 07/05 → 07/06 · 15 303 comptes · 9 263 boutiques éligibles · Tickets support : 140 tickets au 10/06/2026
 </footer>
 
 <script>
 Chart.defaults.font.family="'Plus Jakarta Sans',sans-serif";
 Chart.defaults.color='#64748B';
 const P='#6366F1',G='#10B981',O='#F59E0B',R='#E63946',T='#14B8A6',GR='#94A3B8';
-const SNAPS=['07/05','11/05','18/05','24/05','31/05','07/06','14/06','21/06'];
+const SNAPS = ['07/05','11/05','18/05','24/05','31/05','07/06','28/06'];
 const tabInited={};
 
 function openTab(id,btn){
@@ -1109,21 +888,19 @@ function openTab(id,btn){
     if(id==='evolution') initEvolution();
     if(id==='overview')  setTimeout(initOverview, 60);
     if(id==='requetes')  setTimeout(initRequetes, 60);
-    if(id==='analytics') setTimeout(initAnalytics, 60);
+    if(id==='support')   setTimeout(initSupport, 60);
   }
 }
 
 /* ── HELPERS ── */
 function mkDonut(id,labels,data,colors){
-  const el=document.getElementById(id); if(!el) return;
-  new Chart(el,{type:'doughnut',
+  new Chart(document.getElementById(id),{type:'doughnut',
     data:{labels,datasets:[{data,backgroundColor:colors,borderWidth:3,borderColor:'#fff',hoverOffset:6}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
       plugins:{legend:{position:'bottom',labels:{padding:12,font:{size:11}}}}}});
 }
 function mkBar(id,labels,datasets,opts={}){
-  const el=document.getElementById(id); if(!el) return;
-  new Chart(el,{type:'bar',data:{labels,datasets},
+  new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:opts.legend||{display:false}},
       scales:{
@@ -1133,8 +910,7 @@ function mkBar(id,labels,datasets,opts={}){
            ...(opts.ymax?{max:opts.ymax}:{})}}}});
 }
 function mkLine(id,labels,datasets,opts={}){
-  const el=document.getElementById(id); if(!el) return;
-  new Chart(el,{type:'line',data:{labels,datasets},
+  new Chart(document.getElementById(id),{type:'line',data:{labels,datasets},
     options:{responsive:true,maintainAspectRatio:false,
       interaction:{mode:'index',intersect:false},
       plugins:{legend:{position:'top',labels:{padding:14,font:{size:12}}}},
@@ -1149,40 +925,40 @@ function mkLine(id,labels,datasets,opts={}){
 /* ── ÉTAT DES LIEUX ── */
 function initEtat(){
   // Comptes principaux vs secondaires
-  mkDonut('c1',['Comptes principaux','Comptes secondaires'],[10572,7162],[P,T]);
+  mkDonut('c1',['Comptes principaux','Comptes secondaires'],[9107,6196],[P,T]);
   // OTP par type (stacked)
   mkBar('c2',['Comptes principaux','Comptes secondaires'],
-    [{label:'OTP actif',data:[1942,683],backgroundColor:[G,T],borderRadius:8,borderSkipped:false},
-     {label:'OTP inactif',data:[8630,6479],backgroundColor:['rgba(16,185,129,.15)','rgba(20,184,166,.15)'],borderRadius:8,borderSkipped:false}],
+    [{label:'OTP actif',data:[1717,609],backgroundColor:[G,T],borderRadius:8,borderSkipped:false},
+     {label:'OTP inactif',data:[7390,5587],backgroundColor:['rgba(16,185,129,.15)','rgba(20,184,166,.15)'],borderRadius:8,borderSkipped:false}],
     {stacked:true,legend:{position:'top',labels:{padding:10,font:{size:11}}}});
   // Distribution comptes/boutique
   mkBar('c3',['1','2','3','4','5','6','7','8','9','10+'],
     [{label:'Nb boutiques',data:[7530,737,313,185,132,76,66,47,36,141],backgroundColor:P,borderRadius:6,borderSkipped:false}],
     {xtitle:'Nb comptes / boutique'});
   // mfa_choice principaux
-  mkDonut('c4',['"Later"','"Yes"','Aucune interaction'],[6590,1981,2001],[O,G,GR]);
+  mkDonut('c4',['"Later"','"Yes"','Aucune interaction'],[5619,1755,1733],[O,G,GR]);
   // Nouveaux vs anciens (horizontal)
   new Chart(document.getElementById('c5'),{type:'bar',
     data:{labels:['Anciens vendeurs\n< 418 448','Nouveaux vendeurs\n≥ 418 448'],
-      datasets:[{data:[22.9,16.0],backgroundColor:[G,T],borderRadius:8,borderSkipped:false}]},
+      datasets:[{data:[23.8,16.0],backgroundColor:[G,T],borderRadius:8,borderSkipped:false}]},
     options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
       plugins:{legend:{display:false}},
       scales:{x:{beginAtZero:true,max:30,grid:{color:'#F1F5F9'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
   // Nouveaux vendeurs donut
   mkDonut('c6',['MFA actif','Later','Aucune interaction','Yes non complété'],
-    [636,2166,1148,639],
+    [556,1882,1048,25],
     [G,O,GR,P]);
   // Aucune interaction par année
   mkBar('c7',['2021','2022','2023','2024','2025','2026'],
-    [{label:'Boutiques sans interaction',data:[1,239,121,188,258,1148],backgroundColor:[GR,GR,GR,GR,GR,R],borderRadius:6,borderSkipped:false}]);
+    [{label:'Boutiques sans interaction',data:[1,154,87,165,240,1061],backgroundColor:[GR,GR,GR,GR,GR,R],borderRadius:6,borderSkipped:false}]);
   // No-int type
-  mkDonut('c8',['Principaux uniquement','Avec compte secondaire'],[1826,129],[P,'rgba(99,102,241,.25)']);
+  mkDonut('c8',['Principaux uniquement','Avec compte secondaire'],[1605,103],[P,'rgba(99,102,241,.25)']);
   // Profil années
   new Chart(document.getElementById('c9'),{type:'bar',
     data:{labels:['2021','2022','2023','2024','2025','2026'],datasets:[
-      {type:'bar',label:'Total éligibles',data:[25,4287,1971,2295,3542,5613],backgroundColor:'rgba(99,102,241,.18)',borderColor:P,borderWidth:1.5,borderRadius:6,yAxisID:'y'},
-      {type:'bar',label:'OTP actifs',data:[12,705,213,242,484,968],backgroundColor:G,borderRadius:6,yAxisID:'y'},
-      {type:'line',label:'Taux OTP %',data:[48.0,16.4,10.8,10.5,13.7,17.2],borderColor:O,backgroundColor:'transparent',borderWidth:2.5,pointRadius:5,tension:0.4,yAxisID:'y2'}
+      {type:'bar',label:'Total éligibles',data:[20,2104,684,1016,1769,3513],backgroundColor:'rgba(99,102,241,.18)',borderColor:P,borderWidth:1.5,borderRadius:6,yAxisID:'y'},
+      {type:'bar',label:'OTP actifs',data:[8,523,136,170,322,557],backgroundColor:G,borderRadius:6,yAxisID:'y'},
+      {type:'line',label:'Taux OTP %',data:[40.0,24.9,19.9,16.7,18.2,15.9],borderColor:O,backgroundColor:'transparent',borderWidth:2.5,pointRadius:5,tension:0.4,yAxisID:'y2'}
     ]},
     options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
       plugins:{legend:{position:'top',labels:{padding:10,font:{size:11}}}},
@@ -1191,8 +967,8 @@ function initEtat(){
         x:{grid:{display:false}}}}});
   // Distribution éligibles vs adoptants
   mkBar('c10',['2021','2022','2023','2024','2025','2026'],
-    [{label:'% population éligible',data:[0.1,24.2,11.1,12.9,20.0,31.7],backgroundColor:'rgba(99,102,241,.25)',borderColor:P,borderWidth:1.5,borderRadius:6},
-     {label:'% adoptants MFA',data:[0.1,4.0,1.2,1.4,2.7,5.5],backgroundColor:G,borderRadius:6}],
+    [{label:'% population éligible',data:[0.2,23.1,7.5,11.2,19.4,38.6],backgroundColor:'rgba(99,102,241,.25)',borderColor:P,borderWidth:1.5,borderRadius:6},
+     {label:'% adoptants MFA',data:[0.5,30.5,7.9,9.9,18.8,32.4],backgroundColor:G,borderRadius:6}],
     {pct:true,legend:{position:'top',labels:{padding:12,font:{size:11}}}});
 }
 function int_safe(v){return Math.round(v);}
@@ -1201,32 +977,30 @@ function int_safe(v){return Math.round(v);}
 function initEvolution(){
   // Taux adoption boutiques + OTP comptes
   mkLine('e1',SNAPS,[
-    {label:'Taux adoption boutiques (%)',data:[19.8,19.8,20.1,20.0,20.1,20.9,20.0,20.4],borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:3,fill:true,tension:0.4,pointRadius:6,pointHoverRadius:9},
-    {label:'Taux OTP comptes (%)',data:[13.9,14.1,14.4,14.5,14.6,15.2,14.5,14.8],borderColor:P,backgroundColor:'rgba(99,102,241,.08)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:6,pointHoverRadius:9}
+    {label:'Taux adoption boutiques (%)',data:[19.8,19.8,20.1,20.0,20.1,20.7],borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:3,fill:true,tension:0.4,pointRadius:6,pointHoverRadius:9},
+    {label:'Taux OTP comptes (%)',data:[13.9,14.1,14.4,14.5,14.6,15.1],borderColor:P,backgroundColor:'rgba(99,102,241,.08)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:6,pointHoverRadius:9}
   ],{pct:true,min:10,max:25});
   // Volume boutiques
   mkBar('e2',SNAPS,
-    [{label:'Boutiques éligibles',data:[8054,8336,8610,8908,9131,9263,10485,10707],backgroundColor:'rgba(99,102,241,.2)',borderColor:P,borderWidth:1.5,borderRadius:6},
-     {label:'Boutiques MFA actif',data:[1591,1652,1734,1785,1838,1932,2098,2180],backgroundColor:G,borderRadius:6}],
+    [{label:'Boutiques éligibles',data:[8054,8336,8610,8908,9131,10973],backgroundColor:'rgba(99,102,241,.2)',borderColor:P,borderWidth:1.5,borderRadius:6},
+     {label:'Boutiques MFA actif',data:[1591,1652,1734,1785,1838,2267],backgroundColor:G,borderRadius:6}],
     {legend:{position:'top',labels:{padding:12,font:{size:12}}}});
   // Nv vs anciens vendeurs
   mkLine('e3',SNAPS,[
-    {label:'Anciens vendeurs (<418 448)',data:[22.2,22.3,22.7,22.8,22.9,23.1,22.8,22.9],borderColor:P,backgroundColor:'rgba(99,102,241,.08)',borderWidth:2.5,fill:false,tension:0.4,pointRadius:6,borderDash:[5,3]},
-    {label:'Nouveaux vendeurs (≥418 448)',data:[13.9,14.3,15.0,15.0,15.4,15.8,14.2,16.0],borderColor:T,backgroundColor:'rgba(20,184,166,.1)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:6}
+    {label:'Anciens vendeurs (<418 448)',data:[22.2,22.3,22.7,22.8,22.9,23.3],borderColor:P,backgroundColor:'rgba(99,102,241,.08)',borderWidth:2.5,fill:false,tension:0.4,pointRadius:6,borderDash:[5,3]},
+    {label:'Nouveaux vendeurs (≥418 448)',data:[13.9,14.3,15.0,15.0,15.4,16.5],borderColor:T,backgroundColor:'rgba(20,184,166,.1)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:6}
   ],{pct:true,min:10,max:30});
   // Volume statuts
   mkLine('e4',SNAPS,[
-    {label:'MFA actif',data:[1591,1652,1734,1785,1838,1932,2098,2180],borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:5},
-    {label:'Later',data:[5225,5429,5627,5816,5962,6051,6389,6590],borderColor:O,backgroundColor:'rgba(245,158,11,.07)',borderWidth:2.5,fill:false,tension:0.4,pointRadius:5},
-    {label:'Aucune interaction',data:[1599,1633,1639,1701,1738,1708,2020,2001],borderColor:GR,backgroundColor:'transparent',borderWidth:2,fill:false,tension:0.4,pointRadius:5,borderDash:[4,3]}
+    {label:'MFA actif',data:[1591,1652,1734,1785,1838,2267],borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,fill:true,tension:0.4,pointRadius:5},
+    {label:'Later',data:[5225,5429,5627,5816,5962,6651],borderColor:O,backgroundColor:'rgba(245,158,11,.07)',borderWidth:2.5,fill:false,tension:0.4,pointRadius:5},
+    {label:'Aucune interaction',data:[1599,1633,1639,1701,1738,2055],borderColor:GR,backgroundColor:'transparent',borderWidth:2,fill:false,tension:0.4,pointRadius:5,borderDash:[4,3]}
   ],{min:0});
   // Delta MFA par semaine
   // Graphe e5 : barres delta + droite tendance + annotation mail
   function rrE5(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();}
 
-  const dataE5=[61,82,51,53,94,166,82];
-  const dataE5_vague=[0,0,0,0,0,115,25];    // part nouvelle vague 10/06
-  const dataE5_old  =[61,82,51,53,94,51,57]; // part anciens éligibles
+  const dataE5=[61,82,51,53,94,0];
   const nE5=dataE5.length, xsE5=dataE5.map((_,i)=>i);
   const sX=xsE5.reduce((a,b)=>a+b,0), sY=dataE5.reduce((a,b)=>a+b,0);
   const sXY=xsE5.reduce((s,x,i)=>s+x*dataE5[i],0), sX2=xsE5.reduce((s,x)=>s+x*x,0);
@@ -1236,33 +1010,23 @@ function initEvolution(){
 
   const annotE5={id:'annotE5',afterDraw(chart){
     const{ctx,chartArea:{top,bottom},scales:{x}}=chart;
-    // Jalon mail relance 04/06 (entre index 3 et 4)
     const mx=(x.getPixelForValue(3)+x.getPixelForValue(4))/2;
     ctx.save();
     ctx.beginPath();ctx.strokeStyle='rgba(163,45,45,0.45)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
     ctx.moveTo(mx,top);ctx.lineTo(mx,bottom);ctx.stroke();ctx.setLineDash([]);
-    const bw=168,bh=46,bx=mx-bw-8,by=top+10;
+    const bw=168,bh=46,bx=mx-bw-8,by=top+80;
     rrE5(ctx,bx,by,bw,bh,6);ctx.fillStyle='#FFF1F2';ctx.strokeStyle='rgba(226,75,74,0.5)';ctx.lineWidth=1;ctx.fill();ctx.stroke();
     ctx.fillStyle='#A32D2D';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Mail relance — 04/06',bx+10,by+17);
     ctx.fillStyle='#15803D';ctx.fillText('✓ +52 boutiques activées',bx+10,by+34);
-    // Jalon vague 10/06 (entre index 4 et 5)
-    const vx=(x.getPixelForValue(4)+x.getPixelForValue(5))/2;
-    ctx.beginPath();ctx.strokeStyle='rgba(99,102,241,0.55)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
-    ctx.moveTo(vx,top);ctx.lineTo(vx,bottom);ctx.stroke();ctx.setLineDash([]);
-    const vbw=186,vbh=46,vbx=vx+6,vby=top+10;
-    rrE5(ctx,vbx,vby,vbw,vbh,6);ctx.fillStyle='#EDE9FE';ctx.strokeStyle='rgba(99,102,241,0.4)';ctx.lineWidth=1;ctx.fill();ctx.stroke();
-    ctx.fillStyle='#312E81';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Nouvelle vague — 10/06',vbx+10,vby+17);
-    ctx.fillStyle='#4338CA';ctx.fillText('+999 nouvelles boutiques éligibles',vbx+10,vby+34);
     ctx.restore();
   }};
 
   new Chart(document.getElementById('e5'),{
     type:'bar',plugins:[annotE5],
     data:{
-      labels:['11/05','18/05','24/05','31/05','07/06','14/06','21/06'],
+      labels:['11/05','18/05','24/05','31/05','07/06'],
       datasets:[
-        {type:'bar',label:'Anciens éligibles',data:dataE5_old,backgroundColor:'#1D9E75',borderColor:'#0F6E56',borderWidth:1,borderRadius:0,borderSkipped:false,stack:'s',order:2},
-        {type:'bar',label:'Nouvelle vague 10/06',data:dataE5_vague,backgroundColor:'#6366F1',borderColor:'#4338CA',borderWidth:1,borderRadius:5,borderSkipped:false,stack:'s',order:2},
+        {type:'bar',label:'Nouvelles boutiques MFA',data:dataE5,backgroundColor:'#1D9E75',borderColor:'#0F6E56',borderWidth:1,borderRadius:5,borderSkipped:false,order:2},
         {type:'line',label:'Tendance linéaire',data:trendE5,borderColor:'#534AB7',borderWidth:2,borderDash:[8,4],pointRadius:0,pointHoverRadius:0,fill:false,tension:0,order:1}
       ]
     },
@@ -1271,18 +1035,17 @@ function initEvolution(){
       layout:{padding:{top:8,bottom:8,right:12}},
       interaction:{mode:'index',intersect:false},
       plugins:{
-        legend:{display:true,position:'top',labels:{padding:12,font:{size:11},usePointStyle:true,pointStyleWidth:9}},
+        legend:{display:false},
         tooltip:{callbacks:{
           title:c=>'Semaine du '+c[0].label,
-          label:i=>i.datasetIndex===2?' Tendance : +'+i.parsed.y:' '+i.dataset.label+' : +'+i.parsed.y+' boutiques',
-          footer:items=>{const tot=items.filter(i=>i.datasetIndex<2).reduce((s,i)=>s+i.parsed.y,0);return tot>0?'Total : +'+tot+' boutiques MFA':'';}
+          label:i=>i.datasetIndex===0?' +'+i.parsed.y+' boutiques MFA':' Tendance : +'+i.parsed.y
         }}
       },
       scales:{
-        x:{stacked:true,grid:{display:false},ticks:{font:{size:13},color:'#475569',autoSkip:false}},
-        y:{stacked:true,beginAtZero:true,max:200,grid:{color:'#F1F5F9'},border:{dash:[4,4]},
+        x:{grid:{display:false},ticks:{font:{size:13},color:'#475569',autoSkip:false}},
+        y:{beginAtZero:true,max:160,grid:{color:'#F1F5F9'},border:{dash:[4,4]},
           title:{display:true,text:'Nouvelles boutiques / semaine',font:{size:11},color:'#64748B'},
-          ticks:{precision:0,font:{size:11}}}
+          ticks:{precision:0,font:{size:11},callback:v=>v<=110?v:''}}
       }
     }
   });
@@ -1291,6 +1054,28 @@ function initEvolution(){
 /* ── OVERVIEW ── */
 function initOverview(){
   const G='#10B981', P='#6366F1', O='#F59E0B', R='#E63946', GR='#94A3B8';
+
+  // Ratio hebdo sol/activations
+  const ratioC=document.getElementById('ov_ratio');
+  if(ratioC){
+    new Chart(ratioC,{type:'line',
+      data:{labels:['11/05','18/05','25/05','01/06','08/06'],
+        datasets:[
+          {label:'Ratio sol./activations (%)',data:[12.9,11.2,13.6,13.4,11.3],
+            borderColor:O,backgroundColor:'rgba(245,158,11,.1)',borderWidth:2.5,
+            fill:true,tension:0.3,pointRadius:5,pointHoverRadius:7},
+          {label:'Objectif < 5%',data:[5,5,5,5,5],
+            borderColor:G,borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false,tension:0}
+        ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'top',labels:{font:{size:11},padding:12,usePointStyle:true,pointStyleWidth:8}},
+          tooltip:{callbacks:{label:i=>` ${i.dataset.label}: ${i.parsed.y}%`}}},
+        scales:{
+          x:{grid:{display:false},ticks:{font:{size:11}}},
+          y:{min:8,max:18,grid:{color:'#F1F5F9'},ticks:{font:{size:11},callback:v=>v+'%'}}
+        }}
+    });
+  }
 
   // Tickets dev par semaine
   const tickC=document.getElementById('ov_tickets');
@@ -1314,6 +1099,27 @@ function initOverview(){
     });
   }
 
+  // Courbe adoption
+  const adoptC=document.getElementById('ov_adoption');
+  if(adoptC){
+    new Chart(adoptC,{type:'line',
+      data:{labels:['07/05','11/05','18/05','24/05','31/05','07/06'],
+        datasets:[
+          {label:'Taux adoption (%)',data:[19.8,19.8,20.1,20.0,20.1,20.9],
+            borderColor:G,backgroundColor:'rgba(16,185,129,.1)',borderWidth:2.5,
+            fill:true,tension:0.4,pointRadius:5,pointHoverRadius:7},
+          {label:'Objectif 30%',data:[30,30,30,30,30,30],
+            borderColor:G,borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false,tension:0}
+        ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'top',labels:{font:{size:11},padding:12,usePointStyle:true,pointStyleWidth:8}},
+          tooltip:{callbacks:{label:i=>` ${i.dataset.label}: ${i.parsed.y}%`}}},
+        scales:{
+          x:{grid:{display:false},ticks:{font:{size:11}}},
+          y:{min:15,max:35,grid:{color:'#F1F5F9'},ticks:{font:{size:11},callback:v=>v+'%'}}
+        }}
+    });
+  }
 }
 
 /* ── ANALYSE REQUÊTES ── */
@@ -1325,9 +1131,10 @@ function initRequetes(){
   // ── PLUGIN JALONS (commun aux 3 graphes) ─────────────────────────
   function makeJalonPlugin(labels, id){
     const jalons=[
-      {label:'Durée session · 30/03', date:'30/03',impact:'✓ Impact',     impactOk:true},
-      {label:'UX parcours · 13/04',   date:'13/04',impact:'~ Progressif', impactOk:false},
-      {label:'Email récup. · 04/05',  date:'04/05',impact:'— Neutre',     impactOk:false},
+      {label:'Durée session · 30/03', date:'30/03',impact:'✓ Impact',  impactOk:true},
+      {label:'UX parcours · 13/04',   date:'13/04',impact:'— Stable',  impactOk:false},
+      {label:'Email récup. · 04/05',  date:'04/05',impact:'— Neutre',  impactOk:false},
+      {label:'Mail relance · 01/06',  date:'01/06',impact:'✓ +52 act.',impactOk:true},
     ];
     const COL='#6366F1';
     return {
@@ -1395,83 +1202,58 @@ function initRequetes(){
   }
 
   // ── GRAPHE 1 : OSP ───────────────────────────────────────────────
-  const ospLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
+  const ospLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
   stackedBar('rq_osp', ospLabels, [
-    {label:'Multi-utilisateurs',data:[1,0,1,0,0,2,2,2,2,1,0,1,1,1,0,1,0,0,1,0,0,0,6,2,2,3,4,7,1],backgroundColor:ALPHA.multi},
-    {label:'Reset OTP',         data:[1,0,0,0,0,4,2,2,2,1,3,5,5,4,1,1,1,1,2,2,1,0,1,1,2,0,3,4,1],backgroundColor:ALPHA.reset},
-    {label:'Incompréhension',   data:[1,0,0,1,1,1,5,5,14,4,3,4,8,3,1,2,0,3,2,1,1,1,2,3,2,1,2,3,2],backgroundColor:ALPHA.incomp},
-    {label:'Opposition',        data:[0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:ALPHA.oppos},
-    {label:'Bug',               data:[0,1,0,0,0,0,1,1,2,1,1,2,1,0,0,1,0,0,0,0,0,1,0,1,1,1,0,0,0],backgroundColor:ALPHA.bug}
+    {label:'Multi-utilisateurs',data:[1,0,1,0,0,2,3,7,8,5,3,3,2,2,1,0,0,1,3,0,0,1,1,2,2,2,0],backgroundColor:ALPHA.multi},
+    {label:'Reset OTP',         data:[1,0,0,0,0,2,3,1,5,1,1,1,6,2,1,2,1,1,2,3,1,0,6,2,4,2,3],backgroundColor:ALPHA.reset},
+    {label:'Incompréhension',   data:[0,0,0,0,1,3,3,1,4,1,3,5,3,1,0,2,0,1,0,0,1,0,0,1,0,1,1],backgroundColor:ALPHA.incomp},
+    {label:'Opposition',        data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],backgroundColor:ALPHA.oppos},
+    {label:'Bug',               data:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],backgroundColor:ALPHA.bug}
   ], 'osp');
 
   // ── GRAPHE 2 : SELFCARE ──────────────────────────────────────────
-  const scLabels = ['08/12','15/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
+  const scLabels = ['08/12','15/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
   stackedBar('rq_sc', scLabels, [
-    {label:'Multi-utilisateurs',data:[0,2,2,0,3,2,2,1,2,4,3,2,2,4,1,0,1,0,1,0,0,1,0,0,1,2,2],backgroundColor:ALPHA.multi},
-    {label:'Reset OTP',         data:[0,0,0,2,0,1,3,4,1,2,0,1,6,1,2,0,3,3,0,2,1,3,1,3,3,4,1],backgroundColor:ALPHA.reset},
-    {label:'Incompréhension',   data:[1,0,0,1,1,2,3,1,3,4,3,4,1,1,2,1,1,1,2,1,3,1,2,1,1,1,1],backgroundColor:ALPHA.incomp},
-    {label:'Opposition',        data:[0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0],backgroundColor:ALPHA.oppos},
-    {label:'Bug technique',     data:[2,0,0,1,1,4,3,0,0,0,3,0,2,0,0,2,0,0,0,0,0,1,1,0,4,1,0],backgroundColor:ALPHA.bug}
+    {label:'Multi-utilisateurs',data:[0,2,2,0,3,2,2,1,2,4,3,2,2,4,1,0,1,0,1,0,0,1,0,0,1],backgroundColor:ALPHA.multi},
+    {label:'Reset OTP',         data:[0,0,0,2,0,1,3,4,1,2,0,1,6,1,2,0,3,3,0,2,1,3,1,3,3],backgroundColor:ALPHA.reset},
+    {label:'Incompréhension',   data:[1,0,0,1,1,2,3,1,3,4,3,4,1,1,2,1,1,1,2,1,3,1,2,1,1],backgroundColor:ALPHA.incomp},
+    {label:'Opposition',        data:[0,0,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,0],backgroundColor:ALPHA.oppos},
+    {label:'Bug technique',     data:[2,0,0,1,1,4,3,0,0,0,3,0,2,0,0,2,0,0,0,0,0,1,1,0,4],backgroundColor:ALPHA.bug}
   ], 'sc');
 
-  // ── GRAPHE 3 : 318 sollicitations par thématique ───────────────
-  const cumulLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
-  // Plugin jalons décalés verticalement (anti-chevauchement avec les barres)
-  const jalonPluginCumul={id:'jalonsCumul',afterDraw(chart){
-    const{ctx,chartArea:{top,bottom,right},scales:{x}}=chart;
-    const COL2='#6366F1';
-    const jals=[
-      {l:'① Durée session · 30/03',d:'30/03',i:'✓ Impact',     ok:true},
-      {l:'② UX parcours · 13/04',  d:'13/04',i:'~ Progressif', ok:false},
-      {l:'③ Email récup. · 04/05', d:'04/05',i:'— Neutre',     ok:false},
-    ];
-    const BH=34,BP=6;
-    const yPos=[top+6,top+48,top+90,top+132];
-    jals.forEach((j,i)=>{
-      const xi=cumulLabels.indexOf(j.d);if(xi<0)return;
-      const px=x.getPixelForValue(xi);
-      ctx.save();
-      ctx.beginPath();ctx.strokeStyle=COL2;ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
-      ctx.moveTo(px,top);ctx.lineTo(px,bottom);ctx.stroke();ctx.setLineDash([]);
-      ctx.font="600 9.5px sans-serif";
-      const bw=Math.max(ctx.measureText(j.l).width,ctx.measureText(j.i).width)+BP*2+4;
-      const oY=yPos[i];
-      const bx=(px+bw+6>right)?px-bw-4:px+4;
-      ctx.fillStyle='rgba(99,102,241,.1)';ctx.strokeStyle=COL2;ctx.lineWidth=0.8;
-      ctx.beginPath();ctx.roundRect(bx,oY,bw,BH,3);ctx.fill();ctx.stroke();
-      const tx=bx+bw/2;
-      ctx.fillStyle='#4F46E5';ctx.font="600 9.5px sans-serif";
-      ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(j.l,tx,oY+11);
-      ctx.fillStyle=j.ok?'#15803D':'#64748B';ctx.font="500 9px sans-serif";
-      ctx.fillText(j.i,tx,oY+25);
-      ctx.restore();
-    });
-  }};
+  // ── GRAPHE 3 : CUMUL (sources empilées, labels OSP + SC union) ───
+  const cumulLabels = ['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+  // SC aligné sur les labels OSP (0 pour semaines sans SC)
+  const scOnOsp={
+    '08/12':3,'15/12':2,'05/01':2,'12/01':4,'19/01':5,'26/01':9,
+    '02/02':13,'09/02':7,'16/02':6,'23/02':8,'02/03':11,'09/03':8,
+    '16/03':11,'23/03':6,'30/03':5,'06/04':3,'13/04':5,'20/04':5,
+    '27/04':3,'04/05':3,'11/05':4,'18/05':6,'25/05':2,'01/06':4,'08/06':8
+  };
+  const scAligned=cumulLabels.map(l=>scOnOsp[l]||0);
+  const ospTotals=[4,4,1,0,1,7,9,9,17,7,7,8,11,5,2,4,1,4,5,3,2,1,7,5,6,5,5];
   const cCanvas=document.getElementById('rq_cumul');
   if(cCanvas){
     new Chart(cCanvas,{
       type:'bar',
-      plugins:[jalonPluginCumul],
+      plugins:[makeJalonPlugin(cumulLabels,'cumul')],
       data:{labels:cumulLabels,datasets:[
-        {label:'Compte partagé',        backgroundColor:'rgba(99,102,241,.82)', borderRadius:0,stack:'s',data:[1,2,1,0,2,2,5,4,4,2,2,5,4,3,2,5,1,0,2,0,1,0,6,3,2,3,5,9,3]},
-        {label:"Perte d'accès",         backgroundColor:'rgba(230,57,70,.82)',  borderRadius:0,stack:'s',data:[1,0,0,0,0,6,2,3,5,5,4,7,5,5,7,2,3,1,5,5,1,2,2,4,3,3,6,8,2]},
-        {label:'Config initiale ratée', backgroundColor:'rgba(245,158,11,.82)', borderRadius:0,stack:'s',data:[2,0,0,1,1,2,6,7,17,5,6,8,11,7,2,3,2,4,3,2,3,2,5,4,4,2,3,4,3]},
-        {label:'Opposition / Refus',    backgroundColor:'rgba(217,119,6,.82)',  borderRadius:0,stack:'s',data:[0,0,0,0,0,1,1,0,2,1,0,0,2,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0]},
-        {label:'Autres',                backgroundColor:'rgba(148,163,184,.75)',borderRadius:0,stack:'s',data:[2,1,0,0,0,1,2,5,5,1,1,2,4,0,2,1,0,2,0,0,0,1,0,2,2,1,4,1,0]}
+        {label:'Centre OSP',data:ospTotals,backgroundColor:'rgba(99,102,241,.82)',borderRadius:0,stack:'s'},
+        {label:'Selfcare email',data:scAligned,backgroundColor:'rgba(230,57,70,.75)',borderRadius:0,stack:'s'}
       ]},
       options:{
         responsive:true,maintainAspectRatio:false,
-        layout:{padding:{bottom:8,top:8,right:8}},
+        layout:{padding:{bottom:8,top:4}},
         interaction:{mode:'index',intersect:false},
         plugins:{
-          legend:{position:'top',align:'end',labels:{padding:12,font:{size:11},usePointStyle:true,pointStyleWidth:9}},
+          legend:{position:'top',align:'end',labels:{padding:16,font:{size:12},usePointStyle:true,pointStyleWidth:10}},
           tooltip:{callbacks:{
             title:c=>'Semaine du '+c[0].label,
             footer:items=>'Total : '+items.reduce((s,i)=>s+i.parsed.y,0)+' sollicitations'
           }}
         },
         scales:{
-          x:{stacked:true,grid:{display:false},ticks:{font:{size:10},maxRotation:45}},
+          x:{stacked:true,grid:{display:false},ticks:{font:{size:11},maxRotation:45}},
           y:{stacked:true,beginAtZero:true,grid:{color:'#F1F5F9'},
             title:{display:true,text:'Sollicitations / semaine',font:{size:11},color:'#64748B'},
             ticks:{precision:0,font:{size:11}}}
@@ -1525,12 +1307,12 @@ function initRequetes(){
   if(canvasRq3){
     new Chart(canvasRq3,{type:'bar',data:{labels:['Non précisé','Codes utilisés','Codes épuisés','Totalement bloqué','Épuisement progressif'],datasets:[{data:[51,9,7,5,3],backgroundColor:['#94A3B8','#10B981','#E63946','#E63946','#F59E0B'],borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{beginAtZero:true,grid:{color:'#F1F5F9'},ticks:{font:{size:11}}}}}});
   }
-
-  setTimeout(initSupport, 60);
 }
+
+
 function initSupport(){
-  const weeks=['08/12','15/12','22/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06'];
-  const totals=[4,4,1,1,5,3,2,13,6,3,14,12,9,11,4,1,4,5,6,5,3,3,8,4,6,8,10,2];
+  const weeks=['08/12','15/12','22/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06'];
+  const totals=[4,4,1,1,5,3,2,13,6,3,14,12,9,11,4,1,4,5,6,5,3,3,8,4,6,3];
   const AC='#6D28D9';
   function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();}
   const ap={id:'aS',
@@ -1583,6 +1365,18 @@ function initSupport(){
         ctx.beginPath();ctx.strokeStyle=AC;ctx.lineWidth=1;ctx.setLineDash([3,3]);
         ctx.moveTo(a.side==='right'?bx+BW:bx,by+BH/2);ctx.lineTo(ax,by+BH/2);ctx.stroke();ctx.setLineDash([]);
       });
+      // ── Mail relance 04/06 (entre sem 01/06 idx24 et 08/06 idx25, vers le milieu)
+      const mailX2 = x.getPixelForValue(24) + (x.getPixelForValue(25)-x.getPixelForValue(24))*0.5;
+      ctx.beginPath();ctx.strokeStyle='#E63946';ctx.lineWidth=2;ctx.setLineDash([6,4]);
+      ctx.moveTo(mailX2,top);ctx.lineTo(mailX2,bottom);ctx.stroke();ctx.setLineDash([]);
+      ctx.fillStyle='#FFF1F2';ctx.strokeStyle='#E63946';ctx.lineWidth=1;
+      rr(ctx,mailX2-(mailX2>chart.chartArea.right-130?136:6),top+8,130,42,6);
+      ctx.fill();ctx.stroke();
+      const mlx=mailX2-(mailX2>chart.chartArea.right-130?130:0);
+      ctx.fillStyle='#E63946';ctx.font="700 11px 'Plus Jakarta Sans'";ctx.textAlign='left';
+      ctx.fillText('📧 Mail relance',mlx+6,top+24);
+      ctx.font="500 10px 'Plus Jakarta Sans'";ctx.fillStyle='#9A3412';
+      ctx.fillText('04/06 · 3 703 cibles',mlx+6,top+38);
       ctx.restore();
     }
   };
@@ -1598,11 +1392,8 @@ function initSupport(){
 }
 
 // Init onglet actif au chargement
-
-/* ── ANALYTICS ── */
-function initAnalytics(){}
-tabInited['overview']=true; setTimeout(initOverview, 60);
-tabInited['etat']=false;
+tabInited['etat']=true; initEtat();
+tabInited['overview']=false;
 </script>
 </body>
 </html>
