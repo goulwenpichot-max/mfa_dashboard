@@ -435,7 +435,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
   <div class="cc" style="margin-bottom:32px">
     <h4>📊 Nouvelles boutiques MFA activées par semaine</h4>
-    <div class="csub" style="display:flex;gap:20px;margin-bottom:14px"><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;display:inline-block"></span>Nouvelles boutiques / semaine</span><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:20px;height:0;border-top:2px dashed #534AB7;display:inline-block"></span>Tendance linéaire</span></div>
+    <div class="csub" style="display:flex;gap:20px;margin-bottom:14px"><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;display:inline-block"></span>Nouvelles boutiques / semaine</span><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:20px;height:0;border-top:2px dashed #F59E0B;display:inline-block"></span>Tendance linéaire</span></div>
     <div class="cw h380"><canvas id="e5"></canvas></div>
   </div>
 
@@ -564,8 +564,8 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
     <div style="background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:var(--rad);padding:24px;color:#fff;position:relative;overflow:hidden">
       <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.05);border-radius:50%"></div>
       <div style="font-size:11px;font-weight:600;opacity:.6;margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase">Signal semaine</div>
-      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#10B981;margin-bottom:4px">+73</div>
-      <div style="font-size:13px;opacity:.85;line-height:1.6">Nouvelles boutiques MFA la semaine du 05/07 — rythme soutenu après le record de 14/06 (+166). La vague 10/06 contribue <strong style="color:#F8FAFC">+7</strong> activations supplémentaires (cumul 161, 16,1%).</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#10B981;margin-bottom:4px">+76</div>
+      <div style="font-size:13px;opacity:.85;line-height:1.6">76 boutiques ont activé le MFA la semaine du 29/06 · source : <strong style="color:#F8FAFC">otp_creation_dates</strong>. Rythme moyen depuis le lancement : <strong style="color:#F8FAFC">+78/semaine</strong> · pic : +183 (sem. 23/02).</div>
     </div>
 
   </div>
@@ -880,6 +880,41 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div style="display:inline-block;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;margin-bottom:14px">📊 Analytics · Microsoft Clarity · 22/06→06/07/2026</div>
   <h2 style="font-family:Outfit,sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:8px">Analyse comportementale — Parcours MFA</h2>
   <p style="font-size:12px;opacity:.75;line-height:1.6">Tags custom authentication_* · Suivi semaine par semaine pour mesurer la réduction des abandons.</p>
+</div>
+<!-- RECOVERY CODES -->
+<div class="st">🔄 Qualité MFA — Codes de secours rechargés</div>
+<div class="card" style="padding:24px 28px;margin-bottom:24px">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:20px">
+    <div style="text-align:center;padding:16px 12px;background:#F0FDF4;border-radius:12px;border:1px solid #BBF7D0">
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#15803D" id="rc-total">2 341</div>
+      <div style="font-size:12px;font-weight:600;color:#166534;margin-top:4px">Boutiques MFA actif</div>
+      <div style="font-size:11px;color:#15803D;margin-top:2px">base de référence</div>
+    </div>
+    <div style="text-align:center;padding:16px 12px;background:#FFF7ED;border-radius:12px;border:1px solid #FED7AA">
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#C2410C" id="rc-diff">234</div>
+      <div style="font-size:12px;font-weight:600;color:#B45309;margin-top:4px">Codes rechargés au moins 1×</div>
+      <div style="font-size:11px;color:#92400E;margin-top:2px">recovery_date ≠ otp_date · <strong>10,0%</strong></div>
+    </div>
+    <div style="text-align:center;padding:16px 12px;background:#FFF1F2;border-radius:12px;border:1px solid #FECDD3">
+      <div style="font-family:'Outfit',sans-serif;font-size:32px;font-weight:800;color:#BE123C" id="rc-over30">58</div>
+      <div style="font-size:12px;font-weight:600;color:#BE123C;margin-top:4px">Rechargés &gt;30j après OTP</div>
+      <div style="font-size:11px;color:#9F1239;margin-top:2px">usage actif probable · <strong>2,5%</strong></div>
+    </div>
+  </div>
+  <div style="background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:16px">
+    <div style="font-size:12px;font-weight:700;color:#475569;margin-bottom:10px;text-transform:uppercase;letter-spacing:.4px">Répartition des 234 boutiques avec rechargement</div>
+    <div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:8px">
+      <div style="background:#E63946;width:24.8%" title="58 boutiques — rechargement tardif >30j"></div>
+      <div style="background:#F59E0B;width:75.2%" title="176 boutiques — rechargement rapide ≤30j"></div>
+    </div>
+    <div style="display:flex;gap:20px;font-size:11px;color:#64748B">
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#E63946;margin-right:4px;vertical-align:middle"></span>58 boutiques — rechargement tardif (&gt;30j) · usage actif des codes backup comme moyen de connexion</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#F59E0B;margin-right:4px;vertical-align:middle"></span>176 boutiques — rechargement rapide (≤30j) · probablement lors du setup initial</span>
+    </div>
+  </div>
+  <div style="background:#EFF6FF;border-radius:8px;padding:12px 14px;font-size:12px;color:#1E40AF;line-height:1.6;border-left:3px solid #3B82F6">
+    <strong>Interprétation :</strong> quand <code style="background:#DBEAFE;padding:1px 5px;border-radius:3px;font-size:11px">recovery_creation_dates</code> est postérieur à <code style="background:#DBEAFE;padding:1px 5px;border-radius:3px;font-size:11px">otp_creation_dates</code> de plus de 30 jours, le vendeur a consommé sa grille de codes de secours en l'utilisant pour se connecter, puis en a régénéré une nouvelle. Ces 58 boutiques n'utilisent probablement pas leur app TOTP de façon fluide — signal potentiel de difficulté d'adoption ou d'app mal configurée.
+  </div>
 </div>
 <!-- FUNNEL 1 -->
 <!-- FUNNEL 1 -->
@@ -1255,20 +1290,19 @@ function initEvolution(){
   // Graphe e5 : barres delta + droite tendance + annotation mail
   function rrE5(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();}
 
-  const dataE5=[61,82,51,53,94,166,82,87,73];
-  const dataE5_vague=[0,0,0,0,0,115,25,14,7];    // part nouvelle vague 10/06
-  const dataE5_old  =[61,82,51,53,94,51,57,73,66]; // part anciens éligibles
+  // Source : otp_creation_dates — 1ère activation par boutique (sellerid), 30 semaines depuis le lancement
+  const dataE5=[33,17,2,2,5,47,56,138,178,55,108,183,129,107,88,58,78,59,79,71,52,66,81,55,52,108,167,94,94,76];
   const nE5=dataE5.length, xsE5=dataE5.map((_,i)=>i);
   const sX=xsE5.reduce((a,b)=>a+b,0), sY=dataE5.reduce((a,b)=>a+b,0);
   const sXY=xsE5.reduce((s,x,i)=>s+x*dataE5[i],0), sX2=xsE5.reduce((s,x)=>s+x*x,0);
   const slp=(nE5*sXY-sX*sY)/(nE5*sX2-sX*sX);
   const icp=(sY-slp*sX)/nE5;
-  const trendE5=xsE5.map(x=>Math.round(icp+slp*x));
+  const trendE5=xsE5.map(x=>+Math.max(0,icp+slp*x).toFixed(1));
 
   const annotE5={id:'annotE5',afterDraw(chart){
     const{ctx,chartArea:{top,bottom},scales:{x}}=chart;
     // Jalon mail relance 04/06 (entre index 3 et 4)
-    const mx=(x.getPixelForValue(3)+x.getPixelForValue(4))/2;
+    const mx=(x.getPixelForValue(24)+x.getPixelForValue(25))/2;
     ctx.save();
     ctx.beginPath();ctx.strokeStyle='rgba(163,45,45,0.45)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
     ctx.moveTo(mx,top);ctx.lineTo(mx,bottom);ctx.stroke();ctx.setLineDash([]);
@@ -1277,7 +1311,7 @@ function initEvolution(){
     ctx.fillStyle='#A32D2D';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Mail relance — 04/06',bx+10,by+17);
     ctx.fillStyle='#15803D';ctx.fillText('✓ +52 boutiques activées',bx+10,by+34);
     // Jalon vague 10/06 (entre index 4 et 5)
-    const vx=(x.getPixelForValue(4)+x.getPixelForValue(5))/2;
+    const vx=(x.getPixelForValue(25)+x.getPixelForValue(26))/2;
     ctx.beginPath();ctx.strokeStyle='rgba(99,102,241,0.55)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
     ctx.moveTo(vx,top);ctx.lineTo(vx,bottom);ctx.stroke();ctx.setLineDash([]);
     const vbw=186,vbh=46,vbx=vx+6,vby=top+10;
@@ -1290,11 +1324,10 @@ function initEvolution(){
   new Chart(document.getElementById('e5'),{
     type:'bar',plugins:[annotE5],
     data:{
-      labels:['11/05','18/05','24/05','31/05','07/06','14/06','21/06','28/06','05/07'],
+      labels:['08/12','15/12','22/12','29/12','05/01','12/01','19/01','26/01','02/02','09/02','16/02','23/02','02/03','09/03','16/03','23/03','30/03','06/04','13/04','20/04','27/04','04/05','11/05','18/05','25/05','01/06','08/06','15/06','22/06','29/06'],
       datasets:[
-        {type:'bar',label:'Anciens éligibles',data:dataE5_old,backgroundColor:'#1D9E75',borderColor:'#0F6E56',borderWidth:1,borderRadius:0,borderSkipped:false,stack:'s',order:2},
-        {type:'bar',label:'Nouvelle vague 10/06',data:dataE5_vague,backgroundColor:'#6366F1',borderColor:'#4338CA',borderWidth:1,borderRadius:5,borderSkipped:false,stack:'s',order:2},
-        {type:'line',label:'Tendance linéaire',data:trendE5,borderColor:'#534AB7',borderWidth:2,borderDash:[8,4],pointRadius:0,pointHoverRadius:0,fill:false,tension:0,order:1}
+        {type:'bar',label:'Nouvelles boutiques MFA',data:dataE5,backgroundColor:'#1D9E75',borderColor:'#0F6E56',borderWidth:1,borderRadius:4,borderSkipped:false,order:2},
+        {type:'line',label:'Tendance linéaire',data:trendE5,borderColor:'#F59E0B',borderWidth:2.5,borderDash:[8,4],pointRadius:0,pointHoverRadius:0,fill:false,tension:0,order:1}
       ]
     },
     options:{
@@ -1305,13 +1338,12 @@ function initEvolution(){
         legend:{display:true,position:'top',labels:{padding:12,font:{size:11},usePointStyle:true,pointStyleWidth:9}},
         tooltip:{callbacks:{
           title:c=>'Semaine du '+c[0].label,
-          label:i=>i.datasetIndex===2?' Tendance : +'+i.parsed.y:' '+i.dataset.label+' : +'+i.parsed.y+' boutiques',
-          footer:items=>{const tot=items.filter(i=>i.datasetIndex<2).reduce((s,i)=>s+i.parsed.y,0);return tot>0?'Total : +'+tot+' boutiques MFA':'';}
+          label:i=>i.datasetIndex===1?' Tendance : ~'+Math.round(i.parsed.y)+' boutiques':' '+i.dataset.label+' : +'+i.parsed.y+' boutiques',
         }}
       },
       scales:{
-        x:{stacked:true,grid:{display:false},ticks:{font:{size:13},color:'#475569',autoSkip:false}},
-        y:{stacked:true,beginAtZero:true,max:200,grid:{color:'#F1F5F9'},border:{dash:[4,4]},
+        x:{grid:{display:false},ticks:{font:{size:11},color:'#475569',autoSkip:true,maxTicksLimit:15,maxRotation:0}},
+        y:{beginAtZero:true,max:200,grid:{color:'#F1F5F9'},border:{dash:[4,4]},
           title:{display:true,text:'Nouvelles boutiques / semaine',font:{size:11},color:'#64748B'},
           ticks:{precision:0,font:{size:11}}}
       }
