@@ -166,10 +166,17 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
         <div style="font-size:12px;color:var(--mut);margin-top:4px">Seuil cible : &lt; 5% sol./activations</div>
       </div>
     </div>
-    <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-      <div style="background:linear-gradient(90deg,#10B981,#F59E0B);width:73%;height:100%;border-radius:99px;transition:width .6s"></div>
+        <div style="display:flex;height:10px;border-radius:4px;overflow:hidden;background:#E2E8F0;margin-bottom:6px">
+      <div style="width:25%;background:#10B981;flex-shrink:0"></div>
+      <div style="width:43%;background:linear-gradient(90deg,#FCD34D,#F97316);flex-shrink:0"></div>
     </div>
-    <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong>13,6%</strong> · objectif : passer sous <strong style="color:#10B981">5%</strong></div>
+    <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-bottom:8px">
+      <span>0%</span>
+      <span style="color:#10B981;font-weight:600">&#8592; 5% objectif</span>
+      <span style="color:#F97316;font-weight:600">13,6% actuel</span>
+      <span>20%</span>
+    </div>
+    <div style="font-size:12px;color:var(--mut)">Ratio actuel : <strong style="color:#F97316">13,6%</strong> · objectif : passer sous <strong style="color:#10B981">5%</strong> · <strong style="color:#E11D48">&#9888; 8,6 pts restants</strong></div>
   </div>
 
   <!-- CHALLENGE 2 : ADOPTION -->
@@ -194,10 +201,16 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
           <div style="font-size:12px;color:var(--mut);margin-top:4px">~1 505 boutiques connectées de plus</div>
         </div>
       </div>
-      <div style="background:var(--bg);border-radius:99px;height:10px;overflow:hidden;margin-bottom:8px">
-        <div style="background:linear-gradient(90deg,#10B981 60%,#F59E0B);width:86%;height:100%;border-radius:99px"></div>
+      <div style="display:flex;height:10px;border-radius:4px;overflow:hidden;background:#E2E8F0;margin-bottom:6px">
+        <div style="width:59.3%;background:linear-gradient(90deg,#FCD34D,#F97316);flex-shrink:0"></div>
+        <div style="width:40.7%;background:#FED7AA;flex-shrink:0"></div>
       </div>
-      <div style="font-size:12px;color:var(--mut);margin-bottom:16px">59% de l'objectif atteint · +14,2 pts restants</div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--mut);margin-bottom:8px">
+        <span>0%</span>
+        <span style="color:#F97316;font-weight:600">17,8% actuel</span>
+        <span style="color:#10B981;font-weight:600">30% objectif →</span>
+      </div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:16px">59% du chemin · <strong style="color:#B45309">+12,2 pts restants</strong> · zone claire = effort restant</div>
       <!-- Répartition Substate des connectés -->
       <div style="background:var(--bg);border-radius:var(--rads);padding:12px 14px;margin-top:4px">
         <div style="font-size:11px;font-weight:700;color:var(--mut);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px">Répartition des 12 448 vendeurs connectés 30j</div>
@@ -548,7 +561,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
           <td><strong>19/07</strong><br><span style="font-size:11px;color:var(--p);font-weight:700">← Dernier</span></td>
           <td>16 434 <span class="pill up">+5461</span></td>
           <td><strong>2 592</strong> <span class="pill up">+325</span></td>
-          <td><span class="pill g">15,8%</span></td>
+          <td><span class="pill o">↓ 15,8%</span></td>
           <td>25 383 <span class="pill up">+7296</span></td>
           <td>3 120 <span class="pill up">+384</span></td>
           <td>12,3%</td>
@@ -1350,14 +1363,22 @@ function initEvolution(){
     rrE5(ctx,bx,by,bw,bh,6);ctx.fillStyle='#FFF1F2';ctx.strokeStyle='rgba(226,75,74,0.5)';ctx.lineWidth=1;ctx.fill();ctx.stroke();
     ctx.fillStyle='#A32D2D';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Mail relance — 04/06',bx+10,by+17);
     ctx.fillStyle='#15803D';ctx.fillText('✓ +52 boutiques activées',bx+10,by+34);
-    // Jalon vague 10/06 (entre index 4 et 5)
+    // Jalon vague 10/06 — tooltip droite
     const vx=(x.getPixelForValue(25)+x.getPixelForValue(26))/2;
     ctx.beginPath();ctx.strokeStyle='rgba(99,102,241,0.55)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
     ctx.moveTo(vx,top);ctx.lineTo(vx,bottom);ctx.stroke();ctx.setLineDash([]);
-    const vbw=186,vbh=46,vbx=vx-vbw-6,vby=top+10;
+    const vbw=192,vbh=46,vbx=vx+6,vby=top+10;
     rrE5(ctx,vbx,vby,vbw,vbh,6);ctx.fillStyle='#EDE9FE';ctx.strokeStyle='rgba(99,102,241,0.4)';ctx.lineWidth=1;ctx.fill();ctx.stroke();
     ctx.fillStyle='#312E81';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Nouvelle vague — 10/06',vbx+10,vby+17);
     ctx.fillStyle='#4338CA';ctx.fillText('+999 nouvelles boutiques éligibles',vbx+10,vby+34);
+    // Jalon vague 16/07 — tooltip gauche
+    const v2x=(x.getPixelForValue(32)+x.getPixelForValue(33))/2;
+    ctx.beginPath();ctx.strokeStyle='rgba(99,102,241,0.55)';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
+    ctx.moveTo(v2x,top);ctx.lineTo(v2x,bottom);ctx.stroke();ctx.setLineDash([]);
+    const v2bw=208,v2bh=46,v2bx=v2x-v2bw-6,v2by=top+10;
+    rrE5(ctx,v2bx,v2by,v2bw,v2bh,6);ctx.fillStyle='#EDE9FE';ctx.strokeStyle='rgba(99,102,241,0.4)';ctx.lineWidth=1;ctx.fill();ctx.stroke();
+    ctx.fillStyle='#312E81';ctx.font="500 11px sans-serif";ctx.textAlign='left';ctx.fillText('Nouvelle vague — 16/07',v2bx+10,v2by+17);
+    ctx.fillStyle='#4338CA';ctx.fillText('+4 832 nouvelles boutiques éligibles',v2bx+10,v2by+34);
     ctx.restore();
   }};
 
