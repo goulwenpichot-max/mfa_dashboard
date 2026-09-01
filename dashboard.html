@@ -159,6 +159,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
         <div>
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#92400E;margin-bottom:2px">Challenge 1</div>
           <div style="font-size:13px;font-weight:700;color:#78350F">Réduire les sollicitations</div>
+          <div style="font-size:11px;color:#92400E;margin-top:3px">Objectif : taux &lt; 5 %</div>
         </div>
         <div style="background:#F59E0B;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap">⏳ Presque atteint</div>
       </div>
@@ -215,6 +216,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
         <div>
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#14532D;margin-bottom:2px">Challenge 2</div>
           <div style="font-size:13px;font-weight:700;color:#14532D">Adoption MFA</div>
+          <div style="font-size:11px;color:#14532D;margin-top:3px">Objectif : 30 % des boutiques actives</div>
         </div>
         <div style="background:#10B981;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap">✓ Atteint</div>
       </div>
@@ -346,16 +348,16 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
 
 <div class="st">👥 Focus — Comptes utilisateurs par type</div><div class="cgrid">
-    <div class="cc"><h4>🍩 Comptes principaux vs secondaires</h4><div class="csub">16 195 principaux · 10 828 secondaires · 30/08/2026</div><div class="cw h220"></div></div>
-    <div class="cc"><h4>📊 OTP actif — principaux vs secondaires</h4><div class="csub">Principaux : 21,8% OTP · Secondaires : 9,9% OTP · 30/08/2026</div><div class="cw h220"></div></div>
+    <div class="cc"><h4>🍩 Comptes principaux vs secondaires</h4><div class="csub">16 195 principaux · 10 828 secondaires · 30/08/2026</div><div class="cw h220"><canvas id="c1"></canvas></div></div>
+    <div class="cc"><h4>📊 OTP actif — principaux vs secondaires</h4><div class="csub">Principaux : 21,8% OTP · Secondaires : 9,9% OTP · 30/08/2026</div><div class="cw h220"><canvas id="c2"></canvas></div></div>
   </div>
 
 
 
   <div class="st">😶 Focus — Boutiques sans aucune interaction (3 799 boutiques)</div>
   <div class="two">
-    <div class="cc"><h4>📅 Ancienneté des boutiques sans interaction</h4><div class="csub">Année de création du compte le plus ancien</div><div class="cw h220"></div></div>
-    <div class="cc"><h4>👥 Profil des comptes</h4><div class="csub">Sur les 3 799 boutiques sans interaction</div><div class="cw h180"></div>
+    <div class="cc"><h4>📅 Ancienneté des boutiques sans interaction</h4><div class="csub">Année de création du compte le plus ancien</div><div class="cw h220"><canvas id="c7"></canvas></div></div>
+    <div class="cc"><h4>👥 Profil des comptes</h4><div class="csub">Sur les 3 799 boutiques sans interaction</div><div class="cw h180"><canvas id="c8"></canvas></div>
       <div style="margin-top:14px">
         <div class="srow"><span class="srl">Boutiques mono-compte</span><span class="srv" style="color:var(--p)">~1 826 <small style="font-weight:400;font-size:12px;color:var(--mut)">(~94%)</small></span></div>
         <div class="srow"><span class="srl">Nb comptes moyen / boutique</span><span class="srv">1,11</span></div>
@@ -366,7 +368,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
   <div class="st">📅 Profil adoption MFA — par année de création</div>
   <div class="cgrid">
-    <div class="cc"><h4>📊 Taux OTP par année de création (comptes principaux)</h4><div class="csub">Taux OTP actif (%) + volume comptes éligibles · 30/08/2026</div><div class="cw h260"></div></div>
+    <div class="cc"><h4>📊 Taux OTP par année de création (comptes principaux)</h4><div class="csub">Taux OTP actif (%) + volume comptes éligibles · 30/08/2026</div><div class="cw h260"><canvas id="c9"></canvas></div></div>
     
   </div>
 
@@ -400,7 +402,7 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
   <div class="cc" style="margin-bottom:32px">
     <h4>📊 Nouvelles boutiques MFA activées par semaine</h4>
     <div class="csub" style="display:flex;gap:20px;margin-bottom:14px"><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;display:inline-block"></span>Nouvelles boutiques / semaine</span><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut)"><span style="width:20px;height:0;border-top:2px dashed #F59E0B;display:inline-block"></span>Tendance linéaire</span></div>
-    <div class="cw h380"></div>
+    <div class="cw h380"><canvas id="e5"></canvas></div>
   </div>
 
   <div class="st">📋 Suivi des 18 snapshots</div>
@@ -588,8 +590,8 @@ footer{background:var(--card);border-top:1px solid var(--brd);padding:22px 32px;
 
   <div class="st">📈 Visualisations</div>
   <div class="cgrid">
-    <div class="cc"><h4>📈 Taux d'adoption — courbe sur 6 snapshots</h4><div class="csub">Taux boutiques MFA (%) et taux comptes OTP (%) · annotations : mail relance + ouverture vague</div><div class="cw h260"></div></div>
-    <div class="cc"><h4>📦 Évolution volume par statut (boutiques)</h4><div class="csub">MFA actif, Later, Aucune interaction — en valeur absolue</div><div class="cw h260"></div></div>
+    <div class="cc"><h4>📈 Taux d'adoption — courbe sur 6 snapshots</h4><div class="csub">Taux boutiques MFA (%) et taux comptes OTP (%) · annotations : mail relance + ouverture vague</div><div class="cw h260"><canvas id="e1"></canvas></div></div>
+    <div class="cc"><h4>📦 Évolution volume par statut (boutiques)</h4><div class="csub">MFA actif, Later, Aucune interaction — en valeur absolue</div><div class="cw h260"><canvas id="e4"></canvas></div></div>
   </div>
 
 
